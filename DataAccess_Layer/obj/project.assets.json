@@ -46,6 +46,27 @@
           }
         }
       },
+      "EntityFramework/4.1.10331": {
+        "type": "package",
+        "compile": {
+          "lib/EntityFramework.dll": {}
+        },
+        "runtime": {
+          "lib/EntityFramework.dll": {}
+        }
+      },
+      "EntityFramework.Extensions/0.0.2": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework": "4.1.10331"
+        },
+        "compile": {
+          "lib/net40/EntityFramework.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/net40/EntityFramework.Extensions.dll": {}
+        }
+      },
       "Humanizer.Core/2.14.1": {
         "type": "package",
         "compile": {
@@ -1613,6 +1634,33 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
+      ]
+    },
+    "EntityFramework/4.1.10331": {
+      "sha512": "of8dhDvFBbBLDoTumIaf1//UHeL9CvDgB6/P38KioIe/EhWkUhCWEjl3le1Qj0Ca86V+3cDH3iSMER7z+4uqig==",
+      "type": "package",
+      "path": "entityframework/4.1.10331",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "entityframework.4.1.10331.nupkg.sha512",
+        "entityframework.nuspec",
+        "lib/EntityFramework.dll",
+        "lib/EntityFramework.xml",
+        "tools/install.ps1"
+      ]
+    },
+    "EntityFramework.Extensions/0.0.2": {
+      "sha512": "Uv2wtOlk42qx93LZ6b05DxKOTc3wfhRlfalrytA8q6kXHZxZnqqQmIrd/2X9XOyTKVViVUs7j+R9kOMUn4XFIg==",
+      "type": "package",
+      "path": "entityframework.extensions/0.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "entityframework.extensions.0.0.2.nupkg.sha512",
+        "entityframework.extensions.nuspec",
+        "lib/net40/EntityFramework.Extensions.dll"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -4253,6 +4301,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "EntityFramework.Extensions >= 0.0.2",
       "Microsoft.AspNetCore.JsonPatch >= 8.0.6",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 8.0.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 8.0.6",
@@ -4265,11 +4314,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\web_projects\\LUXURIA\\DataAccess_Layer\\DataAccess_Layer.csproj",
+      "projectUniqueName": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj",
       "projectName": "DataAccess_Layer",
-      "projectPath": "D:\\Projects\\web_projects\\LUXURIA\\DataAccess_Layer\\DataAccess_Layer.csproj",
+      "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj",
       "packagesPath": "C:\\Users\\ALYOSER\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\web_projects\\LUXURIA\\DataAccess_Layer\\obj\\",
+      "outputPath": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ALYOSER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4298,6 +4347,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "EntityFramework.Extensions": {
+            "target": "Package",
+            "version": "[0.0.2, )"
+          },
           "Microsoft.AspNetCore.JsonPatch": {
             "target": "Package",
             "version": "[8.0.6, )"
@@ -4336,5 +4389,27 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework 4.1.10331' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework.Extensions 0.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework.Extensions",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

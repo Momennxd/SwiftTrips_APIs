@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "DataAccess_Layer/1.0.0": {
         "dependencies": {
+          "EntityFramework.Extensions": "0.0.2",
           "Microsoft.AspNetCore.JsonPatch": "8.0.6",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6",
@@ -48,6 +49,25 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.10.3.0",
             "fileVersion": "1.1000.323.51804"
+          }
+        }
+      },
+      "EntityFramework/4.1.10331": {
+        "runtime": {
+          "lib/EntityFramework.dll": {
+            "assemblyVersion": "4.1.0.0",
+            "fileVersion": "4.1.10331.0"
+          }
+        }
+      },
+      "EntityFramework.Extensions/0.0.2": {
+        "dependencies": {
+          "EntityFramework": "4.1.10331"
+        },
+        "runtime": {
+          "lib/net40/EntityFramework.Extensions.dll": {
+            "assemblyVersion": "0.0.1.0",
+            "fileVersion": "0.0.1.0"
           }
         }
       },
@@ -923,6 +943,20 @@
       "sha512": "sha512-l1Xm2MWOF2Mzcwuarlw8kWQXLZk3UeB55aQXVyjj23aBfDwOZ3gu5GP2kJ6KlmZeZv2TCzw7x4L3V36iNr3gww==",
       "path": "azure.identity/1.10.3",
       "hashPath": "azure.identity.1.10.3.nupkg.sha512"
+    },
+    "EntityFramework/4.1.10331": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-of8dhDvFBbBLDoTumIaf1//UHeL9CvDgB6/P38KioIe/EhWkUhCWEjl3le1Qj0Ca86V+3cDH3iSMER7z+4uqig==",
+      "path": "entityframework/4.1.10331",
+      "hashPath": "entityframework.4.1.10331.nupkg.sha512"
+    },
+    "EntityFramework.Extensions/0.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Uv2wtOlk42qx93LZ6b05DxKOTc3wfhRlfalrytA8q6kXHZxZnqqQmIrd/2X9XOyTKVViVUs7j+R9kOMUn4XFIg==",
+      "path": "entityframework.extensions/0.0.2",
+      "hashPath": "entityframework.extensions.0.0.2.nupkg.sha512"
     },
     "Humanizer.Core/2.14.1": {
       "type": "package",

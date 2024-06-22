@@ -1,4 +1,5 @@
 ﻿using DataAccess_Layer;
+using DataAccess_Layer.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -32,6 +33,8 @@ namespace ConsoleApp1
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<eCountriesDA>().HasKey(e=> e.CountryID);
+            modelBuilder.Entity<ePeopleDA>().HasKey(e => e.PersonID);
+
         }
 
 
@@ -42,8 +45,9 @@ namespace ConsoleApp1
 
         public DbSet<eCountriesDA> Countries {  get; set; }
 
+        public DbSet<ePeopleDA> People { get; set; }
 
-        
+
 
     }
 }

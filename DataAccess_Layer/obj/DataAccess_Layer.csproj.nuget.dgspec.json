@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\web_projects\\LUXURIA\\DataAccess_Layer\\DataAccess_Layer.csproj": {}
+    "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\web_projects\\LUXURIA\\DataAccess_Layer\\DataAccess_Layer.csproj": {
+    "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\web_projects\\LUXURIA\\DataAccess_Layer\\DataAccess_Layer.csproj",
+        "projectUniqueName": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj",
         "projectName": "DataAccess_Layer",
-        "projectPath": "D:\\Projects\\web_projects\\LUXURIA\\DataAccess_Layer\\DataAccess_Layer.csproj",
+        "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj",
         "packagesPath": "C:\\Users\\ALYOSER\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\web_projects\\LUXURIA\\DataAccess_Layer\\obj\\",
+        "outputPath": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ALYOSER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "EntityFramework.Extensions": {
+              "target": "Package",
+              "version": "[0.0.2, )"
+            },
             "Microsoft.AspNetCore.JsonPatch": {
               "target": "Package",
               "version": "[8.0.6, )"

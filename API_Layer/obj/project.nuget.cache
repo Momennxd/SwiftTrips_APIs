@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "dRQ1dH3CUNXYTlCQBJeIiCfv3PFgUgRgbAQxUj+SMWzZoeyFR0yv04A6ctdeGM2xqJU7ojiZSb36ldQyzySSPw==",
+  "dgSpecHash": "gIjFkXTCiWxkijEmqAth8XZZWEC0sMveu4hKQER5VrFN8QyDO77vQl2OUJ/InChOKHTLZnWUDsbvKvY5Lf19cA==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\web_projects\\LUXURIA\\API_Layer\\API_Layer.csproj",
+  "projectFilePath": "D:\\Projects\\web_projects\\SwiftTrips\\API_Layer\\API_Layer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALYOSER\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ALYOSER\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\ALYOSER\\.nuget\\packages\\entityframework\\4.1.10331\\entityframework.4.1.10331.nupkg.sha512",
+    "C:\\Users\\ALYOSER\\.nuget\\packages\\entityframework.extensions\\0.0.2\\entityframework.extensions.0.0.2.nupkg.sha512",
     "C:\\Users\\ALYOSER\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\8.0.6\\microsoft.aspnetcore.jsonpatch.8.0.6.nupkg.sha512",
     "C:\\Users\\ALYOSER\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\8.0.6\\microsoft.aspnetcore.mvc.newtonsoftjson.8.0.6.nupkg.sha512",
     "C:\\Users\\ALYOSER\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
@@ -70,5 +72,26 @@
     "C:\\Users\\ALYOSER\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\ALYOSER\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework 4.1.10331' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework.Extensions 0.0.2' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework.Extensions",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
