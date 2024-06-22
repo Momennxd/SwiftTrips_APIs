@@ -12,3 +12,4 @@ D:\Projects\web_projects\LUXURIA\DataAccess_Layer\obj\Debug\net8.0\refint\DataAc
 D:\Projects\web_projects\LUXURIA\DataAccess_Layer\obj\Debug\net8.0\DataAccess_Layer.pdb
 D:\Projects\web_projects\LUXURIA\DataAccess_Layer\obj\Debug\net8.0\DataAccess_Layer.genruntimeconfig.cache
 D:\Projects\web_projects\LUXURIA\DataAccess_Layer\obj\Debug\net8.0\ref\DataAccess_Layer.dll
+D:\Projects\web_projects\LUXURIA\DataAccess_Layer\obj\Debug\net8.0\DataAccess_Layer.sourcelink.json

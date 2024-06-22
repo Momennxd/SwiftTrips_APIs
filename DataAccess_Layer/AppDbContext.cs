@@ -15,7 +15,7 @@ namespace ConsoleApp1
     {
         const string _dbConnectionString =
 
-            "Server=.;Database=OnlineStoreDB;User Id=sa;Password=sa123456;TrustServerCertificate=true";
+            "Server=.;Database=SwiftTripsDB;User Id=sa;Password=sa123456;TrustServerCertificate=true";
 
 
         public AppDbContext()
