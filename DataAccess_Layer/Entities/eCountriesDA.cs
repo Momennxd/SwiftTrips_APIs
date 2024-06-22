@@ -16,7 +16,7 @@ namespace DataAccess_Layer
     {
 
         [Key]
-        public int CountryID { get; private set; }
+        public int CountryID { get; }
 
 
         public string CountryName { get; set; }
