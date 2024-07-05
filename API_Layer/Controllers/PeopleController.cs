@@ -1,8 +1,6 @@
 ﻿using API_Layer.DTOs;
-using Azure;
 using DataAccess_Layer;
 using DataAccess_Layer.Entities;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
@@ -65,7 +63,36 @@ namespace API_Layer.Controllers
         }
 
 
+        [HttpPut("putPeron")]
+        public ActionResult<dynamic> UpdatePerson([FromBody] ePeopleDA NewPerson, int ID)
+        {
 
+            if (dtoPerson.UpdatePerson(NewPerson, ID))
+            {
+                return Ok();
+            }
+
+
+
+            return BadRequest();
+        }
+
+
+        [HttpPatch("UpdatePartialPerson")]
+        public ActionResult<dynamic> PatcheCountry([FromBody] JsonPatchDocument<ePeopleDA> NewPerson, int ID)
+        {
+
+            if (dtoPerson.PatchPerson(NewPerson, ID))
+            {
+                return Ok(true);
+            }
+
+
+
+
+
+            return BadRequest();
+        }
 
     }
 }

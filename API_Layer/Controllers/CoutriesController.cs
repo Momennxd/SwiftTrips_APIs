@@ -51,7 +51,7 @@ namespace API_Layer.Controllers
            
             if (eCountriesDA.updateCountry(Newcountry, ID))
             {
-                return true;
+                return Ok(Newcountry);
             }
 
 

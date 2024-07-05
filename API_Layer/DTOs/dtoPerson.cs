@@ -1,6 +1,8 @@
-﻿using ConsoleApp1;
+﻿using Azure;
+using ConsoleApp1;
 using DataAccess_Layer;
 using DataAccess_Layer.Entities;
+using Microsoft.AspNetCore.JsonPatch;
 using System;
 
 namespace API_Layer.DTOs
@@ -103,6 +105,14 @@ namespace API_Layer.DTOs
             return ePeopleDA.DeletePerson(PersonID);
         }
 
+        public static bool UpdatePerson(ePeopleDA Person, int ID)
+        {
+            return ePeopleDA.UpatePerson(Person, ID);
+        }
 
+        public static bool PatchPerson(JsonPatchDocument<ePeopleDA> Person, int ID)
+        {
+            return ePeopleDA.PatchPerson(Person, ID);
+        }
     }
 }

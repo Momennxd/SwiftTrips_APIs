@@ -1,0 +1,15 @@
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\bin\Release\net8.0\DataAccess_Layer.deps.json
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\bin\Release\net8.0\DataAccess_Layer.runtimeconfig.json
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\bin\Release\net8.0\DataAccess_Layer.dll
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\bin\Release\net8.0\DataAccess_Layer.pdb
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\DataAccess_Layer.csproj.AssemblyReference.cache
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\DataAccess_Layer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\DataAccess_Layer.AssemblyInfoInputs.cache
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\DataAccess_Layer.AssemblyInfo.cs
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\DataAccess_Layer.csproj.CoreCompileInputs.cache
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\DataAccess_Layer.sourcelink.json
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\DataAccess_Layer.dll
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\refint\DataAccess_Layer.dll
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\DataAccess_Layer.pdb
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\DataAccess_Layer.genruntimeconfig.cache
+D:\Projects\web_projects\SwiftTrips\DataAccess_Layer\obj\Release\net8.0\ref\DataAccess_Layer.dll

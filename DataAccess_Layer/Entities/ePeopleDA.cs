@@ -1,4 +1,5 @@
 ﻿using ConsoleApp1;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -110,9 +111,71 @@ namespace DataAccess_Layer.Entities
 
 
 
+        public static bool UpatePerson(ePeopleDA newPerson, int personID)
+        {
+            if (newPerson == null)
+            {
+                return false;
+            }
+
+            AppDbContext context = new AppDbContext();
 
 
+            try
+            {
+                ePeopleDA person = context.People.Find(personID);
 
+                //id does not exist
+                if (person == null)
+                    return false;
+
+                person.FirstName = newPerson.FirstName;
+                person.LastName = newPerson.LastName;
+                person.Gender = newPerson.Gender;
+                person.ProfilePicPath = newPerson.ProfilePicPath;
+                person.Address = newPerson.Address;
+                person.DateOfBirth = newPerson.DateOfBirth;
+                person.Phone = newPerson.Phone;
+                person.CountryID = newPerson.CountryID;
+
+                context.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+
+        public static bool PatchPerson(JsonPatchDocument<ePeopleDA> NewPerson, int personID)
+        {
+            if (NewPerson == null || personID <= 0)
+            {
+                return false;
+            }
+
+            AppDbContext context = new AppDbContext();
+
+
+            try
+            {
+                ePeopleDA person = context.People.Find(personID);
+
+                //id does not exist
+                if (person == null)
+                    return false;
+
+                NewPerson.ApplyTo(person);
+
+                context.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
 
     }
 }
