@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API_Layer.Controllers
+namespace API_Layer.Controllers.people
 {
     [Route("API/Counties")]
     [ApiController]
@@ -18,7 +18,7 @@ namespace API_Layer.Controllers
         public ActionResult<dynamic> GetAllCountries()
         {
 
-            return DataAccess_Layer.eCountriesDA.GetAllCountries();
+            return eCountriesDA.GetAllCountries();
         }
 
         [HttpGet("GetCountry")]
@@ -33,7 +33,7 @@ namespace API_Layer.Controllers
         [HttpPost("AddCountry")]
         public ActionResult<dynamic> CreateCountry([FromBody] eCountriesDA country)
         {
-            if (DataAccess_Layer.eCountriesDA.AddCountry(country))
+            if (eCountriesDA.AddCountry(country))
             {
 
                 return Ok(country);
@@ -48,7 +48,7 @@ namespace API_Layer.Controllers
         [HttpPut("PutCountry")]
         public ActionResult<dynamic> UpdateCountry([FromBody] eCountriesDA Newcountry, int ID)
         {
-           
+
             if (eCountriesDA.updateCountry(Newcountry, ID))
             {
                 return Ok(Newcountry);
@@ -70,7 +70,7 @@ namespace API_Layer.Controllers
                 return Ok(true);
             }
 
-            
+
 
 
 

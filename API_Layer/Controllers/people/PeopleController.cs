@@ -4,18 +4,19 @@ using DataAccess_Layer.Entities;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API_Layer.Controllers
+namespace API_Layer.Controllers.people
 {
     [Route("API/People")]
     [ApiController]
     public class PeopleController : ControllerBase
     {
+
         [HttpGet("GetAllPeople")]
-        public ActionResult<dynamic> GetAllPeople()
+        public dynamic GetAllPeople()
         {
             return dtoPerson.GetAllPeople();
 
-          //  return temp.ExecGetAllPeople();
+            //  return temp.ExecGetAllPeople();
         }
 
 

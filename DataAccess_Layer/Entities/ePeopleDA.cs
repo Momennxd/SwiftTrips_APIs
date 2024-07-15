@@ -28,7 +28,7 @@ namespace DataAccess_Layer.Entities
 
         public string? Phone { get; set; }
 
-        public bool Gender { get; set; }
+        public string Gender { get; set; }
 
         public int CountryID { get; set; }
 
@@ -38,12 +38,12 @@ namespace DataAccess_Layer.Entities
 
        
 
-        public static List<ePeopleDA> GetAllPeople()
+        public static dynamic GetAllPeople()
         {
             AppDbContext context = new AppDbContext();
 
 
-            return context.People.ToList();
+            return context.People.AsNoTracking().ToList();
         }
 
 
