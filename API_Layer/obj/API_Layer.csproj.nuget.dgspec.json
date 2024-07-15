@@ -1,35 +1,38 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\web_projects\\SwiftTrips\\API_Layer\\API_Layer.csproj": {}
+    "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\web_projects\\SwiftTrips\\API_Layer\\API_Layer.csproj": {
+    "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\web_projects\\SwiftTrips\\API_Layer\\API_Layer.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
         "projectName": "API_Layer",
-        "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\API_Layer\\API_Layer.csproj",
-        "packagesPath": "C:\\Users\\ALYOSER\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\web_projects\\SwiftTrips\\API_Layer\\obj\\",
+        "projectPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
+        "packagesPath": "C:\\Users\\Ahmed Ben Sahmaln\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ALYOSER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmed Ben Sahmaln\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\web_projects\\SwiftTrips\\Business_Layer\\Business_Layer.csproj": {
-                "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\Business_Layer\\Business_Layer.csproj"
+              "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Business_Layer\\Business_Layer.csproj": {
+                "projectPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Business_Layer\\Business_Layer.csproj"
               }
             }
           }
@@ -38,6 +41,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -76,36 +84,39 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\web_projects\\SwiftTrips\\Business_Layer\\Business_Layer.csproj": {
+    "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Business_Layer\\Business_Layer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\web_projects\\SwiftTrips\\Business_Layer\\Business_Layer.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Business_Layer\\Business_Layer.csproj",
         "projectName": "Business_Layer",
-        "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\Business_Layer\\Business_Layer.csproj",
-        "packagesPath": "C:\\Users\\ALYOSER\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\web_projects\\SwiftTrips\\Business_Layer\\obj\\",
+        "projectPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Business_Layer\\Business_Layer.csproj",
+        "packagesPath": "C:\\Users\\Ahmed Ben Sahmaln\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Business_Layer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ALYOSER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmed Ben Sahmaln\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj": {
-                "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj"
+              "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj": {
+                "projectPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj"
               }
             }
           }
@@ -114,6 +125,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -135,28 +151,31 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj": {
+    "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj",
+        "projectUniqueName": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj",
         "projectName": "DataAccess_Layer",
-        "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\DataAccess_Layer.csproj",
-        "packagesPath": "C:\\Users\\ALYOSER\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\web_projects\\SwiftTrips\\DataAccess_Layer\\obj\\",
+        "projectPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj",
+        "packagesPath": "C:\\Users\\Ahmed Ben Sahmaln\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\ALYOSER\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ahmed Ben Sahmaln\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -169,6 +188,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -214,7 +238,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

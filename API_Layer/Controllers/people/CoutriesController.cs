@@ -1,5 +1,9 @@
-﻿using Azure;
+﻿
+
+using Azure;
+using ConsoleApp1;
 using DataAccess_Layer;
+using DataAccess_Layer.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -11,21 +15,25 @@ namespace API_Layer.Controllers.people
     public class CoutriesController : ControllerBase
     {
 
+        private readonly IBasicRepository<eCountriesDA> _basicRepo;
 
-
+        public CoutriesController(IBasicRepository<eCountriesDA> basicRepo)
+        {
+            _basicRepo=basicRepo;
+        }
 
         [HttpGet("GetCountries")]
         public ActionResult<dynamic> GetAllCountries()
         {
-
-            return eCountriesDA.GetAllCountries();
+            return _basicRepo.GetAllItem();
+            //return eCountriesDA.GetAllCountries();
         }
 
         [HttpGet("GetCountry")]
         public ActionResult<dynamic> GetCountry(int ID)
         {
-
-            return eCountriesDA.GetCountry(ID);
+            return _basicRepo.GetItem(ID);
+            // return eCountriesDA.GetCountry(ID);
         }
 
 
@@ -33,7 +41,7 @@ namespace API_Layer.Controllers.people
         [HttpPost("AddCountry")]
         public ActionResult<dynamic> CreateCountry([FromBody] eCountriesDA country)
         {
-            if (eCountriesDA.AddCountry(country))
+            if (_basicRepo.AddItem(country))
             {
 
                 return Ok(country);
@@ -49,7 +57,12 @@ namespace API_Layer.Controllers.people
         public ActionResult<dynamic> UpdateCountry([FromBody] eCountriesDA Newcountry, int ID)
         {
 
-            if (eCountriesDA.updateCountry(Newcountry, ID))
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            if (_basicRepo.UpdateItem(Newcountry, ID))
             {
                 return Ok(Newcountry);
             }
@@ -65,14 +78,10 @@ namespace API_Layer.Controllers.people
         public ActionResult<dynamic> PatcheCountry([FromBody] JsonPatchDocument<eCountriesDA> Newcountry, int ID)
         {
 
-            if (eCountriesDA.PatchCountry(Newcountry, ID))
+            if (_basicRepo.PatchItem(Newcountry, ID))
             {
                 return Ok(true);
             }
-
-
-
-
 
             return BadRequest();
         }
@@ -82,7 +91,7 @@ namespace API_Layer.Controllers.people
         public ActionResult<dynamic> DeleteCountry(int ID)
         {
 
-            if (eCountriesDA.DeleteCountry(ID))
+            if (_basicRepo.DeleteItem(ID))
             {
                 return true;
             }
@@ -94,3 +103,6 @@ namespace API_Layer.Controllers.people
 
     }
 }
+
+
+

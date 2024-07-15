@@ -14,21 +14,21 @@ namespace ConsoleApp1
 {
     public class AppDbContext : DbContext
     {
-        const string _dbConnectionString =
+        //const string _dbConnectionString =
 
-            "Server=.;Database=SwiftTripsDB;User Id=sa;Password=sa123456;TrustServerCertificate=true";
+        //    "Server=.;Database=SwiftTripsDB;User Id=sa;Password=sa123456;TrustServerCertificate=true";
 
 
-        public AppDbContext()
+        public AppDbContext(DbContextOptions options) :base(options)
         {
         }
   
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(_dbConnectionString);
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(_dbConnectionString);
            
-        }
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

@@ -32,11 +32,11 @@ namespace Business_Layer.Classes
 
 
 
-        public static dynamic GetAllPeople()
-        {
+        //public static dynamic GetAllPeople()
+        //{
 
-            return DataAccess_Layer.Entities.ePeopleDA.GetAllPeople();
-        }
+        //    return DataAccess_Layer.Entities.ePeopleDA.GetAllPeople();
+        //}
 
 
 

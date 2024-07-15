@@ -28,80 +28,93 @@ namespace API_Layer.DTOs
         public string? ProfilePicPath { get; set; }
 
 
-        public static dynamic GetAllPeople()
-        {
-            //AppDbContext context = new AppDbContext();
+        //public static dynamic GetAllPeople()
+        //{
+        //    //AppDbContext context = new AppDbContext();
 
-            //List<dtoPerson> peopleDTO = new List<dtoPerson>();
+        //    //List<dtoPerson> peopleDTO = new List<dtoPerson>();
 
 
-            //List<ePeopleDA> PeopleEntitys = context.People.ToList();
+        //    //List<ePeopleDA> PeopleEntitys = context.People.ToList();
             
 
-            //foreach(ePeopleDA person in PeopleEntitys)
-            //{
-            //    peopleDTO.Add(new dtoPerson
-            //    {
-            //        FirstName = person.FirstName,
-            //        LastName = person.LastName,
-            //        Address = person.Address,
-            //        Phone = person.Phone,
-            //        Gender = person.Gender,
-            //        CountryID = person.CountryID,
-            //        DateOfBirth = person.DateOfBirth,
-            //        ProfilePicPath = person.ProfilePicPath
+        //    //foreach(ePeopleDA person in PeopleEntitys)
+        //    //{
+        //    //    peopleDTO.Add(new dtoPerson
+        //    //    {
+        //    //        FirstName = person.FirstName,
+        //    //        LastName = person.LastName,
+        //    //        Address = person.Address,
+        //    //        Phone = person.Phone,
+        //    //        Gender = person.Gender,
+        //    //        CountryID = person.CountryID,
+        //    //        DateOfBirth = person.DateOfBirth,
+        //    //        ProfilePicPath = person.ProfilePicPath
 
 
-            //    });
-            //}
+        //    //    });
+        //    //}
 
-            return Business_Layer.Classes.clsPeople.GetAllPeople();   
+        //    return Business_Layer.Classes.clsPeople.GetAllPeople();   
             
-        }
+        //}
 
 
-        public static dtoPerson GetPerson(int personID)
-        {
-            if (personID <= 0)
-                return null;
+        //public static dtoPerson GetPerson(int personID)
+        //{
+        //    if (personID <= 0)
+        //        return null;
 
-            AppDbContext context = new AppDbContext();
+        //    AppDbContext context = new AppDbContext();
 
 
-            ePeopleDA person =
-                context.People.Select(e => e).Where(e => e.PersonID == personID).FirstOrDefault();
+        //    ePeopleDA person =
+        //        context.People.Select(e => e).Where(e => e.PersonID == personID).FirstOrDefault();
 
-            if (person == null)
-                return null;
+        //    if (person == null)
+        //        return null;
 
-            return new dtoPerson()
-            {
-                FirstName = person.FirstName,
-                LastName = person.LastName,
-                Address = person.Address,
-                Phone = person.Phone,
-                Gender = person.Gender,
-                CountryID = person.CountryID,
-                DateOfBirth = person.DateOfBirth,
-                ProfilePicPath = person.ProfilePicPath
-            };
-        }
+        //    return new dtoPerson()
+        //    {
+        //        FirstName = person.FirstName,
+        //        LastName = person.LastName,
+        //        Address = person.Address,
+        //        Phone = person.Phone,
+        //        Gender = person.Gender,
+        //        CountryID = person.CountryID,
+        //        DateOfBirth = person.DateOfBirth,
+        //        ProfilePicPath = person.ProfilePicPath
+        //    };
+        //}
 
 
        
-        public static bool DeletePerson(int PersonID)
-        {
-            return ePeopleDA.DeletePerson(PersonID);
-        }
+        //public static bool DeletePerson(int PersonID)
+        //{
+        //    return ePeopleDA.DeletePerson(PersonID);
+        //}
 
-        public static bool UpdatePerson(ePeopleDA Person, int ID)
-        {
-            return ePeopleDA.UpatePerson(Person, ID);
-        }
+        //public static bool UpdatePerson(ePeopleDA Person, int ID)
+        //{
+        //    return ePeopleDA.UpatePerson(Person, ID);
+        //}
 
-        public static bool PatchPerson(JsonPatchDocument<ePeopleDA> Person, int ID)
-        {
-            return ePeopleDA.PatchPerson(Person, ID);
-        }
+        //public static bool PatchPerson(JsonPatchDocument<ePeopleDA> Person, int ID)
+        //{
+        //    return ePeopleDA.PatchPerson(Person, ID);
+        //}
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
