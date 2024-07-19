@@ -1,10 +1,10 @@
-﻿
-using API_Layer.DTOs;
+﻿using API_Layer.DTOs;
 using DataAccess_Layer;
 using DataAccess_Layer.Entities;
 using DataAccess_Layer.Repository;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace API_Layer.Controllers.people
 {
@@ -13,6 +13,7 @@ namespace API_Layer.Controllers.people
     public class PeopleController : ControllerBase
     {
         private readonly IBasicRepository<ePeopleDA> _basicRepo;
+        
 
         public PeopleController(IBasicRepository<ePeopleDA> basicRepo)
         {
@@ -20,41 +21,41 @@ namespace API_Layer.Controllers.people
         }
 
         [HttpGet("GetAllPeople")]
-        public dynamic GetAllPeople()
+        public ActionResult<dynamic> GetAllPeople()
         {
-            return _basicRepo.GetAllItem();
-
-            //return dtoPerson.GetAllPeople();
-
-            //return temp.ExecGetAllPeople();
+            return Ok(_basicRepo.GetAllItem());
         }
 
 
 
         [HttpGet("GetPerson")]
-        public ActionResult<dynamic> GetPerson(int PersonID)
+        public ActionResult<dtoPerson> GetPerson(int PersonID)
         {
             var person = _basicRepo.GetItem(PersonID);
+
+            
 
             if (person == null)
             {
                 return BadRequest();
             }
 
-            return Ok(person);
+            return Ok(dtoPerson.ToDTO(person));
         }
 
 
 
         [HttpPost("AddPerson")]
-        public ActionResult<dynamic> CreatePerson(ePeopleDA Person)
+        public ActionResult<dynamic> CreatePerson([FromBody] ePeopleDA Person)
         {
 
-            if (!ModelState.IsValid)
-            {
+            if (!ModelState.IsValid)           
                 return BadRequest(ModelState);
-            }
+            
 
+            if (Person == null)           
+                return BadRequest();
+            
 
             if (_basicRepo.AddItem(Person))
             {

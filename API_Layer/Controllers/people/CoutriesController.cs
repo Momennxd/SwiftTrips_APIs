@@ -26,14 +26,12 @@ namespace API_Layer.Controllers.people
         public ActionResult<dynamic> GetAllCountries()
         {
             return _basicRepo.GetAllItem();
-            //return eCountriesDA.GetAllCountries();
         }
 
         [HttpGet("GetCountry")]
         public ActionResult<dynamic> GetCountry(int ID)
         {
             return _basicRepo.GetItem(ID);
-            // return eCountriesDA.GetCountry(ID);
         }
 
 
@@ -43,7 +41,6 @@ namespace API_Layer.Controllers.people
         {
             if (_basicRepo.AddItem(country))
             {
-
                 return Ok(country);
             }
 
