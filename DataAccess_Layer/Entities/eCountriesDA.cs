@@ -19,7 +19,7 @@ namespace DataAccess_Layer
         public int CountryID { get; }
 
 
-        public string CountryName { get; set; }
+        public required string CountryName { get; set; }
 
 
         

@@ -18,17 +18,17 @@ namespace DataAccess_Layer.Entities
         public int PersonID { get; }
 
 
-        public string FirstName {get; set; }
+        public required string FirstName {get; set; }
 
 
-        public string LastName { get; set; }
+        public required string LastName { get; set; }
 
 
         public string? Address { get; set; }
 
         public string? Phone { get; set; }
 
-        public string Gender { get; set; }
+        public required string Gender { get; set; }
 
         public int CountryID { get; set; }
 

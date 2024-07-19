@@ -34,6 +34,10 @@ namespace ConsoleApp1
         {
             modelBuilder.Entity<eCountriesDA>().HasKey(e=> e.CountryID);
             modelBuilder.Entity<ePeopleDA>().HasKey(e => e.PersonID);
+            modelBuilder.Entity<eHotelsManagersDA>().HasKey(e => e.HotelManagerID);
+            modelBuilder.Entity<eHotelsManagersHotelsDA>().HasKey(e => e.ID);
+            modelBuilder.Entity<eHotelsDA>().HasKey(e => e.HotelID);
+            modelBuilder.Entity<eHotelsPicsDA>().HasKey(e => e.HotelID);
 
         }
 
@@ -46,6 +50,14 @@ namespace ConsoleApp1
         public DbSet<eCountriesDA> Countries {  get; set; }
 
         public DbSet<ePeopleDA> People { get; set; }
+
+        public DbSet<eHotelsManagersDA> HotelManagers { get; set; }
+
+        public DbSet<eHotelsManagersHotelsDA> HotelsManagersHotels { get; set; }
+
+        public DbSet<eHotelsDA> Hotels { get; set; }
+
+        public DbSet<eHotelsPicsDA> HotelsPics { get; set; }
 
 
 
