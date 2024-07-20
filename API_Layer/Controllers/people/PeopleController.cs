@@ -1,114 +1,130 @@
 ﻿using API_Layer.DTOs;
-using DataAccess_Layer;
-using DataAccess_Layer.Entities.People;
-using DataAccess_Layer.Repository;
+using Core_Layer;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using DataAccess_Layer;
 
 namespace API_Layer.Controllers.people
 {
     [Route("API/People")]
     [ApiController]
     public class PeopleController : ControllerBase
-    {
-        private readonly IBasicRepository<ePeopleDA> _basicRepo;
+    {        
+        private clsPerson _Person { get; set; }
+
+
+        public PeopleController()
+        {
+            _Person = new clsPerson();
+
+
+        }
+
+
+
         
 
-        public PeopleController(IBasicRepository<ePeopleDA> basicRepo)
-        {
-            _basicRepo=basicRepo;
-        }
+
+
+
+
+        //EndPoints------------------------------------------------------->
 
         [HttpGet("GetAllPeople")]
-        public ActionResult<dynamic> GetAllPeople()
-        {
-            return Ok(_basicRepo.GetAllItem());
+        public ActionResult GetAllPeople()
+        {       
+           return Ok(PeopleDTOs.ToDTO(_Person.GetAllItem()));
         }
 
 
 
-        [HttpGet("GetPerson")]
-        public ActionResult<dtoPerson> GetPerson(int PersonID)
-        {
-            var person = _basicRepo.GetItem(PersonID);
+
+
+
+
+
+        //[HttpGet("GetPerson")]
+        //public ActionResult<dtoPerson> GetPerson(int PersonID)
+        //{
+        //    var person = _basicRepo.GetItem(PersonID);
 
             
 
-            if (person == null)
-            {
-                return BadRequest();
-            }
+        //    if (person == null)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            return Ok(dtoPerson.ToDTO(person));
-        }
+        //    return Ok(dtoPerson.ToDTO(person));
+        //}
 
 
 
-        [HttpPost("AddPerson")]
-        public ActionResult<dynamic> CreatePerson([FromBody] ePeopleDA Person)
-        {
+        //[HttpPost("AddPerson")]
+        //public ActionResult<dynamic> CreatePerson([FromBody] ePeopleDA Person)
+        //{
 
-            if (!ModelState.IsValid)           
-                return BadRequest(ModelState);
+        //    if (!ModelState.IsValid)           
+        //        return BadRequest(ModelState);
             
 
-            if (Person == null)           
-                return BadRequest();
+        //    if (Person == null)           
+        //        return BadRequest();
             
 
-            if (_basicRepo.AddItem(Person))
-            {
-                return Ok(Person);
-            }
+        //    if (_basicRepo.AddItem(Person))
+        //    {
+        //        return Ok(Person);
+        //    }
 
-            return BadRequest();
-        }
-
-
-
-        [HttpDelete("DeletePerson")]
-        public ActionResult<dynamic> DeletePerson(int ID)
-        {
-
-            if (_basicRepo.DeleteItem(ID))
-            {
-                return Ok();
-            }
+        //    return BadRequest();
+        //}
 
 
 
-            return BadRequest();
-        }
+        //[HttpDelete("DeletePerson")]
+        //public ActionResult<dynamic> DeletePerson(int ID)
+        //{
 
-
-        [HttpPut("putPeron")]
-        public ActionResult<dynamic> UpdatePerson([FromBody] ePeopleDA NewPerson, int ID)
-        {
-
-            if (_basicRepo.UpdateItem(NewPerson, ID))
-            {
-                return Ok();
-            }
+        //    if (_basicRepo.DeleteItem(ID))
+        //    {
+        //        return Ok();
+        //    }
 
 
 
-            return BadRequest();
-        }
+        //    return BadRequest();
+        //}
 
 
-        [HttpPatch("UpdatePartialPerson")]
-        public ActionResult<dynamic> PatcheCountry([FromBody] JsonPatchDocument<ePeopleDA> NewPerson, int ID)
-        {
+        //[HttpPut("putPeron")]
+        //public ActionResult<dynamic> UpdatePerson([FromBody] ePeopleDA NewPerson, int ID)
+        //{
 
-            if (_basicRepo.PatchItem(NewPerson, ID))
-            {
-                return Ok(true);
-            }
+        //    if (_basicRepo.UpdateItem(NewPerson, ID))
+        //    {
+        //        return Ok();
+        //    }
 
 
-            return BadRequest();
-        }
+
+        //    return BadRequest();
+        //}
+
+
+        //[HttpPatch("UpdatePartialPerson")]
+        //public ActionResult<dynamic> PatcheCountry([FromBody] JsonPatchDocument<ePeopleDA> NewPerson, int ID)
+        //{
+
+        //    if (_basicRepo.PatchItem(NewPerson, ID))
+        //    {
+        //        return Ok(true);
+        //    }
+
+
+        //    return BadRequest();
+        //}
 
     }
 }

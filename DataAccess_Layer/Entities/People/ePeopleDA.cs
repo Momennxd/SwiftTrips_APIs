@@ -18,7 +18,7 @@ namespace DataAccess_Layer.Entities.People
         public int PersonID { get; }
 
 
-        public required string FirstName { get; set; }
+        public string FirstName { get; set; }
 
 
         public string? LastName { get; set; }
@@ -36,6 +36,11 @@ namespace DataAccess_Layer.Entities.People
 
         public string? ProfilePicPath { get; set; }
 
+        public string? Email { get; set; }
+
+        public DateTime JoinedDate { get; set; }
+
+        public string? Notes { get; set; }
 
 
     }

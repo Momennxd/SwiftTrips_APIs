@@ -28,6 +28,9 @@ namespace ConsoleApp1
         {
         }
 
+        public AppDbContext()
+        {
+        }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -47,15 +50,18 @@ namespace ConsoleApp1
             modelBuilder.Entity<eFacilitiesCategoriesDA>().HasKey(e => e.FacilityCategoryID);
             modelBuilder.Entity<eFacilitiesDA>().HasKey(e => e.FacilityID);
             modelBuilder.Entity<eHotelFacilitiesDA>().HasKey(e => e.HotelFactilityID);
-            
+            modelBuilder.Entity<eLanguageDA>().HasKey(e => e.LanguageID);
+            modelBuilder.Entity<ePreferedPeopleLanguagesDA>().HasKey(e => e.LanguagePersonID);
+
 
         }
 
 
 
+
+
+
         //tabels
-
-
 
         public DbSet<eCountriesDA> Countries {  get; set; }
 
@@ -79,7 +85,7 @@ namespace ConsoleApp1
 
         public DbSet<eLanguageDA> Languages { get; set; }
 
-        public DbSet<ePerformancePeopleLanuageDA> PerformancePeopleLanguages { get; set; }
+        public DbSet<ePreferedPeopleLanguagesDA> PreferedPeopleLanguages { get; set; }
 
 
 

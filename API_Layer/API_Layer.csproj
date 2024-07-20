@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DataAccess_Layer\DataAccess_Layer.csproj" />
+    <ProjectReference Include="..\Core_Layer\Core_Layer.csproj" />
   </ItemGroup>
 
 </Project>

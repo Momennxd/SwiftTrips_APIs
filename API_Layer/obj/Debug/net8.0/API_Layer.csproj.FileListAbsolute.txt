@@ -315,3 +315,5 @@ D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\r
 D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\API_Layer.pdb
 D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\API_Layer.genruntimeconfig.cache
 D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\ref\API_Layer.dll
+D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\bin\Debug\net8.0\Core_Layer.dll
+D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\bin\Debug\net8.0\Core_Layer.pdb

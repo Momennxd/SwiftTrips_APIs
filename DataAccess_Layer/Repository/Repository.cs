@@ -15,17 +15,33 @@ namespace DataAccess_Layer.Repository
 {
     public class Repository<T> : IBasicRepository<T> where T : class
     {
-        private readonly AppDbContext context;
+        private AppDbContext ? context;
 
-        public Repository(AppDbContext context)
+        /// <summary>
+        /// Initializes the class by Initializing the appDbContext 
+        /// </summary>
+        /// <param name="context"></param>
+        /// <returns>
+        /// True if init successfully, False if context is null
+        /// </returns>
+        protected bool Init(AppDbContext context)
         {
-            this.context = context;
+
+            if (this.context != null)
+                return false;
+
+            this.context = context;           
+
+            return true;
         }
 
 
+        public T BaseObject { get; set; }
+
         public dynamic GetAllItem()
         {
-
+            if (context == null)
+                return null;
 
             return context.Set<T>().ToList();
 
@@ -39,6 +55,9 @@ namespace DataAccess_Layer.Repository
             if (ItemID <= 0)
                 return null;
 
+            if (context == null)
+                return null;
+
             return context.Set<T>().Find(ItemID);
         }
 
@@ -47,9 +66,9 @@ namespace DataAccess_Layer.Repository
     
         public bool AddItem(T Item)
         {
-            if (Item == null)        
+            if (Item == null || context== null)        
                 return false;
-            
+          
 
             try
             {
@@ -71,7 +90,7 @@ namespace DataAccess_Layer.Repository
 
         public bool DeleteItem(int ItemID)
         {
-            if (ItemID <= 0)
+            if (ItemID <= 0 || context == null)
             {
                 return false;
             }
@@ -100,7 +119,7 @@ namespace DataAccess_Layer.Repository
 
         public bool UpdateItem(T NewItem, int ItemID)
         {
-            if (NewItem == null)
+            if (NewItem == null || context == null)
             {
                 return false;
             }
@@ -162,7 +181,7 @@ namespace DataAccess_Layer.Repository
         public bool PatchItem(JsonPatchDocument<T> NewItem, int ItemID)
         {
 
-            if (NewItem == null || ItemID <= 0)
+            if (NewItem == null || ItemID <= 0 || context == null)
             {
                 return false;
             }

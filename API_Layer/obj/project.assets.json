@@ -1162,6 +1162,19 @@
           }
         }
       },
+      "Core_Layer/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "DataAccess_Layer": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core_Layer.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core_Layer.dll": {}
+        }
+      },
       "DataAccess_Layer/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3374,6 +3387,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Core_Layer/1.0.0": {
+      "type": "project",
+      "path": "../Core_Layer/Core_Layer.csproj",
+      "msbuildProject": "../Core_Layer/Core_Layer.csproj"
+    },
     "DataAccess_Layer/1.0.0": {
       "type": "project",
       "path": "../DataAccess_Layer/DataAccess_Layer.csproj",
@@ -3382,45 +3400,41 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "DataAccess_Layer >= 1.0.0",
+      "Core_Layer >= 1.0.0",
       "Microsoft.AspNetCore.JsonPatch >= 8.0.6",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 8.0.6",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ahmed Ben Sahmaln\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\ALYOSER\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
+      "projectUniqueName": "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
       "projectName": "API_Layer",
-      "projectPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
-      "packagesPath": "C:\\Users\\Ahmed Ben Sahmaln\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\obj\\",
+      "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
+      "packagesPath": "C:\\Users\\ALYOSER\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\API_Layer\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Ahmed Ben Sahmaln\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\ALYOSER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj": {
-              "projectPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj"
+            "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\Core_Layer\\Core_Layer.csproj": {
+              "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\Core_Layer\\Core_Layer.csproj"
             }
           }
         }
@@ -3429,11 +3443,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3472,17 +3481,11 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
   "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

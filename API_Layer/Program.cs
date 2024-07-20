@@ -1,5 +1,4 @@
 using ConsoleApp1;
-using DataAccess_Layer.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,7 +13,6 @@ builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
                builder.Configuration.GetConnectionString("MyConnection")
                ));
-builder.Services.AddScoped(typeof(IBasicRepository<>), typeof(Repository<>));
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
