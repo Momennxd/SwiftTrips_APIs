@@ -1,5 +1,9 @@
-﻿using DataAccess_Layer;
-using DataAccess_Layer.Entities;
+﻿using DataAccess_Layer.Entities;
+using DataAccess_Layer.Entities.Bridges;
+using DataAccess_Layer.Entities.Facilities;
+using DataAccess_Layer.Entities.Hotels;
+using DataAccess_Layer.Entities.Logs;
+using DataAccess_Layer.Entities.People;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -38,6 +42,10 @@ namespace ConsoleApp1
             modelBuilder.Entity<eHotelsManagersHotelsDA>().HasKey(e => e.ID);
             modelBuilder.Entity<eHotelsDA>().HasKey(e => e.HotelID);
             modelBuilder.Entity<eHotelsPicsDA>().HasKey(e => e.HotelID);
+            modelBuilder.Entity<eUsersDA>().HasKey(e => e.UserID);
+            modelBuilder.Entity<eFacilitiesCategoriesDA>().HasKey(e => e.FacilityCategoryID);
+            modelBuilder.Entity<eFacilitiesDA>().HasKey(e => e.FacilityID);
+            modelBuilder.Entity<eHotelFacilitiesDA>().HasKey(e => e.HotelFactilityID);
 
         }
 
@@ -58,6 +66,16 @@ namespace ConsoleApp1
         public DbSet<eHotelsDA> Hotels { get; set; }
 
         public DbSet<eHotelsPicsDA> HotelsPics { get; set; }
+
+        public DbSet<eUsersDA> Users { get; set; }
+
+        public DbSet<eFacilitiesCategoriesDA> FacilitiesCategories { get; set; }
+
+        public DbSet<eFacilitiesDA> Facilities { get; set; }
+
+        public DbSet<eHotelFacilitiesDA> HotelFacilities { get; set; }
+
+
 
 
 

@@ -1,6 +1,6 @@
 ﻿using API_Layer.DTOs;
 using DataAccess_Layer;
-using DataAccess_Layer.Entities;
+using DataAccess_Layer.Entities.People;
 using DataAccess_Layer.Repository;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;

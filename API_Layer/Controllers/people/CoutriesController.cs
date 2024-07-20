@@ -2,7 +2,7 @@
 
 using Azure;
 using ConsoleApp1;
-using DataAccess_Layer;
+using DataAccess_Layer.Entities.People;
 using DataAccess_Layer.Repository;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
