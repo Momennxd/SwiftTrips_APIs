@@ -25,7 +25,11 @@ namespace DataAccess_Layer.Repository
 
         public dynamic GetAllItem()
         {
+
+
             return context.Set<T>().ToList();
+
+
         }
 
 

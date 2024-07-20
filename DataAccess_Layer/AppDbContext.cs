@@ -2,6 +2,7 @@
 using DataAccess_Layer.Entities.Bridges;
 using DataAccess_Layer.Entities.Facilities;
 using DataAccess_Layer.Entities.Hotels;
+using DataAccess_Layer.Entities.Language.cs;
 using DataAccess_Layer.Entities.Logs;
 using DataAccess_Layer.Entities.People;
 using Microsoft.EntityFrameworkCore;
@@ -46,6 +47,7 @@ namespace ConsoleApp1
             modelBuilder.Entity<eFacilitiesCategoriesDA>().HasKey(e => e.FacilityCategoryID);
             modelBuilder.Entity<eFacilitiesDA>().HasKey(e => e.FacilityID);
             modelBuilder.Entity<eHotelFacilitiesDA>().HasKey(e => e.HotelFactilityID);
+            
 
         }
 
@@ -74,6 +76,10 @@ namespace ConsoleApp1
         public DbSet<eFacilitiesDA> Facilities { get; set; }
 
         public DbSet<eHotelFacilitiesDA> HotelFacilities { get; set; }
+
+        public DbSet<eLanguageDA> Languages { get; set; }
+
+        public DbSet<ePerformancePeopleLanuageDA> PerformancePeopleLanguages { get; set; }
 
 
 
