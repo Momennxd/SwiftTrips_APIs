@@ -3,13 +3,43 @@
   "WorkspaceRootPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\reservation\\ereservationtransactionda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\hotels\\ehotelsda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\accommodation\\eaccommdoationbasesda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\payments\\epaymentstypeda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\accommodation\\eaccommodationpatmentsmethodda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\accommodation\\eaccommodationfacilitiesda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\accommodation\\eaccommodationdiscountda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\accommodation\\eaccommodatiopicsda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\accommodation\\eaccommodationpricesda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\people\\euserssessionsda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Core_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\clsperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\people\\eusersda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\repository\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\language.cs\\eperformancepeoplelanuageda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\entities\\language.cs\\elanguageda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -39,10 +69,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\api_layer\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\api_layer\\dtos\\dtoperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:dtos\\dtoperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\api_layer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -76,6 +102,13 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\eCountriesDA.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Language.cs\\ePerformancePeopleLanuageDA.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\DTOs\\dtoPerson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DTOs\\dtoPerson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,45 +123,178 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "eReservationTransactionDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Reservation\\eReservationTransactionDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Reservation\\eReservationTransactionDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Reservation\\eReservationTransactionDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Reservation\\eReservationTransactionDA.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T16:18:24.47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "eHotelsDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Hotels\\eHotelsDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Hotels\\eHotelsDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Hotels\\eHotelsDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Hotels\\eHotelsDA.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAzwCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T16:13:00.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "eAccommodationFacilitiesDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationFacilitiesDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationFacilitiesDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationFacilitiesDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationFacilitiesDA.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T15:01:17.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ePaymentsTypeDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Payments\\ePaymentsTypeDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Payments\\ePaymentsTypeDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Payments\\ePaymentsTypeDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Payments\\ePaymentsTypeDA.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T15:01:09.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "eAccommdoationBasesDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommdoationBasesDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommdoationBasesDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommdoationBasesDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommdoationBasesDA.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAADwvzAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T14:22:05.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "eAccommodationPatmentsMethodDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationPatmentsMethodDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationPatmentsMethodDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationPatmentsMethodDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationPatmentsMethodDA.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T15:01:18.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "eAccommodationDiscountDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationDiscountDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationDiscountDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationDiscountDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationDiscountDA.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T15:01:15.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "eAccommodatioPicsDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodatioPicsDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodatioPicsDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodatioPicsDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodatioPicsDA.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T14:50:33.959Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "eAccommodationPricesDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationPricesDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationPricesDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationPricesDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommodationPricesDA.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T14:51:06.949Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "eUsersSessionsDA.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\People\\eUsersSessionsDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\People\\eUsersSessionsDA.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\People\\eUsersSessionsDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\People\\eUsersSessionsDA.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA1wBkAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T14:15:38.427Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "clsPerson.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\clsPerson.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\clsPerson.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\clsPerson.cs",
+              "RelativeToolTip": "..\\Core_Layer\\clsPerson.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-21T14:12:20.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "eUsersDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\People\\eUsersDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\People\\eUsersDA.cs",
               "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\People\\eUsersDA.cs",
               "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\People\\eUsersDA.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T11:44:14.905Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T11:44:14.905Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "DataAccess_Layer",
+              "DocumentIndex": 16,
+              "Title": "DataAccess_Layer.csproj",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\DataAccess_Layer.csproj",
               "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj",
               "RelativeToolTip": "..\\DataAccess_Layer\\DataAccess_Layer.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-07-20T11:36:14.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T11:36:14.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "API_Layer",
+              "DocumentIndex": 17,
+              "Title": "API_Layer.csproj",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
               "RelativeDocumentMoniker": "API_Layer.csproj",
               "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
               "RelativeToolTip": "API_Layer.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-07-20T11:36:09.956Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T11:36:09.956Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 14,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\AppDbContext.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\AppDbContext.cs",
@@ -136,12 +302,11 @@
               "RelativeToolTip": "..\\DataAccess_Layer\\AppDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T11:34:17.351Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T11:34:17.351Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 13,
               "Title": "eLanguageDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Language.cs\\eLanguageDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Language.cs\\eLanguageDA.cs",
@@ -149,12 +314,11 @@
               "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Language.cs\\eLanguageDA.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T11:33:13.131Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T11:33:13.131Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "ePeopleDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\People\\ePeopleDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\People\\ePeopleDA.cs",
@@ -162,12 +326,11 @@
               "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\People\\ePeopleDA.cs",
               "ViewState": "AQIAABEAAAAAAAAAAAAAABwAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T11:25:59.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T11:25:59.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 32,
               "Title": "ePerformancePeopleLanuageDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Language.cs\\ePerformancePeopleLanuageDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Language.cs\\ePerformancePeopleLanuageDA.cs",
@@ -175,12 +338,11 @@
               "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Language.cs\\ePerformancePeopleLanuageDA.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T11:24:06.951Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T11:24:06.951Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 12,
               "Title": "Repository.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Repository\\Repository.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Repository\\Repository.cs",
@@ -188,12 +350,11 @@
               "RelativeToolTip": "..\\DataAccess_Layer\\Repository\\Repository.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-15T23:01:11.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-15T23:01:11.252Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 18,
               "Title": "eUsersSessionsDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Logs\\eUsersSessionsDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Logs\\eUsersSessionsDA.cs",
@@ -201,12 +362,11 @@
               "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Logs\\eUsersSessionsDA.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T11:05:23.017Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T11:05:23.017Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 19,
               "Title": "eHotelsManagersHotelsDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Bridges\\eHotelsManagersHotelsDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Bridges\\eHotelsManagersHotelsDA.cs",
@@ -214,12 +374,11 @@
               "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Bridges\\eHotelsManagersHotelsDA.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-20T11:05:05.972Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-20T11:05:05.972Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 20,
               "Title": "eHotelFacilitiesDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\eHotelFacilitiesDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\eHotelFacilitiesDA.cs",
@@ -230,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 28,
               "Title": "eFacilitiesDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\eFacilitiesDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\eFacilitiesDA.cs",
@@ -242,7 +401,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 29,
               "Title": "eFacilitiesCategoriesDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\eFacilitiesCategoriesDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\eFacilitiesCategoriesDA.cs",
@@ -254,7 +413,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 21,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -266,7 +425,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 26,
               "Title": "clsPeople.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Business_Layer\\Classes\\clsPeople.cs",
               "RelativeDocumentMoniker": "..\\Business_Layer\\Classes\\clsPeople.cs",
@@ -278,7 +437,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 27,
               "Title": "temp.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\temp.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\temp.cs",
@@ -290,7 +449,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 30,
               "Title": "ePeopleDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\ePeopleDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\ePeopleDA.cs",
@@ -302,7 +461,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 31,
               "Title": "eCountriesDA.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\eCountriesDA.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\eCountriesDA.cs",
@@ -314,7 +473,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 22,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -326,7 +485,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 33,
               "Title": "dtoPerson.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\DTOs\\dtoPerson.cs",
               "RelativeDocumentMoniker": "DTOs\\dtoPerson.cs",
@@ -338,7 +497,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 25,
               "Title": "IBasicRepository.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Repository\\IBasicRepository.cs",
               "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Repository\\IBasicRepository.cs",
@@ -350,7 +509,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 23,
               "Title": "PeopleController.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\PeopleController.cs",
               "RelativeDocumentMoniker": "Controllers\\people\\PeopleController.cs",
@@ -362,7 +521,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 24,
               "Title": "CoutriesController.cs",
               "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\CoutriesController.cs",
               "RelativeDocumentMoniker": "Controllers\\people\\CoutriesController.cs",
