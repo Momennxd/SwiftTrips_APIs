@@ -11,9 +11,7 @@
     public DateTime EndDate { get; set; }   
 
 
-    // Nagivation Property
-
-    public eAccommodationPricesDA pricePrices { get; set; }
+   
 
 
 }

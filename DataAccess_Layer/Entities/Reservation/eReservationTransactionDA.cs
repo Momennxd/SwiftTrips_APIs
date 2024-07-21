@@ -21,9 +21,7 @@ namespace DataAccess_Layer.Entities.Reservation
         public int PricePaid { get; set; }
 
 
-        // Navigation Property 
-
-        public eHotlesReservationsDA hotlesReservations { get; set; }
+       
 
 
 
