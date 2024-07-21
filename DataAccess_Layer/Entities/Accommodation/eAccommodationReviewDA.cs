@@ -18,10 +18,5 @@ public class eAccommodationReviewDA
     public int AccommodationBaseID { get; set; }
 
 
-    // Navigation Property 
-
-    public eUsersDA users  { get; set; }
-
-
-    public eAccommdoationBasesDA accommdoationBases { get; set; }
+   
 }

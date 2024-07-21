@@ -23,8 +23,6 @@ namespace DataAccess_Layer.Entities.People
         public int InValidReason {  get; set; }
 
 
-        // Navigation Property
-
-        public eUsersDA usersDA { get; set; }
+       
     }
 }

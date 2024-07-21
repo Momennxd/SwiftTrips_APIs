@@ -10,9 +10,7 @@ public class eAccommodationPricesDA
 
     public short NumberOfPeople { get; set; }
 
-    // Navigation  Property
-
-    public eAccommdoationBasesDA accommdoationBases { get; set; }
+   
 
 }
 

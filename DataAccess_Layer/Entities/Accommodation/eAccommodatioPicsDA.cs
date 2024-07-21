@@ -13,8 +13,6 @@ public class eAccommodatioPicsDA
 
     public string PicName { get; set; }
 
-    // Navigation Property
-
-    public eAccommdoationBasesDA accommdoationBases { get; set; }
+    
 }
 
