@@ -13,9 +13,9 @@ using System.Threading.Tasks;
 
 namespace DataAccess_Layer.Repository
 {
-    public class Repository<T> : IBasicRepository<T> where T : class
+    public abstract class Repository<T> : IBasicRepository<T> where T : class
     {
-        private AppDbContext ? context;
+        protected AppDbContext context;
 
         /// <summary>
         /// Initializes the class by Initializing the appDbContext 
@@ -24,19 +24,26 @@ namespace DataAccess_Layer.Repository
         /// <returns>
         /// True if init successfully, False if context is null
         /// </returns>
-        protected bool Init(AppDbContext context)
+        private bool InitContext()
         {
-
-            if (this.context != null)
-                return false;
-
-            this.context = context;           
-
+            this.context = new AppDbContext();
             return true;
         }
 
+        public Repository()
+        {
+            InitContext();
+            InitBaseObject();
+        }
 
-        public T BaseObject { get; set; }
+
+        /// <summary>
+        /// This function init the base object with the default values depending on the child class.
+        /// </summary>
+        protected abstract void InitBaseObject();
+        
+
+        public T  BaseObject { get; set; }
 
         public dynamic GetAllItem()
         {

@@ -18,7 +18,7 @@ namespace DataAccess_Layer.Entities
         public int HotelManagerID { get; }
 
 
-        public int UserID { get; set; }
+        public required int UserID { get; set; }
 
 
        

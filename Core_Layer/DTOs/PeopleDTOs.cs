@@ -11,6 +11,11 @@ namespace API_Layer.DTOs
         string? Email, DateTime JoinedDate, string? Notes);
 
 
+        public record CreatePersonDTO(string FirstName, string? LastName, string? Address,
+
+       string? Phone, string? Gender, int CountryID, DateTime? DateOfBirth, string? ProfilePicPath,
+       string? Email, string? Notes);
+
 
         /// <summary>
         /// Converts a "clsPerson object" to a "SendPersonDTO" DTO.

@@ -3,7 +3,6 @@ using Core_Layer;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using DataAccess_Layer;
 
 namespace API_Layer.Controllers.people
 {
@@ -17,13 +16,9 @@ namespace API_Layer.Controllers.people
         public PeopleController()
         {
             _Person = new clsPerson();
-
-
         }
 
 
-
-        
 
 
 
@@ -33,7 +28,7 @@ namespace API_Layer.Controllers.people
 
         [HttpGet("GetAllPeople")]
         public ActionResult GetAllPeople()
-        {       
+        {
            return Ok(PeopleDTOs.ToDTO(_Person.GetAllItem()));
         }
 
@@ -49,7 +44,7 @@ namespace API_Layer.Controllers.people
         //{
         //    var person = _basicRepo.GetItem(PersonID);
 
-            
+
 
         //    if (person == null)
         //    {
@@ -67,11 +62,11 @@ namespace API_Layer.Controllers.people
 
         //    if (!ModelState.IsValid)           
         //        return BadRequest(ModelState);
-            
+
 
         //    if (Person == null)           
         //        return BadRequest();
-            
+
 
         //    if (_basicRepo.AddItem(Person))
         //    {

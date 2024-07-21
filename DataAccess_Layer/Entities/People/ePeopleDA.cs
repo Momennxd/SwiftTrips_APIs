@@ -18,7 +18,7 @@ namespace DataAccess_Layer.Entities.People
         public int PersonID { get; }
 
 
-        public string FirstName { get; set; }
+        public required string FirstName { get; set; }
 
 
         public string? LastName { get; set; }
