@@ -1,17 +1,17 @@
 ﻿using Core_Layer;
+using DataAccess_Layer.Entities;
 using DataAccess_Layer.Entities.People;
+using static API_Layer.DTOs.UsersDTOs;
 
 namespace API_Layer.DTOs
 {
     public class HotelsManagersDTOs
     {
-        public record SendHotelsManagerDTO(int UserID, int PersonID, string Username, string Password);
+        public record SendHotelsManagerDTO(UsersDTOs.SendUserDTO User);
 
-        public record CreateUserDTO(string Username, string Password, string FirstName,
-            string? LastName, string? Address,
-        string? Phone, string? Gender, int CountryID, DateTime? DateOfBirth, string? ProfilePicPath,
-        string? Email, string? Notes);
+       // public record CreateHotelsManagerDTO(UsersDTOs.CreateUserDTO User);
 
+        public record CreateHotelsManagerDTO(string Username, string Password, string Name, int CountryID);
 
 
 
@@ -20,42 +20,56 @@ namespace API_Layer.DTOs
 
 
 
-        ///// <summary>
-        ///// Converts a "eUsersDA object" to a "SendUserDTO" DTO.
-        ///// </summary>
-        ///// <param name="user"></param>
-        ///// <returns></returns>
-        //public static SendUserDTO ToSendUserDTO(eUsersDA user)
-        //{
-        //    if (user == null)
-        //        return null;
+        /// <summary>
+        /// Converts a "eHotelsManagersDA object" to a "SendHotelsManagerDTO" DTO.
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public static SendHotelsManagerDTO ToSendHotelsManagerDTO(eHotelsManagersDA HotelManager)
+        {
+            if (HotelManager == null)
+                return null;
 
-        //    SendUserDTO dto = new SendUserDTO(user.UserID, user.PersonID,
-        //        user.Username, user.Password);
-
-        //    return dto;
-        //}
+            clsHotelsManager hotelsManager = new clsHotelsManager();
 
 
-        ///// <summary>
-        ///// Converts a "eUsersDA list" to a "SendUserDTO" DTOs list .
-        ///// </summary>
-        ///// <param name="person"></param>
-        ///// <returns></returns>
-        //public static List<SendUserDTO> ToSendUserDTO(List<eUsersDA> users)
-        //{
-        //    List<SendUserDTO> lstDTOs = new List<SendUserDTO> ();
+            SendHotelsManagerDTO dto = new SendHotelsManagerDTO(
+                UsersDTOs.ToSendUserDTO(hotelsManager.User));
 
-        //    foreach(eUsersDA user in users)
-        //    {
-        //        lstDTOs.Add(ToSendUserDTO(user));
-        //    }
-
-        //    return lstDTOs;
-        //}
-    
+            return dto;
+        }
 
 
+        /// <summary>
+        /// Converts a "eHotelsManagersDA list" to a "SendHotelsManagerDTO" DTOs list .
+        /// </summary>
+        /// <param name="person"></param>
+        /// <returns></returns>
+        public static List<SendHotelsManagerDTO> ToSendHotelsManagerDTO(List<eHotelsManagersDA> hotelers)
+        {
+            List<SendHotelsManagerDTO> lstDTOs = new List<SendHotelsManagerDTO>();
+
+            foreach (eHotelsManagersDA hoteler in hotelers)
+            {
+                lstDTOs.Add(ToSendHotelsManagerDTO(hoteler));
+            }
+
+            return lstDTOs;
+        }
+
+
+        public static eHotelsManagersDA ToHotelsManagerEntity(CreateHotelsManagerDTO HotelManagerDTO)
+        {
+            if (HotelManagerDTO == null)
+                return null;
+
+            eHotelsManagersDA eHotelManager = new eHotelsManagersDA()
+            {
+                UserID = -1
+            };
+
+            return eHotelManager;
+        }
 
     }
 }

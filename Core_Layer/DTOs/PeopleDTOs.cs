@@ -22,7 +22,7 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="person"></param>
         /// <returns></returns>
-        public static SendPersonDTO ToDTO(ePeopleDA person)
+        public static SendPersonDTO ToSendPersonDTO(ePeopleDA person)
         {
             if (person == null)
                 return null;
@@ -41,17 +41,45 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="person"></param>
         /// <returns></returns>
-        public static List<SendPersonDTO> ToDTO(List<ePeopleDA> People)
+        public static List<SendPersonDTO> ToSendPersonDTO(List<ePeopleDA> People)
         {
             List<SendPersonDTO> lstDTOs = new List<SendPersonDTO> ();
 
             foreach(ePeopleDA person in People)
             {
-                lstDTOs.Add(ToDTO(person));
+                lstDTOs.Add(ToSendPersonDTO(person));
             }
 
             return lstDTOs;
         }
 
+
+
+        public static ePeopleDA ToPersonEntity(CreatePersonDTO personDTO)
+        {
+            if (personDTO == null)
+                return null;
+
+            ePeopleDA person = new ePeopleDA()
+            {
+                FirstName = personDTO.FirstName,
+                LastName = personDTO.LastName,
+                Address = personDTO.Address,
+                Phone = personDTO.Phone,
+                Gender = personDTO.Gender,
+                CountryID = personDTO.CountryID,
+                DateOfBirth = personDTO.DateOfBirth,
+                ProfilePicPath = personDTO.ProfilePicPath,
+                Email = personDTO.Email,
+                JoinedDate = DateTime.Now,
+                Notes = personDTO.Notes
+
+            };
+
+
+
+
+            return person;
+        }
     }
 }

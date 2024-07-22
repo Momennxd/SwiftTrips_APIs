@@ -15,40 +15,45 @@ namespace Core_Layer
         {
         }
 
-        
-        
-        public static bool AddItem(UsersDTOs.CreateUserDTO userDTO)
+
+        public static bool DoesUserExist(string Username)
+        {
+            if (new clsUser().context.Users.SingleOrDefault(user => user.Username == Username) == null)
+                return false;
+
+            return true;    
+        }
+
+
+        /// <summary>
+        /// A static method to add a new user from its DTO.
+        /// </summary>
+        /// <param name="userDTO"></param>
+        /// <returns>
+        /// -1 if the user is has not been added successfully, UserID if has been added successfully.
+        /// </returns>
+        public static int AddItem(UsersDTOs.CreateUserDTO userDTO)
         {
             clsPerson UserPerson = new clsPerson();
 
-
-            UserPerson.BaseObject.FirstName = userDTO.Person.FirstName;
-            UserPerson.BaseObject.LastName = userDTO.Person.LastName;
-            UserPerson.BaseObject.Address = userDTO.Person.Address;
-            UserPerson.BaseObject.Phone = userDTO.Person.Phone;
-            UserPerson.BaseObject.Gender = userDTO.Person.Gender;
-            UserPerson.BaseObject.CountryID = userDTO.Person.CountryID;
-            UserPerson.BaseObject.DateOfBirth = userDTO.Person.DateOfBirth;
-            UserPerson.BaseObject.ProfilePicPath = userDTO.Person.ProfilePicPath;
-            UserPerson.BaseObject.Email = userDTO.Person.Email;
-            UserPerson.BaseObject.JoinedDate = DateTime.Now;
-            UserPerson.BaseObject.Notes = userDTO.Person.Notes;
+            UserPerson.BaseObject = PeopleDTOs.ToPersonEntity(userDTO.Person);
 
             if (!UserPerson.AddItem(UserPerson.BaseObject))
-                return false;
+                return -1;
 
 
             clsUser user = new clsUser();
+
+
+            user.BaseObject = UsersDTOs.ToUserEntity(userDTO);
             user.BaseObject.PersonID = UserPerson.BaseObject.PersonID;
-            user.BaseObject.Username = userDTO.Username;
-            user.BaseObject.Password = userDTO.Password;
-            user.BaseObject.IsActive = true;
+
 
             if (!user.AddItem(user.BaseObject))
-                return false;
+                return -1;
 
 
-            return true;
+            return user.BaseObject.UserID;
 
         }
 

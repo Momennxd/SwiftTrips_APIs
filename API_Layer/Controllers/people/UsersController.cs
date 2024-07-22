@@ -33,11 +33,17 @@ namespace API_Layer.Controllers.people
         public ActionResult AddUser(UsersDTOs.CreateUserDTO userDTO)
         {
 
-            if (clsUser.AddItem(userDTO))
-                return Ok(true);
+            if (clsUser.DoesUserExist(userDTO.Username))       
+                return BadRequest("Username already exists");
+            
+
+            int UserID = clsUser.AddItem(userDTO);
+
+            if (UserID != -1)
+                return Ok(UserID);
 
             else
-                return BadRequest(false);
+                return BadRequest(UserID);
         }
 
 

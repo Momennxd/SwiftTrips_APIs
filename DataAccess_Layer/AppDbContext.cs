@@ -67,7 +67,7 @@ namespace ConsoleApp1
 
         public DbSet<ePeopleDA> People { get; set; }
 
-        public DbSet<eHotelsManagersDA> HotelManagers { get; set; }
+        public DbSet<eHotelsManagersDA> HotelsManagers { get; set; }
 
         public DbSet<eHotelsManagersHotelsDA> HotelsManagersHotels { get; set; }
 

@@ -15,7 +15,7 @@ namespace DataAccess_Layer.Repository
 {
     public abstract class Repository<T> : IBasicRepository<T> where T : class
     {
-        protected AppDbContext context;
+        public AppDbContext context { get; private set; }
 
         /// <summary>
         /// Initializes the class by Initializing the appDbContext 
@@ -24,10 +24,9 @@ namespace DataAccess_Layer.Repository
         /// <returns>
         /// True if init successfully, False if context is null
         /// </returns>
-        private bool InitContext()
+        private void InitContext()
         {
             this.context = new AppDbContext();
-            return true;
         }
 
         public Repository()

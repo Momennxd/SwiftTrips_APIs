@@ -23,10 +23,6 @@ namespace DataAccess_Layer.Entities.Reservation
         public int PricePaid { get; set; }
 
 
-        // Navigation Property 
-
-        public eHotlesReservationsDA hotlesReservations { get; set; }
-
 
 
     }
@@ -62,11 +58,7 @@ public class eHotlesReservationsDA
     public DateTime ReservationDate { get; set; }  
     
 
-    // Navigation Property 
-
-    public eReservationTypeDA reservationType { get; set; }
-
-    public eAccommdoationBasesDA accommdoationBases { get; set; }
+   
 }
 
 

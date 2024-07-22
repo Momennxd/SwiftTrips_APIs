@@ -2,6 +2,7 @@
 using DataAccess_Layer.Entities.People;
 using Microsoft.AspNetCore.Identity;
 using System.Runtime.CompilerServices;
+using static API_Layer.DTOs.PeopleDTOs;
 
 namespace API_Layer.DTOs
 {
@@ -28,7 +29,7 @@ namespace API_Layer.DTOs
 
             clsPerson MainPerson = new clsPerson();
             
-            SendUserDTO dto = new SendUserDTO(user.UserID, PeopleDTOs.ToDTO(MainPerson.GetItem(user.PersonID)),
+            SendUserDTO dto = new SendUserDTO(user.UserID, PeopleDTOs.ToSendPersonDTO(MainPerson.GetItem(user.PersonID)),
                 user.Username, user.Password);
 
             return dto;
@@ -54,9 +55,19 @@ namespace API_Layer.DTOs
 
             return lstDTOs;
         }
- 
 
 
+
+        public static eUsersDA ToUserEntity(CreateUserDTO userDTO)
+        {
+            if (userDTO == null)
+                return null;
+
+            eUsersDA user = new eUsersDA() { IsActive = true, Username = userDTO.Username,
+            Password = userDTO.Password , PersonID = -1};
+
+            return user;
+        }
 
     }
 }

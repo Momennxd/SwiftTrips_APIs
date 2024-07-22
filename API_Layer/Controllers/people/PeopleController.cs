@@ -29,7 +29,7 @@ namespace API_Layer.Controllers.people
         [HttpGet("GetAllPeople")]
         public ActionResult GetAllPeople()
         {
-           return Ok(PeopleDTOs.ToDTO(_Person.GetAllItem()));
+           return Ok(PeopleDTOs.ToSendPersonDTO(_Person.GetAllItem()));
         }
 
 
