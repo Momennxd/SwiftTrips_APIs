@@ -13,11 +13,7 @@ namespace DataAccess_Layer.Entities.Accommodation
         public int AccommodationBaseID { get; set; }
 
 
-        // Navigation Property
-
-        public eFacilitiesDA facilities { get; set; }
-
-        public eAccommdoationBasesDA accommdoationBases { get; set; }
+       
              
     }
 }

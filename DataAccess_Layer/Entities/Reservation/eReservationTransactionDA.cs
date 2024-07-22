@@ -1,8 +1,6 @@
-﻿using DataAccess_Layer.Entities.Accommodation;
-using DataAccess_Layer.Entities.Reservation;
+﻿using DataAccess_Layer.Entities.Reservation;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,12 +21,18 @@ namespace DataAccess_Layer.Entities.Reservation
         public int PricePaid { get; set; }
 
 
+<<<<<<< HEAD
+=======
+       
+
+>>>>>>> 883e113bb43155e3aaab49aec69abd68cecf82f0
 
 
     }
 }
 
 
+<<<<<<< HEAD
 
 public class eHotlesReservationsDA
 {
@@ -74,3 +78,5 @@ public class eReservationTypeDA
 }
 
 
+=======
+>>>>>>> 883e113bb43155e3aaab49aec69abd68cecf82f0

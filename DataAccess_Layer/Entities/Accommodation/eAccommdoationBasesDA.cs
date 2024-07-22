@@ -38,9 +38,7 @@ namespace DataAccess_Layer.Entities.Accommodation
         public string BedsDiscripation { get; set; }
 
 
-        // Navigation Property
-             
-        public eHotelsDA hotels { get; set; }
+      
 
 
 

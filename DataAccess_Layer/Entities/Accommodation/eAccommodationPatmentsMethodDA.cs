@@ -11,11 +11,6 @@ public class eAccommodationPatmentsMethodDA
 
     public int AccommdoationBaseID { get; set; }
 
-    // Navigation Property
-
-    public eAccommdoationBasesDA accommodationBases { get; set; }
-
-    public ePaymentsTypeDA paymentsType {  get; set; } 
-
+  
 
 }
