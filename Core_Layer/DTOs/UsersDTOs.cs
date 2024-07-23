@@ -12,6 +12,7 @@ namespace API_Layer.DTOs
 
         public record CreateUserDTO(string Username, string Password, PeopleDTOs.CreatePersonDTO Person);
 
+        public record LoginUserDTO(string Username, string Password);
 
 
 

@@ -1,5 +1,6 @@
 ﻿using API_Layer.DTOs;
 using Core_Layer;
+using Core_Layer.Core_Classes.Users;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -33,7 +34,7 @@ namespace API_Layer.Controllers.people
         public ActionResult AddUser(UsersDTOs.CreateUserDTO userDTO)
         {
 
-            if (clsUser.DoesUserExist(userDTO.Username))       
+            if (clsUserValidation.DoesUserExist(userDTO.Username))       
                 return BadRequest("Username already exists");
             
 
@@ -65,6 +66,28 @@ namespace API_Layer.Controllers.people
             return Ok(sendUserDTO);
 
            
+        }
+
+        [HttpGet("Login")]
+        public ActionResult LoginUser(string Username, string Password)
+        {
+
+            if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
+                return BadRequest("Enter valid info");
+
+            var LoginResult = clsUserValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
+
+
+            if (LoginResult.enLoginResult == clsUserValidation.enLoginResult.eWrongUsername)
+                return BadRequest("Wrong Username");
+
+            if (LoginResult.enLoginResult == clsUserValidation.enLoginResult.eWrongPassword)
+                return BadRequest("Wrong Password");
+
+
+            return Ok(DTOs.UsersDTOs.ToSendUserDTO(LoginResult.userInfo.BaseObject));
+
+
         }
 
 

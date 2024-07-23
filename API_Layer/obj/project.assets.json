@@ -3412,11 +3412,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
+      "projectUniqueName": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
       "projectName": "API_Layer",
-      "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
+      "projectPath": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\API_Layer.csproj",
       "packagesPath": "C:\\Users\\ALYOSER\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\API_Layer\\obj\\",
+      "outputPath": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ALYOSER\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3433,8 +3433,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\Core_Layer\\Core_Layer.csproj": {
-              "projectPath": "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\Core_Layer\\Core_Layer.csproj"
+            "D:\\Projects\\web_projects\\SwiftTrips_APIs\\Core_Layer\\Core_Layer.csproj": {
+              "projectPath": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\Core_Layer\\Core_Layer.csproj"
             }
           }
         }
@@ -3443,6 +3443,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3481,7 +3486,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
       }
     }
   },

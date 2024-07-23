@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5YI6c+3FH4mmbxb0xAxk2bnViuDyivwxqMAqMeX/XkgKS2HdqkVL3mWoCRZaeBtVMasawIoC0suwuBjWhfXUyQ==",
+  "dgSpecHash": "N9BdIbrCNOpYjgKATnrcMFuxhWjhqJKh6QVO0fduTDz1kNa9vVnXZyPFEcqZW3/yPM2NjdgGuJQqXMyvQHsdXQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\web_projects\\SwiftTrips\\SwiftTrips_APIs\\Core_Layer\\Core_Layer.csproj",
+  "projectFilePath": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\Core_Layer\\Core_Layer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALYOSER\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ALYOSER\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

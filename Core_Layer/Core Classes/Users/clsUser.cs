@@ -4,6 +4,7 @@ using DataAccess_Layer;
 using DataAccess_Layer.Entities.People;
 using DataAccess_Layer.Repository;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 
 
 namespace Core_Layer
@@ -15,14 +16,8 @@ namespace Core_Layer
         {
         }
 
+       
 
-        public static bool DoesUserExist(string Username)
-        {
-            if (new clsUser().context.Users.SingleOrDefault(user => user.Username == Username) == null)
-                return false;
-
-            return true;    
-        }
 
 
         /// <summary>
