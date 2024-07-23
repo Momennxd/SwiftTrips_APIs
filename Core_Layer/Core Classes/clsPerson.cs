@@ -1,13 +1,13 @@
 ﻿
 using ConsoleApp1;
 using DataAccess_Layer;
+using DataAccess_Layer.Data;
 using DataAccess_Layer.Entities.People;
-using DataAccess_Layer.Repository;
 
 
 namespace Core_Layer
 {
-    public class clsPerson : Repository<ePeopleDA>
+    public class clsPerson : GenericRepository<ePeopleDA>
     {
         public clsPerson()
         {

@@ -1,14 +1,14 @@
 ﻿using API_Layer.DTOs;
 using ConsoleApp1;
 using DataAccess_Layer;
+using DataAccess_Layer.Data;
 using DataAccess_Layer.Entities;
 using DataAccess_Layer.Entities.People;
-using DataAccess_Layer.Repository;
 
 
 namespace Core_Layer
 {
-    public class clsHotelsManager : Repository<eHotelsManagersDA>
+    public class clsHotelsManager : GenericRepository<eHotelsManagersDA>
     {
 
         public clsHotelsManager()

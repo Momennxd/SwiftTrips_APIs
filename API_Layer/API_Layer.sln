@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API_Layer", "API_Layer.cspr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess_Layer", "..\DataAccess_Layer\DataAccess_Layer.csproj", "{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core_Layer", "..\Core_Layer\Core_Layer.csproj", "{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Business Logic", "..\Core_Layer\Business Logic.csproj", "{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

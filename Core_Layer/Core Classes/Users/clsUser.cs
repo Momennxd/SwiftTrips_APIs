@@ -1,15 +1,15 @@
 ﻿using API_Layer.DTOs;
 using ConsoleApp1;
 using DataAccess_Layer;
+using DataAccess_Layer.Data;
 using DataAccess_Layer.Entities.People;
-using DataAccess_Layer.Repository;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 
 
 namespace Core_Layer
 {
-    public class clsUser : Repository<eUsersDA>
+    public class clsUser : GenericRepository<eUsersDA>
     {
 
         public clsUser()

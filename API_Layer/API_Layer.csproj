@@ -14,7 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Core_Layer\Core_Layer.csproj" />
+    <ProjectReference Include="..\Core_Layer\Business Logic.csproj" />
+    <ProjectReference Include="..\DataAccess_Layer\DataAccess_Layer.csproj" />
   </ItemGroup>
 
 </Project>

@@ -18,7 +18,7 @@ using System.Text;
 using System.Threading.Tasks;
 using eUsersSessionsDA = DataAccess_Layer.Entities.Logs.eUsersSessionsDA;
 
-namespace ConsoleApp1
+namespace DataAccess_Layer.Data
 {
     public class AppDbContext : DbContext
     {
@@ -27,7 +27,7 @@ namespace ConsoleApp1
             "Server=.;Database=SwiftTripsDB;User Id=sa;Password=sa123456;TrustServerCertificate=true";
 
 
-        public AppDbContext(DbContextOptions options) :base(options)
+        public AppDbContext(DbContextOptions options) : base(options)
         {
         }
 
@@ -43,7 +43,7 @@ namespace ConsoleApp1
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<eCountriesDA>().HasKey(e=> e.CountryID);
+            modelBuilder.Entity<eCountriesDA>().HasKey(e => e.CountryID);
             modelBuilder.Entity<ePeopleDA>().HasKey(e => e.PersonID);
             modelBuilder.Entity<eHotelsManagersDA>().HasKey(e => e.HotelManagerID);
             modelBuilder.Entity<eHotelsManagersHotelsDA>().HasKey(e => e.ID);
@@ -79,12 +79,12 @@ namespace ConsoleApp1
 
 
 
-            
-            
 
 
-            
-            
+
+
+
+
 
 
         }
@@ -96,7 +96,7 @@ namespace ConsoleApp1
 
         //tabels
 
-        public DbSet<eCountriesDA> Countries {  get; set; }
+        public DbSet<eCountriesDA> Countries { get; set; }
 
         public DbSet<ePeopleDA> People { get; set; }
 
@@ -135,10 +135,10 @@ namespace ConsoleApp1
         public DbSet<eUsersSessionsDA> UsersSessions { get; set; }
 
 
-    
 
 
-        
+
+
 
 
 

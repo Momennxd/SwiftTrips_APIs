@@ -1,10 +1,61 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\",
+  "WorkspaceRootPath": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|d:\\projects\\web_projects\\swifttrips_apis\\api_layer\\controllers\\people\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Business Logic.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\interfaces\\igenericservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\api_layer\\controllers\\ahmeduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\ahmeduser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\interfaces\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\api_layer\\controllers\\people\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\people\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Business Logic.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\services\\genericservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\data\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\data\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\DataAccess_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\dataaccess_layer\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Core_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\core classes\\clshotelsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Core_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\core classes\\clsperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Core_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\core classes\\users\\clsuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Core_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\core classes\\users\\clsuservalidation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\api_layer\\controllers\\people\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\people\\peoplecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\api_layer\\controllers\\people\\hotelsmanagerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\people\\hotelsmanagerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Core_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\dtos\\hotelsmanagersdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Core_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\dtos\\peopledtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Core_Layer.csproj|c:\\users\\ahmed ben sahmaln\\desktop\\swifttrips_apis\\core_layer\\dtos\\usersdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +65,222 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AhmedUser.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\AhmedUser.cs",
+              "RelativeDocumentMoniker": "Controllers\\AhmedUser.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\AhmedUser.cs",
+              "RelativeToolTip": "Controllers\\AhmedUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:57:39.905Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Data\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Data\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Data\\UnitOfWork.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Data\\UnitOfWork.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAABkAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:37:33.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Interfaces\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Interfaces\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Interfaces\\IUnitOfWork.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Interfaces\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:35:00.613Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "IGenericServices.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Interfaces\\IGenericServices.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\Interfaces\\IGenericServices.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Interfaces\\IGenericServices.cs",
+              "RelativeToolTip": "..\\Core_Layer\\Interfaces\\IGenericServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:26:31.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Data\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Data\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Data\\GenericRepository.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Data\\GenericRepository.cs",
+              "ViewState": "AQIAAPcAAAAAAAAAAAAQwPYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T19:57:16.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GenericServices.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Services\\GenericServices.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\Services\\GenericServices.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Services\\GenericServices.cs",
+              "RelativeToolTip": "..\\Core_Layer\\Services\\GenericServices.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD0AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:29:15.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UsersController.cs",
-              "DocumentMoniker": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\people\\UsersController.cs",
-              "ToolTip": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\UsersController.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\UsersController.cs",
               "RelativeToolTip": "Controllers\\people\\UsersController.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAwwEsAAAA2AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-23T12:39:23.335Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAAAE0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:26:36.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "clsHotelsManager.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Core Classes\\clsHotelsManager.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\Core Classes\\clsHotelsManager.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Core Classes\\clsHotelsManager.cs",
+              "RelativeToolTip": "..\\Core_Layer\\Core Classes\\clsHotelsManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T19:57:59.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "clsUser.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Core Classes\\Users\\clsUser.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\Core Classes\\Users\\clsUser.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Core Classes\\Users\\clsUser.cs",
+              "RelativeToolTip": "..\\Core_Layer\\Core Classes\\Users\\clsUser.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCgAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T19:55:54.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "clsUserValidation.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Core Classes\\Users\\clsUserValidation.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\Core Classes\\Users\\clsUserValidation.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Core Classes\\Users\\clsUserValidation.cs",
+              "RelativeToolTip": "..\\Core_Layer\\Core Classes\\Users\\clsUserValidation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T19:57:53.345Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "clsPerson.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Core Classes\\clsPerson.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\Core Classes\\clsPerson.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\Core Classes\\clsPerson.cs",
+              "RelativeToolTip": "..\\Core_Layer\\Core Classes\\clsPerson.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAmwAkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T19:56:45.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PeopleController.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\PeopleController.cs",
+              "RelativeDocumentMoniker": "Controllers\\people\\PeopleController.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\PeopleController.cs",
+              "RelativeToolTip": "Controllers\\people\\PeopleController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:01:18.96Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "HotelsManagersController.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\HotelsManagersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\people\\HotelsManagersController.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\HotelsManagersController.cs",
+              "RelativeToolTip": "Controllers\\people\\HotelsManagersController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAiwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T20:01:44.129Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PeopleDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\DTOs\\PeopleDTOs.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\DTOs\\PeopleDTOs.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\DTOs\\PeopleDTOs.cs",
+              "RelativeToolTip": "..\\Core_Layer\\DTOs\\PeopleDTOs.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T19:53:14.258Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UsersDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\DTOs\\UsersDTOs.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\DTOs\\UsersDTOs.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\DTOs\\UsersDTOs.cs",
+              "RelativeToolTip": "..\\Core_Layer\\DTOs\\UsersDTOs.cs",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAswD0AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T19:53:45.732Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "HotelsManagersDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\DTOs\\HotelsManagersDTOs.cs",
+              "RelativeDocumentMoniker": "..\\Core_Layer\\DTOs\\HotelsManagersDTOs.cs",
+              "ToolTip": "C:\\Users\\Ahmed Ben Sahmaln\\Desktop\\SwiftTrips_APIs\\Core_Layer\\DTOs\\HotelsManagersDTOs.cs",
+              "RelativeToolTip": "..\\Core_Layer\\DTOs\\HotelsManagersDTOs.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T19:52:54.542Z"
             }
           ]
         }
