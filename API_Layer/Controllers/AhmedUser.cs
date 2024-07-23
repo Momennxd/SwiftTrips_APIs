@@ -1,4 +1,6 @@
-﻿using Business_Logic.Interfaces;
+﻿using API_Layer.DTOs;
+using Business_Logic.Interfaces;
+using Business_Logic.Mappers;
 using DataAccess_Layer.Entities;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -21,6 +23,16 @@ namespace API_Layer.Controllers
         public IActionResult GetAll()
         {
             var hotleMangers = hotleMangerServices.GetAllItem();
+
+            return Ok(hotleMangers);
+        }
+
+
+
+        [HttpPost("AddItem")]
+        public IActionResult AddItem()
+        {
+            var hotleMangers = hotleMangerServices.AddItem(eHotelsManagersDA as );
 
             return Ok(hotleMangers);
         }
