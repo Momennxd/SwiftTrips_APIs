@@ -23,9 +23,8 @@ namespace DataAccess_Layer.Entities.Reservation
 
 
 
-
-
     }
+
 
 
 
@@ -62,6 +61,7 @@ namespace DataAccess_Layer.Entities.Reservation
 
 
 
+
     public class eReservationTypeDA
     {
 
@@ -76,3 +76,4 @@ namespace DataAccess_Layer.Entities.Reservation
 
 
 }
+

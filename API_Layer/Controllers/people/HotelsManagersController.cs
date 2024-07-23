@@ -1,5 +1,6 @@
 ﻿using API_Layer.DTOs;
 using Core_Layer;
+using Core_Layer.Core_Classes.Users;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -32,6 +33,11 @@ namespace API_Layer.Controllers.people
         [HttpPost("CreateHotelsManager")]
         public ActionResult AddHotelsManager(DTOs.HotelsManagersDTOs.CreateHotelsManagerDTO HotelsManager)
         {
+
+            if (clsUserValidation.DoesUserExist(HotelsManager.Username))
+                return BadRequest("Username already exists");
+
+
             int HotelsManagerID = clsHotelsManager.AddItem(HotelsManager);
 
             if (HotelsManagerID != -1)
@@ -45,8 +51,8 @@ namespace API_Layer.Controllers.people
         }
 
 
-
        
+
 
 
 
