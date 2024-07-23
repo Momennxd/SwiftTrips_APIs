@@ -43,7 +43,7 @@ namespace API_Layer.Controllers.people
                 return Ok(UserID);
 
             else
-                return BadRequest(UserID);
+                return BadRequest("error");
         }
 
 

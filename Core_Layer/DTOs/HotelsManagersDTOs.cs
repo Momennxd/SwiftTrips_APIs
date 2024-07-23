@@ -14,7 +14,11 @@ namespace API_Layer.DTOs
         public record CreateHotelsManagerDTO(string Username, string Password, string Name, int CountryID);
 
 
-
+        void x()
+        {
+            clsHotelsManager s = new clsHotelsManager();
+            
+        }
 
 
 

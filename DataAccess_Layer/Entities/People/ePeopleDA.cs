@@ -38,7 +38,7 @@ namespace DataAccess_Layer.Entities.People
 
         public string? Email { get; set; }
 
-        public DateTime JoinedDate { get; set; }
+        public required DateTime JoinedDate { get; set; }
 
         public string? Notes { get; set; }
 
