@@ -53,7 +53,7 @@ namespace API_Layer.Controllers.people
 
 
         [HttpGet("Login")]
-        public ActionResult LoginUser(string Username, string Password)
+        public ActionResult LoginHotelsManager(string Username, string Password)
         {
 
             var LoginResult = clsUserValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));

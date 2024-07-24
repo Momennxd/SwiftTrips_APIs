@@ -3,15 +3,12 @@
   "WorkspaceRootPath": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|d:\\projects\\web_projects\\swifttrips_apis\\api_layer\\controllers\\people\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\people\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|d:\\projects\\web_projects\\swifttrips_apis\\api_layer\\controllers\\people\\hotelsmanagerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\people\\hotelsmanagerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6D5EED0A-DBCA-4128-B354-E83B2E1F892D}|..\\Core_Layer\\Core_Layer.csproj|d:\\projects\\web_projects\\swifttrips_apis\\core_layer\\dtos\\hotelsmanagersdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\controllers\\people\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\people\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,47 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
               "DocumentMoniker": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\people\\UsersController.cs",
               "ToolTip": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\UsersController.cs",
               "RelativeToolTip": "Controllers\\people\\UsersController.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAUwFMAAAAAAAAA",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAADcAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-23T12:39:23.335Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "HotelsManagersController.cs",
               "DocumentMoniker": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\HotelsManagersController.cs",
               "RelativeDocumentMoniker": "Controllers\\people\\HotelsManagersController.cs",
               "ToolTip": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\API_Layer\\Controllers\\people\\HotelsManagersController.cs",
               "RelativeToolTip": "Controllers\\people\\HotelsManagersController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAuwEYAAAAAAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAAwDUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-24T10:43:04.14Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HotelsManagersDTOs.cs",
-              "DocumentMoniker": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\Core_Layer\\DTOs\\HotelsManagersDTOs.cs",
-              "RelativeDocumentMoniker": "..\\Core_Layer\\DTOs\\HotelsManagersDTOs.cs",
-              "ToolTip": "D:\\Projects\\web_projects\\SwiftTrips_APIs\\Core_Layer\\DTOs\\HotelsManagersDTOs.cs",
-              "RelativeToolTip": "..\\Core_Layer\\DTOs\\HotelsManagersDTOs.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAQwBMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-24T10:44:10.324Z",
               "IsPinned": true,
               "EditorCaption": ""
             },

@@ -44,6 +44,22 @@ namespace DataAccess_Layer.Repository
 
         public T?  BaseObject { get; set; }
 
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
         public dynamic GetAllItem()
         {
             if (context == null)

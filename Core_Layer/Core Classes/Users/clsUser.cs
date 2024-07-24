@@ -18,14 +18,12 @@ namespace Core_Layer
 
        
 
-
-
         /// <summary>
         /// A static method to add a new user from its DTO.
         /// </summary>
         /// <param name="userDTO"></param>
         /// <returns>
-        /// -1 if the user is has not been added successfully, UserID if has been added successfully.
+        /// -1 if the user has NOT been added successfully, UserID if has been added successfully.
         /// </returns>
         public static int AddItem(UsersDTOs.CreateUserDTO userDTO)
         {

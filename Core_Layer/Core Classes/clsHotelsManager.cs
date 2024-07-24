@@ -17,6 +17,8 @@ namespace Core_Layer
             
         }
 
+
+        // NP
         public eUsersDA User 
         {
             get

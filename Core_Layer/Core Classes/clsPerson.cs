@@ -14,6 +14,8 @@ namespace Core_Layer
 
         }
 
+
+       
         protected override void InitBaseObject()
         {
             base.BaseObject = new ePeopleDA()
@@ -21,7 +23,9 @@ namespace Core_Layer
                 FirstName = "",
                 CountryID = -1,
                 JoinedDate = DateTime.MinValue
+               
             };
+
         }
     }
 }
