@@ -35,11 +35,7 @@ namespace Core_Layer.Core_Classes.Users
 
        
 
-        public static eUsersDA? GetUserInfo(string Username)
-        {
-            return new clsUser().context.Users.SingleOrDefault(user => user.Username == Username);
-
-        }
+      
 
 
 
@@ -58,7 +54,7 @@ namespace Core_Layer.Core_Classes.Users
         {
             stLoginResult loginResult = new stLoginResult();
 
-            eUsersDA? user = GetUserInfo(dtoLoginUser.Username);
+            eUsersDA? user = clsUser.GetUserInfo(dtoLoginUser.Username);
 
             if (user == null)
             {

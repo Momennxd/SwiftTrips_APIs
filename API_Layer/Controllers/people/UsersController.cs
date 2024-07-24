@@ -12,13 +12,10 @@ namespace API_Layer.Controllers.people
     public class UsersController : ControllerBase
     {
 
-        private clsUser _User { get; set; }
-
-
         public UsersController()
         {
-            _User = new clsUser();
         }
+
 
 
 
@@ -34,9 +31,9 @@ namespace API_Layer.Controllers.people
         public ActionResult AddUser(UsersDTOs.CreateUserDTO userDTO)
         {
 
-            if (clsUser.DoesUserExist(userDTO.Username))       
+            if (clsUser.DoesUserExist(userDTO.Username))
                 return BadRequest("Username already exists");
-            
+
 
             int UserID = clsUser.AddItem(userDTO);
 
@@ -49,6 +46,9 @@ namespace API_Layer.Controllers.people
 
 
 
+
+
+
         [HttpGet("GetUser")]
         public ActionResult GetUser(int UserID)
         {
@@ -56,21 +56,17 @@ namespace API_Layer.Controllers.people
             if (UserID <= 0)
                 return BadRequest();
 
-            UsersDTOs.SendUserDTO sendUserDTO = UsersDTOs.ToSendUserDTO(_User.GetItem(UserID));
+            UsersDTOs.SendUserDTO sendUserDTO = UsersDTOs.ToSendUserDTO(clsUser.GetItem(UserID));
 
 
-            if (sendUserDTO == null)           
+            if (sendUserDTO == null)
                 return BadRequest();
-            
+
 
             return Ok(sendUserDTO);
 
-           
+
         }
-
-
-
-
 
 
 
@@ -93,12 +89,12 @@ namespace API_Layer.Controllers.people
 
 
             return Ok(DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO(
-                 clsHotelsManager.GetItem(LoginResult.userInfo.BaseObject.UserID).BaseObject));
+                 clsHotelsManager.GetHotelManager(LoginResult.userInfo.BaseObject.UserID).BaseObject));
 
 
         }
 
-        
+
 
     }
 }

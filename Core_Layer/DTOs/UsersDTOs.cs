@@ -8,13 +8,14 @@ namespace API_Layer.DTOs
 {
     public class UsersDTOs
     {
-        public record SendUserDTO(int UserID, PeopleDTOs.SendPersonDTO Person, string Username, string Password);
+        public record SendUserDTO(int UserID, SendPersonDTO Person, string Username, string Password);
 
         public record CreateUserDTO(string Username, string Password, PeopleDTOs.CreatePersonDTO Person);
 
         public record LoginUserDTO(string Username, string Password);
 
 
+        
 
 
 
@@ -28,16 +29,15 @@ namespace API_Layer.DTOs
             if (user == null)
                 return null;
 
-            clsPerson MainPerson = new clsPerson();
             
-            SendUserDTO dto = new SendUserDTO(user.UserID, PeopleDTOs.ToSendPersonDTO(MainPerson.GetItem(user.PersonID)),
+            SendUserDTO dto = new SendUserDTO(user.UserID, PeopleDTOs.ToSendPersonDTO(clsPerson.GetItem(user.PersonID)),
                 user.Username, user.Password);
 
             return dto;
         }
 
 
-
+        
        
 
         /// <summary>

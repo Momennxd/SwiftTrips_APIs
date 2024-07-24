@@ -7,23 +7,19 @@ namespace API_Layer.DTOs
 {
     public class HotelsManagersDTOs
     {
-        public record SendHotelsManagerDTO(UsersDTOs.SendUserDTO User);
+        public record SendHotelsManagerDTO(int HotelsManagerID, UsersDTOs.SendUserDTO User);
 
-       // public record CreateHotelsManagerDTO(UsersDTOs.CreateUserDTO User);
 
         public record CreateHotelsManagerDTO(string Username, string Password, string Name, int CountryID);
 
 
-        void x()
-        {
-            clsHotelsManager s = new clsHotelsManager();
-            
-        }
 
 
 
 
 
+
+  
         /// <summary>
         /// Converts a "eHotelsManagersDA object" to a "SendHotelsManagerDTO" DTO.
         /// </summary>
@@ -34,10 +30,10 @@ namespace API_Layer.DTOs
             if (HotelManager == null)
                 return null;
 
-            clsHotelsManager hotelsManager = new clsHotelsManager();
+            clsHotelsManager hotelsManager = new clsHotelsManager(HotelManager);
 
 
-            SendHotelsManagerDTO dto = new SendHotelsManagerDTO(
+            SendHotelsManagerDTO dto = new SendHotelsManagerDTO(HotelManager.HotelManagerID,
                 UsersDTOs.ToSendUserDTO(hotelsManager.User));
 
             return dto;

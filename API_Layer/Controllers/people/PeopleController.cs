@@ -1,5 +1,6 @@
 ﻿using API_Layer.DTOs;
 using Core_Layer;
+using DataAccess_Layer.Entities.Hotels;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,12 +11,10 @@ namespace API_Layer.Controllers.people
     [ApiController]
     public class PeopleController : ControllerBase
     {        
-        private clsPerson _Person { get; set; }
-
 
         public PeopleController()
         {
-            _Person = new clsPerson();
+          
         }
 
 
@@ -29,30 +28,17 @@ namespace API_Layer.Controllers.people
         [HttpGet("GetAllPeople")]
         public ActionResult GetAllPeople()
         {
-           return Ok(PeopleDTOs.ToSendPersonDTO(_Person.GetAllItem()));
+            return Ok(PeopleDTOs.ToSendPersonDTO(clsPerson.GetAllItem()));
         }
 
 
 
-
-
-
-
-
-        //[HttpGet("GetPerson")]
-        //public ActionResult<dtoPerson> GetPerson(int PersonID)
-        //{
-        //    var person = _basicRepo.GetItem(PersonID);
-
-
-
-        //    if (person == null)
-        //    {
-        //        return BadRequest();
-        //    }
-
-        //    return Ok(dtoPerson.ToDTO(person));
-        //}
+        [HttpGet("GetPerson")]
+        public ActionResult<DTOs.PeopleDTOs.SendPersonDTO> GetPerson(int PersonID)
+        {
+               
+            return Ok(DTOs.PeopleDTOs.ToSendPersonDTO(clsPerson.GetItem(PersonID)));
+        }
 
 
 
@@ -60,11 +46,11 @@ namespace API_Layer.Controllers.people
         //public ActionResult<dynamic> CreatePerson([FromBody] ePeopleDA Person)
         //{
 
-        //    if (!ModelState.IsValid)           
+        //    if (!ModelState.IsValid)
         //        return BadRequest(ModelState);
 
 
-        //    if (Person == null)           
+        //    if (Person == null)
         //        return BadRequest();
 
 

@@ -3,6 +3,7 @@ using DataAccess_Layer;
 using DataAccess_Layer.Entities;
 using DataAccess_Layer.Repository;
 using Microsoft.AspNetCore.JsonPatch;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -13,27 +14,34 @@ using System.Threading.Tasks;
 
 namespace DataAccess_Layer.Repository
 {
-    public abstract class Repository<T> : IBasicRepository<T> where T : class
+    public abstract class Repository<T> where T : class
     {
-        public AppDbContext context { get; private set; }
+        protected static AppDbContext context { get; set; }
 
-        /// <summary>
-        /// Initializes the class by Initializing the appDbContext 
-        /// </summary>
-        /// <param name="context"></param>
-        /// <returns>
-        /// True if init successfully, False if context is null
-        /// </returns>
-        private void InitContext()
+        ///// <summary>
+        ///// Initializes the class by Initializing the appDbContext 
+        ///// </summary>
+        ///// <param name="context"></param>
+        ///// <returns>
+        ///// True if init successfully, False if context is null
+        ///// </returns>
+        //private void InitContext()
+        //{
+            
+        //}
+
+        static Repository()
         {
-            this.context = new AppDbContext();
+            context = new AppDbContext();
         }
 
         public Repository()
         {
-            InitContext();
+            //InitContext();
             InitBaseObject();
         }
+
+      
 
 
         /// <summary>
@@ -51,46 +59,39 @@ namespace DataAccess_Layer.Repository
 
         
 
+        public static T GetItem(int ItemID)
+        {
+
+            AppDbContext context = new AppDbContext();
+        
+            try
+            {
+                return context.Set<T>().Find(ItemID);
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
 
 
-
-
-
-
-
-
-
-        public dynamic GetAllItem()
+        public static List<T> GetAllItem()
         {
             if (context == null)
                 return null;
 
             return context.Set<T>().ToList();
 
-
         }
+       
 
 
-      
-        public T GetItem(int ItemID)
+        public static bool AddItem(T Item)
         {
-            if (ItemID <= 0)
-                return null;
-
-            if (context == null)
-                return null;
-
-            return context.Set<T>().Find(ItemID);
-        }
-
-
-
-    
-        public bool AddItem(T Item)
-        {
-            if (Item == null || context== null)        
+            if (Item == null || context == null)
                 return false;
-          
+
 
             try
             {
@@ -108,9 +109,7 @@ namespace DataAccess_Layer.Repository
 
 
 
-
-
-        public bool DeleteItem(int ItemID)
+        public static bool DeleteItem(int ItemID)
         {
             if (ItemID <= 0 || context == null)
             {
@@ -136,10 +135,7 @@ namespace DataAccess_Layer.Repository
 
 
 
-
-
-
-        public bool UpdateItem(T NewItem, int ItemID)
+        public static bool UpdateItem(T NewItem, int ItemID)
         {
             if (NewItem == null || context == null)
             {
@@ -197,10 +193,7 @@ namespace DataAccess_Layer.Repository
 
 
 
-
-
-
-        public bool PatchItem(JsonPatchDocument<T> NewItem, int ItemID)
+        public static bool PatchItem(JsonPatchDocument<T> NewItem, int ItemID)
         {
 
             if (NewItem == null || ItemID <= 0 || context == null)

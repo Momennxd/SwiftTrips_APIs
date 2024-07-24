@@ -22,10 +22,6 @@ namespace API_Layer.Controllers.people
 
 
 
-
-
-
-
         //EndPoints------------------------------------------------------->
 
 

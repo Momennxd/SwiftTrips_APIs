@@ -5,11 +5,28 @@ namespace API_Layer.DTOs
 {
     public class PeopleDTOs
     {
+
+        /// <summary>
+        /// used for sending the dto to the FE
+        /// </summary>
+        /// <param name="PersonID"></param>
+        /// <param name="FirstName"></param>
+        /// <param name="LastName"></param>
+        /// <param name="Address"></param>
+        /// <param name="Phone"></param>
+        /// <param name="Gender"></param>
+        /// <param name="CountryID"></param>
+        /// <param name="DateOfBirth"></param>
+        /// <param name="ProfilePicPath"></param>
+        /// <param name="Email"></param>
+        /// <param name="JoinedDate"></param>
+        /// <param name="Notes"></param>
         public record SendPersonDTO(int PersonID,  string FirstName, string? LastName, string? Address,
 
         string? Phone,  string? Gender, int CountryID, DateTime? DateOfBirth, string? ProfilePicPath, 
         string? Email, DateTime JoinedDate, string? Notes);
 
+     
 
         public record CreatePersonDTO(string FirstName, string? LastName, string? Address,
 

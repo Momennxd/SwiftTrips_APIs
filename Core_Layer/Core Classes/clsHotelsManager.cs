@@ -17,14 +17,18 @@ namespace Core_Layer
             
         }
 
+        public clsHotelsManager(eHotelsManagersDA? baseObj)
+        {
+            base.BaseObject = baseObj;
+        }
 
-        // NP
-        public eUsersDA User 
+
+        //NP
+        public eUsersDA User
         {
             get
             {
-                clsUser user = new clsUser();
-                return user.GetItem(this.BaseObject.UserID);
+                return clsUser.GetItem(BaseObject.UserID);
             }
         }
 
@@ -44,19 +48,15 @@ namespace Core_Layer
             eHotelsManagers.UserID = UserID;
 
 
-            clsHotelsManager hotelsManager = new clsHotelsManager();
-
-            hotelsManager.AddItem(eHotelsManagers);
+            clsHotelsManager.AddItem(eHotelsManagers);
 
 
             return eHotelsManagers.HotelManagerID;
         }
 
-        public static clsHotelsManager GetItem(int UserID)
+        public static clsHotelsManager GetHotelManager(int UserID)
         {
-            clsHotelsManager HM = new clsHotelsManager();
-            HM.BaseObject = new clsHotelsManager().context.HotelsManagers.SingleOrDefault(h => h.UserID == UserID);
-            return HM;
+             return new clsHotelsManager(context.HotelsManagers.SingleOrDefault(m => m.UserID == UserID));
         }
 
 

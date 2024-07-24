@@ -16,12 +16,15 @@ namespace Core_Layer
         {
         }
 
-
+        public static eUsersDA? GetUserInfo(string Username)
+        {
+            return clsUser.context.Users.SingleOrDefault(user => user.Username == Username);
+        }
 
 
         public static bool DoesUserExist(string Username)
         {
-            if (new clsUser().context.Users.SingleOrDefault(user => user.Username == Username) == null)
+            if (clsUser.context.Users.SingleOrDefault(user => user.Username == Username) == null)
                 return false;
 
             return true;
@@ -42,7 +45,7 @@ namespace Core_Layer
 
             UserPerson.BaseObject = PeopleDTOs.ToPersonEntity(userDTO.Person);
 
-            if (!UserPerson.AddItem(UserPerson.BaseObject))
+            if (!clsPerson.AddItem(UserPerson.BaseObject))
                 return -1;
 
 
@@ -53,7 +56,7 @@ namespace Core_Layer
             user.BaseObject.PersonID = UserPerson.BaseObject.PersonID;
 
 
-            if (!user.AddItem(user.BaseObject))
+            if (!clsUser.AddItem(user.BaseObject))
                 return -1;
 
 
