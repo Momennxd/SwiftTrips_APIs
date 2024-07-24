@@ -33,13 +33,7 @@ namespace Core_Layer.Core_Classes.Users
         }
 
 
-        public static bool DoesUserExist(string Username)
-        {
-            if (new clsUser().context.Users.SingleOrDefault(user => user.Username == Username) == null)
-                return false;
-
-            return true;
-        }
+       
 
         public static eUsersDA? GetUserInfo(string Username)
         {

@@ -34,7 +34,7 @@ namespace API_Layer.Controllers.people
         public ActionResult AddHotelsManager(DTOs.HotelsManagersDTOs.CreateHotelsManagerDTO HotelsManager)
         {
 
-            if (clsUserValidation.DoesUserExist(HotelsManager.Username))
+            if (clsUser.DoesUserExist(HotelsManager.Username))
                 return BadRequest("Username already exists");
 
 

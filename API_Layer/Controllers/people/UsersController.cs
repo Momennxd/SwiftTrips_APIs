@@ -34,7 +34,7 @@ namespace API_Layer.Controllers.people
         public ActionResult AddUser(UsersDTOs.CreateUserDTO userDTO)
         {
 
-            if (clsUserValidation.DoesUserExist(userDTO.Username))       
+            if (clsUser.DoesUserExist(userDTO.Username))       
                 return BadRequest("Username already exists");
             
 
@@ -68,12 +68,24 @@ namespace API_Layer.Controllers.people
            
         }
 
+
+
+
+
+
+
+
+
+
         [HttpGet("Login")]
         public ActionResult LoginUser(string Username, string Password)
         {
 
             if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
                 return BadRequest("Enter valid info");
+
+
+
 
             var LoginResult = clsUserValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
 
