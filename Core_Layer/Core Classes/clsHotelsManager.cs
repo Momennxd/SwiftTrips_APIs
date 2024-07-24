@@ -4,6 +4,7 @@ using DataAccess_Layer;
 using DataAccess_Layer.Entities;
 using DataAccess_Layer.Entities.People;
 using DataAccess_Layer.Repository;
+using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 
 
 namespace Core_Layer
@@ -51,6 +52,12 @@ namespace Core_Layer
             return eHotelsManagers.HotelManagerID;
         }
 
+        public static clsHotelsManager GetItem(int UserID)
+        {
+            clsHotelsManager HM = new clsHotelsManager();
+            HM.BaseObject = new clsHotelsManager().context.HotelsManagers.SingleOrDefault(h => h.UserID == UserID);
+            return HM;
+        }
 
 
         protected override void InitBaseObject()

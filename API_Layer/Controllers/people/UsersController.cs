@@ -81,11 +81,6 @@ namespace API_Layer.Controllers.people
         public ActionResult LoginUser(string Username, string Password)
         {
 
-            if (string.IsNullOrEmpty(Username) || string.IsNullOrEmpty(Password))
-                return BadRequest("Enter valid info");
-
-
-
 
             var LoginResult = clsUserValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
 
@@ -97,12 +92,13 @@ namespace API_Layer.Controllers.people
                 return BadRequest("Wrong Password");
 
 
-            return Ok(DTOs.UsersDTOs.ToSendUserDTO(LoginResult.userInfo.BaseObject));
+            return Ok(DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO(
+                 clsHotelsManager.GetItem(LoginResult.userInfo.BaseObject.UserID).BaseObject));
 
 
         }
 
-
+        
 
     }
 }

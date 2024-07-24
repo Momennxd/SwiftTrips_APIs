@@ -51,8 +51,25 @@ namespace API_Layer.Controllers.people
         }
 
 
-       
 
+        [HttpGet("Login")]
+        public ActionResult LoginHotelsManager(string Username, string Password)
+        {
+
+            var LoginResult = clsUserValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
+
+
+            if (LoginResult.enLoginResult == clsUserValidation.enLoginResult.eWrongUsername)
+                return BadRequest("Wrong Username");
+
+            if (LoginResult.enLoginResult == clsUserValidation.enLoginResult.eWrongPassword)
+                return BadRequest("Wrong Password");
+
+
+            return Ok(DTOs.UsersDTOs.ToSendUserDTO(LoginResult.userInfo.BaseObject));
+
+
+        }
 
 
 
