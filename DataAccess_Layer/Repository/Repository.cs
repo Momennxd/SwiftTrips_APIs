@@ -42,7 +42,7 @@ namespace DataAccess_Layer.Repository
         protected abstract void InitBaseObject();
         
 
-        public T  BaseObject { get; set; }
+        public T?  BaseObject { get; set; }
 
         public dynamic GetAllItem()
         {
