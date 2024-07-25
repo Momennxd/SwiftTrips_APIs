@@ -35,8 +35,7 @@ namespace API_Layer.Controllers.people
 
         [HttpGet("GetPerson")]
         public ActionResult<DTOs.PeopleDTOs.SendPersonDTO> GetPerson(int PersonID)
-        {
-               
+        {             
             return Ok(DTOs.PeopleDTOs.ToSendPersonDTO(clsPerson.GetItem(PersonID)));
         }
 

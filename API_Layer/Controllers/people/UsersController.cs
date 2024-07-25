@@ -54,13 +54,13 @@ namespace API_Layer.Controllers.people
         {
 
             if (UserID <= 0)
-                return BadRequest();
+                return BadRequest("Enter valid UserID");
 
             UsersDTOs.SendUserDTO sendUserDTO = UsersDTOs.ToSendUserDTO(clsUser.GetItem(UserID));
 
 
             if (sendUserDTO == null)
-                return BadRequest();
+                return BadRequest("User Not Found");
 
 
             return Ok(sendUserDTO);
@@ -88,8 +88,7 @@ namespace API_Layer.Controllers.people
                 return BadRequest("Wrong Password");
 
 
-            return Ok(DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO(
-                 clsHotelsManager.GetHotelManager(LoginResult.userInfo.BaseObject.UserID).BaseObject));
+            return Ok(DTOs.UsersDTOs.ToSendUserDTO(LoginResult.userInfo.BaseObject, LoginResult.sessionID));
 
 
         }

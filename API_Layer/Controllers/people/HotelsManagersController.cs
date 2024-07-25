@@ -50,7 +50,7 @@ namespace API_Layer.Controllers.people
 
         [HttpGet("Login")]
         public ActionResult LoginHotelsManager(string Username, string Password)
-        {
+        {        
 
             var LoginResult = clsUserValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
 
@@ -62,9 +62,9 @@ namespace API_Layer.Controllers.people
                 return BadRequest("Wrong Password");
 
 
-            return Ok(DTOs.UsersDTOs.ToSendUserDTO(LoginResult.userInfo.BaseObject));
-
-
+            return Ok(DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO(
+                 clsHotelsManager.GetHotelManager(LoginResult.userInfo.BaseObject.UserID).BaseObject,
+                 LoginResult.sessionID));
         }
 
 

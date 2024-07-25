@@ -14,7 +14,7 @@ namespace Core_Layer
             
         }
 
-        public string Fullname { get { return this.BaseObject.FirstName + this.BaseObject.LastName; } }
+        public string Fullname { get { return this.BaseObject.FirstName + " " +  this.BaseObject.LastName; } }
        
         protected override void InitBaseObject()
         {

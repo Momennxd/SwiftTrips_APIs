@@ -15,7 +15,7 @@ namespace DataAccess_Layer.Entities.Logs
     public class eUsersSessionsDA
     {
         [Key]
-        public string SessionID { get; }
+        public string SessionID { get; set; }
 
 
         public required int UserID { get; set; }
@@ -26,7 +26,7 @@ namespace DataAccess_Layer.Entities.Logs
 
         public required bool IsValid { get; set; }
 
-        public byte Invalid_Reason { get; set; }
+        public byte? Invalid_Reason { get; set; }
 
        
 

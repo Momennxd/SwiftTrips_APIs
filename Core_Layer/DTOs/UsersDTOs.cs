@@ -8,7 +8,7 @@ namespace API_Layer.DTOs
 {
     public class UsersDTOs
     {
-        public record SendUserDTO(int UserID, SendPersonDTO Person, string Username, string Password);
+        public record SendUserDTO(int UserID, SendPersonDTO Person, string Username, string Password, string UserSession);
 
         public record CreateUserDTO(string Username, string Password, PeopleDTOs.CreatePersonDTO Person);
 
@@ -24,14 +24,14 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public static SendUserDTO ToSendUserDTO(eUsersDA user)
+        public static SendUserDTO ToSendUserDTO(eUsersDA user, string SessionID = "")
         {
             if (user == null)
                 return null;
 
             
             SendUserDTO dto = new SendUserDTO(user.UserID, PeopleDTOs.ToSendPersonDTO(clsPerson.GetItem(user.PersonID)),
-                user.Username, user.Password);
+                user.Username, user.Password, SessionID);
 
             return dto;
         }

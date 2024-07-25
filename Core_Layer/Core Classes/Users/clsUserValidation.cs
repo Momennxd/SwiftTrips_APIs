@@ -1,5 +1,7 @@
 ﻿using API_Layer.DTOs;
+using Core_Layer.Core_Classes.Sessions;
 using DataAccess_Layer.Entities.People;
+using Microsoft.AspNetCore.Components.Web;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +18,8 @@ namespace Core_Layer.Core_Classes.Users
             eWrongUsername,
             eWrongPassword,
             eCorrectInfo,
-            NULL
+            NULL,
+            SessionFailed
         }
 
         public struct stLoginResult
@@ -25,10 +28,21 @@ namespace Core_Layer.Core_Classes.Users
 
             public clsUser? userInfo { get; set; }
 
+            public string sessionID { get; set; }
+
             public stLoginResult()
             {
                 userInfo = new clsUser();
                 enLoginResult = enLoginResult.NULL;
+                sessionID = "";
+            }
+
+
+            public stLoginResult(enLoginResult enLoginResult, clsUser? userInfo, string sessionID)
+            {
+                this.userInfo = userInfo;
+                this.enLoginResult = enLoginResult;
+                this.sessionID = sessionID;
             }
         }
 
@@ -73,6 +87,31 @@ namespace Core_Layer.Core_Classes.Users
 
             loginResult.enLoginResult = enLoginResult.eCorrectInfo;
             loginResult.userInfo.BaseObject = user;
+
+
+
+
+            #region create session.
+
+            clsUserSession session = new clsUserSession(clsUserSession.GenSessionID(),loginResult.userInfo.BaseObject.UserID,
+                DateTime.Now, true, null);
+
+
+            clsUserSession.AddItem(session.BaseObject);
+
+            if (session.BaseObject == null || string.IsNullOrEmpty(session.BaseObject.SessionID))
+                return new stLoginResult(enLoginResult.SessionFailed, null, string.Empty);
+
+
+
+            loginResult.sessionID = session.BaseObject.SessionID;
+
+            #endregion
+
+
+
+
+
             return loginResult;
         }
     }

@@ -123,15 +123,25 @@ namespace ConsoleApp1
         public DbSet<eAccommodationDiscountDA> AccommodationsDiscounts { get; set; }
 
         public DbSet<eAccommodationPatmentsMethodDA> AccommationsPaymentsMethods { get; set; }
+
         public DbSet<eAccommdoationBasesDA> AccommodationsBases { get; set; }
+
         public DbSet<eAccommodationFacilitiesDA> AccommodationsFacilities { get; set; }
+
         public DbSet<eAccommodationPricesDA> AccommadationsPrices { get; set; }
+
         public DbSet<eAccommodatioPicsDA> AccommodationsPics { get; set; }
+
         public DbSet<ePaymentsTypeDA> PaymentsTypes { get; set; }
+
         public DbSet<eReservationTypeDA> ReservationsTypes { get; set; }
+
         public DbSet<eReservationTransactionDA> ReservationsTransactions { get; set; }
+
         public DbSet<eHotlesReservationsDA> HotelsReservations { get; set; }
+
         public DbSet<eSavedHotlesDA> SavedHotels { get; set; }
+
         public DbSet<eUsersSessionsDA> UsersSessions { get; set; }
 
 
