@@ -12,12 +12,9 @@ namespace API_Layer.Controllers.people
     public class HotelsManagersController : ControllerBase
     {
 
-        private clsHotelsManager _HotelsManager { get; set; }
-
 
         public HotelsManagersController()
         {
-            _HotelsManager = new clsHotelsManager();
         }
 
 

@@ -36,7 +36,7 @@ namespace DataAccess_Layer.Entities.People
 
         public string? ProfilePicPath { get; set; }
 
-        public string? Email { get; set; }
+        public required string Email { get; set; }
 
         public required DateTime JoinedDate { get; set; }
 

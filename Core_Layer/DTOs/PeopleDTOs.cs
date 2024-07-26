@@ -7,7 +7,7 @@ namespace API_Layer.DTOs
     {
 
         /// <summary>
-        /// used for sending the dto to the FE
+        /// used for sending the dto to the client
         /// </summary>
         /// <param name="PersonID"></param>
         /// <param name="FirstName"></param>
@@ -24,14 +24,14 @@ namespace API_Layer.DTOs
         public record SendPersonDTO(int PersonID,  string FirstName, string? LastName, string? Address,
 
         string? Phone,  string? Gender, int CountryID, DateTime? DateOfBirth, string? ProfilePicPath, 
-        string? Email, DateTime JoinedDate, string? Notes);
+        string Email, DateTime JoinedDate, string? Notes);
 
      
 
         public record CreatePersonDTO(string FirstName, string? LastName, string? Address,
 
        string? Phone, string? Gender, int CountryID, DateTime? DateOfBirth, string? ProfilePicPath,
-       string? Email, string? Notes);
+       string Email, string? Notes);
 
 
         /// <summary>

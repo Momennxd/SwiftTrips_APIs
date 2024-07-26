@@ -20,6 +20,7 @@ namespace Core_Layer
         {
             base.BaseObject = new ePeopleDA()
             {
+                Email = "",
                 FirstName = "",
                 CountryID = -1,
                 JoinedDate = DateTime.MinValue

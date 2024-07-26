@@ -25,7 +25,7 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public static SendHotelsManagerDTO ToSendHotelsManagerDTO(eHotelsManagersDA HotelManager, string SessionID = "")
+        public static SendHotelsManagerDTO? ToSendHotelsManagerDTO(eHotelsManagersDA HotelManager, string SessionID = "")
         {
             if (HotelManager == null)
                 return null;
