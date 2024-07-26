@@ -47,14 +47,14 @@ namespace DataAccess_Layer.Repository
 
         
 
-        public static T GetItem(int ItemID)
+        public static T? GetItem(dynamic ItemPK)
         {
 
             AppDbContext context = new AppDbContext();
         
             try
             {
-                return context.Set<T>().Find(ItemID);
+                return context.Set<T>().Find(ItemPK);
 
             }
             catch (Exception ex)
@@ -97,9 +97,9 @@ namespace DataAccess_Layer.Repository
 
 
 
-        public static bool DeleteItem(int ItemID)
+        public static bool DeleteItem(dynamic ItemPK)
         {
-            if (ItemID <= 0 || context == null)
+            if (context == null)
             {
                 return false;
             }
@@ -107,7 +107,7 @@ namespace DataAccess_Layer.Repository
             try
             {
 
-                var Item = context.Set<T>().Find(ItemID);
+                var Item = context.Set<T>().Find(ItemPK);
 
                 context.Set<T>().Remove(Item);
                 context.SaveChanges();
@@ -123,7 +123,7 @@ namespace DataAccess_Layer.Repository
 
 
 
-        public static bool UpdateItem(T NewItem, int ItemID)
+        public static bool UpdateItem(T NewItem, dynamic ItemPK)
         {
             if (NewItem == null || context == null)
             {
@@ -134,7 +134,7 @@ namespace DataAccess_Layer.Repository
             try
             {
                 T Item = context.Set<T>()
-                    .Find(ItemID);
+                    .Find(ItemPK);
 
                 // تحقق من وجود الكيان
                 if (Item == null)
@@ -181,17 +181,17 @@ namespace DataAccess_Layer.Repository
 
 
 
-        public static bool PatchItem(JsonPatchDocument<T> NewItem, int ItemID)
+        public static bool PatchItem(JsonPatchDocument<T> NewItem, dynamic ItemPK)
         {
 
-            if (NewItem == null || ItemID <= 0 || context == null)
+            if (NewItem == null || context == null)
             {
                 return false;
             }
 
             try
             {
-                T Item = context.Set<T>().Find(ItemID);
+                T Item = context.Set<T>().Find(ItemPK);
 
                 //id does not exist
                 if (Item == null)

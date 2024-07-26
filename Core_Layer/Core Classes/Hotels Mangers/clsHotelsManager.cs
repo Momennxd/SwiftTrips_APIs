@@ -23,7 +23,7 @@ namespace Core_Layer
         }
 
 
-        //NP
+        //Navigation Property
         public eUsersDA User
         {
             get
@@ -38,17 +38,14 @@ namespace Core_Layer
 
             int UserID = clsUser.AddItem(new UsersDTOs.CreateUserDTO(managerDTO.Username, managerDTO.Password,
                 new PeopleDTOs.CreatePersonDTO(managerDTO.Name, null, null, null, null, managerDTO.CountryID,
-                null, null, null, null)));
+                null, null, managerDTO.Email, null)));
 
             if (UserID == -1)
-                return -1;
+                return -1;           
 
+            eHotelsManagersDA eHotelsManagers = HotelsManagersDTOs.ToHotelsManagerEntity(managerDTO, UserID);
 
-            eHotelsManagersDA eHotelsManagers = HotelsManagersDTOs.ToHotelsManagerEntity(managerDTO);
-            eHotelsManagers.UserID = UserID;
-
-
-            clsHotelsManager.AddItem(eHotelsManagers);
+            AddItem(eHotelsManagers);
 
 
             return eHotelsManagers.HotelManagerID;

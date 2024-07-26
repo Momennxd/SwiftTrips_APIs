@@ -59,13 +59,13 @@ namespace API_Layer.DTOs
 
 
 
-        public static eUsersDA ToUserEntity(CreateUserDTO userDTO)
+        public static eUsersDA ToUserEntity(CreateUserDTO userDTO, int PersonID)
         {
             if (userDTO == null)
                 return null;
 
             eUsersDA user = new eUsersDA() { IsActive = true, Username = userDTO.Username,
-            Password = userDTO.Password , PersonID = -1};
+            Password = userDTO.Password , PersonID = PersonID};
 
             return user;
         }

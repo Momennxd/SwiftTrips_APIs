@@ -7,10 +7,11 @@ namespace API_Layer.DTOs
 {
     public class HotelsManagersDTOs
     {
-        public record SendHotelsManagerDTO(int HotelsManagerID, UsersDTOs.SendUserDTO User);
+        public record SendHotelsManagerDTO(int HotelsManagerID, SendUserDTO User);
 
 
-        public record CreateHotelsManagerDTO(string Username, string Password, string Name, int CountryID);
+        public record CreateHotelsManagerDTO(string Username, string Password, string Email 
+            ,string Name, int CountryID);
 
 
 
@@ -58,14 +59,14 @@ namespace API_Layer.DTOs
         }
 
 
-        public static eHotelsManagersDA ToHotelsManagerEntity(CreateHotelsManagerDTO HotelManagerDTO)
+        public static eHotelsManagersDA ToHotelsManagerEntity(CreateHotelsManagerDTO HotelManagerDTO, int UserID)
         {
             if (HotelManagerDTO == null)
                 return null;
 
             eHotelsManagersDA eHotelManager = new eHotelsManagersDA()
             {
-                UserID = -1
+                UserID = UserID              
             };
 
             return eHotelManager;

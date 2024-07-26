@@ -30,10 +30,10 @@ namespace Core_Layer
             return true;
         }
 
-
+        
 
         /// <summary>
-        /// A static method to add a new user from its DTO.
+        /// A static method to add a new user from its create DTO.
         /// </summary>
         /// <param name="userDTO"></param>
         /// <returns>
@@ -52,8 +52,7 @@ namespace Core_Layer
             clsUser user = new clsUser();
 
 
-            user.BaseObject = UsersDTOs.ToUserEntity(userDTO);
-            user.BaseObject.PersonID = UserPerson.BaseObject.PersonID;
+            user.BaseObject = UsersDTOs.ToUserEntity(userDTO, UserPerson.BaseObject.PersonID);
 
 
             if (!clsUser.AddItem(user.BaseObject))

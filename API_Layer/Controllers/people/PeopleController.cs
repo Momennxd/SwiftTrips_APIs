@@ -1,5 +1,6 @@
 ﻿using API_Layer.DTOs;
 using Core_Layer;
+using Core_Layer.Core_Classes.Sessions;
 using DataAccess_Layer.Entities.Hotels;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -32,8 +33,8 @@ namespace API_Layer.Controllers.people
             return Ok(DTOs.PeopleDTOs.ToSendPersonDTO(clsPerson.GetItem(PersonID)));
         }
 
-
-
        
+
+
     }
 }
