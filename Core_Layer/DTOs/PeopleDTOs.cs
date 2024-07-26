@@ -34,6 +34,10 @@ namespace API_Layer.DTOs
        string Email, string? Notes);
 
 
+
+
+
+
         /// <summary>
         /// Converts a "clsPerson object" to a "SendPersonDTO" DTO.
         /// </summary>

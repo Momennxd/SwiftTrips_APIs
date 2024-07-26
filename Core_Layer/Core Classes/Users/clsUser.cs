@@ -16,6 +16,11 @@ namespace Core_Layer
         {
         }
 
+        public clsUser(eUsersDA? eUser)
+        {
+            base.BaseObject = eUser;          
+        }
+
         public static eUsersDA? GetUserInfo(string Username)
         {
             return clsUser.context.Users.SingleOrDefault(user => user.Username == Username);

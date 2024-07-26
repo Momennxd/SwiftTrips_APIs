@@ -15,11 +15,6 @@ namespace API_Layer.DTOs
 
 
 
-
-
-
-
-
   
         /// <summary>
         /// Converts a "eHotelsManagersDA object" to a "SendHotelsManagerDTO" DTO.

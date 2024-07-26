@@ -27,11 +27,11 @@ namespace API_Layer.Controllers.people
         //EndPoints------------------------------------------------------->
 
         
-        [HttpGet("GetPerson")]
-        public ActionResult<DTOs.PeopleDTOs.SendPersonDTO> GetPerson(int PersonID)
-        {             
-            return Ok(DTOs.PeopleDTOs.ToSendPersonDTO(clsPerson.GetItem(PersonID)));
-        }
+        //[HttpGet("GetPerson")]
+        //public ActionResult<DTOs.PeopleDTOs.SendPersonDTO> GetPerson(int PersonID)
+        //{             
+        //    return Ok(DTOs.PeopleDTOs.ToSendPersonDTO(clsPerson.GetItem(PersonID)));
+        //}
 
        
 

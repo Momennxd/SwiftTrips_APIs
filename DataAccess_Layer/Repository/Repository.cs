@@ -49,6 +49,8 @@ namespace DataAccess_Layer.Repository
 
         public static T? GetItem(dynamic ItemPK)
         {
+            if (ItemPK == null)
+                return null;
 
             AppDbContext context = new AppDbContext();
         

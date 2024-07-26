@@ -1,9 +1,11 @@
 ﻿using API_Layer.DTOs;
 using Core_Layer;
+using Core_Layer.Core_Classes.Sessions;
 using Core_Layer.Core_Classes.Users;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 
 namespace API_Layer.Controllers.people
 {
@@ -50,17 +52,27 @@ namespace API_Layer.Controllers.people
 
 
         [HttpGet("GetUser")]
-        public ActionResult GetUser(int UserID)
+        public ActionResult GetUser(int UserID, [FromHeader]string SessionID)
         {
-
-            if (UserID <= 0)
-                return BadRequest("Enter valid UserID");
-
-            UsersDTOs.SendUserDTO sendUserDTO = UsersDTOs.ToSendUserDTO(clsUser.GetItem(UserID));
+            if (UserID <= 0 || string.IsNullOrEmpty(SessionID))
+                return BadRequest("Enter valid info");
 
 
-            if (sendUserDTO == null)
+            clsUser? user = new clsUser(clsUser.GetItem(UserID));
+
+            if (user == null || user.BaseObject == null)
                 return BadRequest("User Not Found");
+
+            clsUserSession.enSessionValidationResult ses_result =
+                clsUserSession.ValidateSession(SessionID, user.BaseObject.UserID);
+
+     
+            if (ses_result != clsUserSession.enSessionValidationResult.eSession_Valid)
+                return Unauthorized(ses_result.ToString());
+
+
+            UsersDTOs.SendUserDTO sendUserDTO = UsersDTOs.ToSendUserDTO(user.BaseObject);
+
 
 
             return Ok(sendUserDTO);
