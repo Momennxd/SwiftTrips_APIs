@@ -236,8 +236,6 @@ C:\Users\Ahmed Ben Sahmaln\Desktop\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\sc
 C:\Users\Ahmed Ben Sahmaln\Desktop\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\API_Layer.csproj.Up2Date
 C:\Users\Ahmed Ben Sahmaln\Desktop\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\API_Layer.genruntimeconfig.cache
 C:\Users\Ahmed Ben Sahmaln\Desktop\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\ref\API_Layer.dll
-D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\bin\Debug\net8.0\appsettings.Development.json
-D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\bin\Debug\net8.0\appsettings.json
 D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\bin\Debug\net8.0\API_Layer.exe
 D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\bin\Debug\net8.0\API_Layer.deps.json
 D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\bin\Debug\net8.0\API_Layer.runtimeconfig.json
@@ -398,3 +396,5 @@ D:\Projects\web_projects\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\scopedcss\bu
 D:\Projects\web_projects\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\API_Layer.csproj.Up2Date
 D:\Projects\web_projects\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\API_Layer.genruntimeconfig.cache
 D:\Projects\web_projects\SwiftTrips_APIs\API_Layer\obj\Debug\net8.0\ref\API_Layer.dll
+D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\bin\Debug\net8.0\JSONs\appsettings.Development.json
+D:\Projects\web_projects\SwiftTrips\SwiftTrips_APIs\API_Layer\bin\Debug\net8.0\JSONs\appsettings.json

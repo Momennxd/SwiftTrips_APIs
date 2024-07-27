@@ -23,8 +23,7 @@ namespace Core_Layer.Core_Classes.Sessions
 
         internal clsUserSession(eUsersSessionsDA? eSession)
         {
-            base.BaseObject = eSession;
-            
+            base.BaseObject = eSession;          
         }
 
         public static int Session_Timeout_Age_InDays 
@@ -92,6 +91,7 @@ namespace Core_Layer.Core_Classes.Sessions
         /// <para>'eSession_NotExist' if the session does not exist in the database.</para>
         /// <para>'eSession_NotValid' if the session exists in the database but is not valid.</para>
         /// <para>'eSession_Timout' if the session exists in the database but the it's timespan reached the max.</para>
+        /// <para>'eUser_HasNoSession' if the user has no session in the database.</para>
         /// <para>'eSession_Valid' if the session exists in the database and valid.</para>
         /// </returns>
         public static enSessionValidationResult ValidateSession(string SessionID, int UserID)

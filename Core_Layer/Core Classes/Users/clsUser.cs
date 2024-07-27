@@ -54,11 +54,7 @@ namespace Core_Layer
                 return -1;
 
 
-            clsUser user = new clsUser();
-
-
-            user.BaseObject = UsersDTOs.ToUserEntity(userDTO, UserPerson.BaseObject.PersonID);
-
+            clsUser user = new clsUser(UsersDTOs.ToUserEntity(userDTO, UserPerson.BaseObject.PersonID));
 
             if (!clsUser.AddItem(user.BaseObject))
                 return -1;

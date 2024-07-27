@@ -15,6 +15,7 @@ namespace API_Layer.Controllers.people
 
         public HotelsManagersController()
         {
+
         }
 
 
