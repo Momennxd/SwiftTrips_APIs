@@ -1,24 +1,12 @@
-﻿using ConsoleApp1;
-using DataAccess_Layer;
-using DataAccess_Layer.Entities;
-using DataAccess_Layer.Repository;
+using ConsoleApp1;
 using Microsoft.AspNetCore.JsonPatch;
-using Microsoft.EntityFrameworkCore.Diagnostics;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataAccess_Layer.Repository
 {
     public abstract class Repository<T> where T : class
     {
+        #region Repository init
         protected static AppDbContext context { get; private set; }
-
-      
         static Repository()
         {
             context = new AppDbContext();
@@ -29,65 +17,68 @@ namespace DataAccess_Layer.Repository
             InitBaseObject();
         }
 
-      
+
 
 
         /// <summary>
         /// This function init the base object with the default values depending on the child class.
         /// </summary>
         protected abstract void InitBaseObject();
-        
+        public T? BaseObject { get; set; }
+        #endregion
 
-        public T?  BaseObject { get; set; }
-
-
-
-
-
-
-        
-
+        #region Static Members
         public static T? GetItem(dynamic ItemPK)
         {
             if (ItemPK == null)
                 return null;
 
-            AppDbContext context = new AppDbContext();
-        
+            using (AppDbContext context = new AppDbContext())
+            {
+
+                try
+                {
+                    return context.Set<T>().Find(ItemPK);
+
+                }
+                catch (Exception ex)
+                {
+                    return null;
+                }
+            }
+        }
+        public static List<T>? GetAllItem()
+        {
+            List<T>? AllItems = null;
             try
             {
-                return context.Set<T>().Find(ItemPK);
+                using (AppDbContext context = new AppDbContext())
+                {
+                    AllItems = context.Set<T>().ToList();
+                }
+            }
+            catch (Exception ex) { }
 
-            }
-            catch (Exception ex)
-            {
-                return null;
-            }
+            return AllItems;
+
         }
 
-
-        public static List<T> GetAllItem()
-        {
-            if (context == null)
-                return null;
-
-            return context.Set<T>().ToList();
-
-        }
-       
 
 
         public static bool AddItem(T Item)
         {
-            if (Item == null || context == null)
+            if (Item == null)
                 return false;
 
 
             try
             {
-                context.Set<T>().Add(Item);
-                context.SaveChanges();
-                return true;
+                using (AppDbContext context = new AppDbContext())
+                {
+                    context.Set<T>().Add(Item);
+                    context.SaveChanges();
+                    return true;
+                }
             }
             catch (Exception ex)
             {
@@ -101,19 +92,16 @@ namespace DataAccess_Layer.Repository
 
         public static bool DeleteItem(dynamic ItemPK)
         {
-            if (context == null)
-            {
-                return false;
-            }
-
             try
             {
-
-                var Item = context.Set<T>().Find(ItemPK);
-
-                context.Set<T>().Remove(Item);
-                context.SaveChanges();
-                return true;
+                using (AppDbContext context = new AppDbContext())
+                {
+                    // Need To Perform
+                    var Item = context.Set<T>().Find(ItemPK);
+                    context.Set<T>().Remove(Item);
+                    context.SaveChanges();
+                    return true;
+                }
             }
             catch (Exception ex)
             {
@@ -124,10 +112,10 @@ namespace DataAccess_Layer.Repository
         }
 
 
-
+        // Need To Perform
         public static bool UpdateItem(T NewItem, dynamic ItemPK)
         {
-            if (NewItem == null || context == null)
+            if (NewItem == null)
             {
                 return false;
             }
@@ -135,41 +123,45 @@ namespace DataAccess_Layer.Repository
 
             try
             {
-                T Item = context.Set<T>()
-                    .Find(ItemPK);
-
-                // تحقق من وجود الكيان
-                if (Item == null)
+                using (AppDbContext context = new AppDbContext())
                 {
-                    return false;
-                }
 
-                //// تحديث كافة الخصائص
-                //context.Entry(Item).CurrentValues.SetValues(NewItem);
+                    T Item = context.Set<T>()
+                        .Find(ItemPK);
 
-                var keyProperties = context.Model.FindEntityType(typeof(T))
-                                        .FindPrimaryKey()
-                                        .Properties;
-
-                // Get all properties of the entity type
-                var properties = typeof(T).GetProperties();
-
-                // Update properties except the key properties
-                foreach (var property in properties)
-                {
-                    // Skip key properties
-                    if (keyProperties.Any(kp => kp.Name == property.Name))
+                    // تحقق من وجود الكيان
+                    if (Item == null)
                     {
-                        continue;
+                        return false;
                     }
 
-                    var newValue = property.GetValue(NewItem);
-                    property.SetValue(Item, newValue);
+                    //// تحديث كافة الخصائص
+                    //context.Entry(Item).CurrentValues.SetValues(NewItem);
+
+                    var keyProperties = context.Model.FindEntityType(typeof(T))
+                                            .FindPrimaryKey()
+                                            .Properties;
+
+                    // Get all properties of the entity type
+                    var properties = typeof(T).GetProperties();
+
+                    // Update properties except the key properties
+                    foreach (var property in properties)
+                    {
+                        // Skip key properties
+                        if (keyProperties.Any(kp => kp.Name == property.Name))
+                        {
+                            continue;
+                        }
+
+                        var newValue = property.GetValue(NewItem);
+                        property.SetValue(Item, newValue);
+                    }
+
+
+                    context.SaveChanges();
+                    return true;
                 }
-
-
-                context.SaveChanges();
-                return true;
             }
             catch (Exception ex)
             {
@@ -209,6 +201,7 @@ namespace DataAccess_Layer.Repository
                 return false;
             }
         }
+        #endregion
 
     }
 }
