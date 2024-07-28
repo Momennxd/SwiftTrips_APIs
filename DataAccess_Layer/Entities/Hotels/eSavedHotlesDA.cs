@@ -19,8 +19,8 @@ public class eSavedHotlesDA
 
     // Navigation Property
 
-    public eUsersDA users {  get; set; }
+    public User users {  get; set; }
 
-    public eHotelsDA hotels {  get; set; }  
+    public Hotel hotels {  get; set; }  
 
 }
