@@ -24,7 +24,7 @@ namespace DataAccess_Layer.Entities.Language.cs
         public int LanguagePersonIndex { get; set; }
 
 
-        public ePeopleDA ePeople {  get; set; }
+        public Person ePeople {  get; set; }
 
 
         public eLanguageDA eLanguage { get; set; }

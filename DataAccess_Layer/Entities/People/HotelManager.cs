@@ -9,27 +9,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.People
+namespace DataAccess_Layer.Entities
 {
-    public class eUsersDA
+    public class HotelManager
     {
 
-        [Key]
-        public int UserID { get; }
+        public int HotelManagerID { get; set; }
 
 
-        public required int PersonID { get; set; }
+        public required int UserID { get; set; }
 
-
-        public required string Username { get; set; }
-
-
-        public required string Password { get; set; }
-
-        public required bool IsActive { get; set; }
 
        
 
+       
 
     }
 }

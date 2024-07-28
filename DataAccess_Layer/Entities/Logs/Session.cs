@@ -12,9 +12,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess_Layer.Entities.Logs
 {
-    public class eUsersSessionsDA
+    public class Session
     {
-        [Key]
         public string SessionID { get; set; }
 
 

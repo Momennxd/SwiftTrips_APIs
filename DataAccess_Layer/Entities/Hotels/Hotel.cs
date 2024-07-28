@@ -11,11 +11,10 @@ using System.Threading.Tasks;
 
 namespace DataAccess_Layer.Entities.Hotels
 {
-    public class eHotelsDA
+    public class Hotel
     {
 
-        [Key]
-        public int HotelID { get; }
+        public int HotelID { get; set; }
 
 
         public required string HotelName { get; set; }

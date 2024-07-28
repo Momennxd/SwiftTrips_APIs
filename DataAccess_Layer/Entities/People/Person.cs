@@ -11,11 +11,10 @@ using System.Threading.Tasks;
 
 namespace DataAccess_Layer.Entities.People
 {
-    public class ePeopleDA
+    public class Person
     {
 
-        [Key]
-        public int PersonID { get; }
+        public int PersonID { get; set; }
 
 
         public required string FirstName { get; set; }

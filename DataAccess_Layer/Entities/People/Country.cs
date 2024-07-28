@@ -12,11 +12,10 @@ using System.Threading.Tasks;
 
 namespace DataAccess_Layer.Entities.People
 {
-    public class eCountriesDA
+    public class Country
     {
 
-        [Key]
-        public int CountryID { get; }
+        public int CountryID { get; set; }
 
 
         public required string CountryName { get; set; }
