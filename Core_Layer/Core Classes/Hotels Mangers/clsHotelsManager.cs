@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.SqlServer.Query.Internal;
 
 namespace Core_Layer
 {
-    public class clsHotelsManager : Repository<eHotelsManagersDA>
+    public class clsHotelsManager : Repository<HotelManager>
     {
 
         public clsHotelsManager()
@@ -17,14 +17,14 @@ namespace Core_Layer
             
         }
 
-        public clsHotelsManager(eHotelsManagersDA? baseObj)
+        public clsHotelsManager(HotelManager? baseObj)
         {
             base.BaseObject = baseObj;
         }
 
 
         //Navigation Property
-        public eUsersDA User
+        public User User
         {
             get
             {
@@ -41,16 +41,16 @@ namespace Core_Layer
                 null, null, managerDTO.Email, null)));
 
             if (UserID == -1)
-                return -1;           
+                return -1;
 
-            eHotelsManagersDA eHotelsManagers = HotelsManagersDTOs.ToHotelsManagerEntity(managerDTO, UserID);
-
+            HotelManager eHotelsManagers = HotelsManagersDTOs.ToHotelsManagerEntity(managerDTO, UserID);
+            
             AddItem(eHotelsManagers);
 
 
             return eHotelsManagers.HotelManagerID;
         }
-
+        
         public static clsHotelsManager GetHotelManager(int UserID)
         {
              return new clsHotelsManager(context.HotelsManagers.SingleOrDefault(m => m.UserID == UserID));
@@ -59,7 +59,7 @@ namespace Core_Layer
 
         protected override void InitBaseObject()
         {
-            base.BaseObject = new eHotelsManagersDA() { UserID = -1 };
+            base.BaseObject = new HotelManager() { UserID = -1 };
         }
     }
 }

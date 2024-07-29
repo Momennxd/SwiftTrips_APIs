@@ -68,7 +68,7 @@ namespace Core_Layer.Core_Classes.Users
         {
             stLoginResult loginResult = new stLoginResult();
 
-            eUsersDA? user = clsUser.GetUserInfo(dtoLoginUser.Username);
+            User? user = clsUser.GetUserInfo(dtoLoginUser.Username);
 
             if (user == null)
             {

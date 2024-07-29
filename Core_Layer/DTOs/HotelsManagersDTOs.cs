@@ -21,7 +21,7 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public static SendHotelsManagerDTO? ToSendHotelsManagerDTO(eHotelsManagersDA HotelManager, string SessionID = "")
+        public static SendHotelsManagerDTO? ToSendHotelsManagerDTO(HotelManager HotelManager, string SessionID = "")
         {
             if (HotelManager == null)
                 return null;
@@ -41,11 +41,11 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="person"></param>
         /// <returns></returns>
-        public static List<SendHotelsManagerDTO> ToSendHotelsManagerDTO(List<eHotelsManagersDA> hotelers)
+        public static List<SendHotelsManagerDTO> ToSendHotelsManagerDTO(List<HotelManager> hotelers)
         {
             List<SendHotelsManagerDTO> lstDTOs = new List<SendHotelsManagerDTO>();
 
-            foreach (eHotelsManagersDA hoteler in hotelers)
+            foreach (HotelManager hoteler in hotelers)
             {
                 lstDTOs.Add(ToSendHotelsManagerDTO(hoteler));
             }
@@ -54,12 +54,12 @@ namespace API_Layer.DTOs
         }
 
 
-        public static eHotelsManagersDA ToHotelsManagerEntity(CreateHotelsManagerDTO HotelManagerDTO, int UserID)
+        public static HotelManager ToHotelsManagerEntity(CreateHotelsManagerDTO HotelManagerDTO, int UserID)
         {
             if (HotelManagerDTO == null)
                 return null;
 
-            eHotelsManagersDA eHotelManager = new eHotelsManagersDA()
+            HotelManager eHotelManager = new HotelManager()
             {
                 UserID = UserID              
             };

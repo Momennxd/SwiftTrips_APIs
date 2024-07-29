@@ -9,19 +9,19 @@ using System.Runtime.CompilerServices;
 
 namespace Core_Layer
 {
-    public class clsUser : Repository<eUsersDA>
+    public class clsUser : Repository<User>
     {
 
         public clsUser()
         {
         }
 
-        public clsUser(eUsersDA? eUser)
+        public clsUser(User? eUser)
         {
             base.BaseObject = eUser;          
         }
 
-        public static eUsersDA? GetUserInfo(string Username)
+        public static User? GetUserInfo(string Username)
         {
             return clsUser.context.Users.SingleOrDefault(user => user.Username == Username);
         }
@@ -66,7 +66,7 @@ namespace Core_Layer
 
         protected override void InitBaseObject()
         {
-            this.BaseObject = new eUsersDA() { Username = "", PersonID = -1, Password = "", IsActive = false};
+            this.BaseObject = new User() { Username = "", PersonID = -1, Password = "", IsActive = false};
         }
     }
 }

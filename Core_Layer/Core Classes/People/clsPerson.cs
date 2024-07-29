@@ -7,7 +7,7 @@ using DataAccess_Layer.Repository;
 
 namespace Core_Layer
 {
-    public class clsPerson : Repository<ePeopleDA>
+    public class clsPerson : Repository<Person>
     {
         public clsPerson()
         {
@@ -18,7 +18,7 @@ namespace Core_Layer
        
         protected override void InitBaseObject()
         {
-            base.BaseObject = new ePeopleDA()
+            base.BaseObject = new Person()
             {
                 Email = "",
                 FirstName = "",

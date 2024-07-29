@@ -1,42 +1,33 @@
-﻿using API_Layer.DTOs;
-using DataAccess_Layer.Entities.Logs;
-using DataAccess_Layer.Entities.People;
+﻿using DataAccess_Layer.Entities.Logs;
 using DataAccess_Layer.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Core_Layer.Core_Classes.Sessions
 {
-    public class clsUserSession : Repository<eUsersSessionsDA>
+    public class clsUserSession : Repository<Session>
     {
 
 
         public clsUserSession()
         {
-            
+
         }
 
-        internal clsUserSession(eUsersSessionsDA? eSession)
+        internal clsUserSession(Session? eSession)
         {
-            base.BaseObject = eSession;          
+            base.BaseObject = eSession;
         }
 
-        public static int Session_Timeout_Age_InDays 
+        public static int Session_Timeout_Age_InDays
         {
-            get 
+            get
             {
                 return 90;
             }
-            
+
             set
             {
                 Session_Timeout_Age_InDays = value;
-            } 
+            }
         }
 
 
@@ -57,7 +48,7 @@ namespace Core_Layer.Core_Classes.Sessions
         public clsUserSession(string SessionID, int UserID, DateTime LasAct_TimeStamp,
             bool IsValid, byte? Invalid_Reason)
         {
-            base.BaseObject = new eUsersSessionsDA()
+            base.BaseObject = new Session()
             {
                 SessionID = SessionID,
                 UserID = UserID,
@@ -77,7 +68,7 @@ namespace Core_Layer.Core_Classes.Sessions
         /// <returns></returns>
         public static string GenSessionID()
         {
-            return  Guid.NewGuid().ToString(); // Generate a new GUID as the session ID
+            return Guid.NewGuid().ToString(); // Generate a new GUID as the session ID
         }
 
 
@@ -98,16 +89,16 @@ namespace Core_Layer.Core_Classes.Sessions
         {
             clsUserSession session = new clsUserSession(GetItem(SessionID));
 
-            if (session == null || session.BaseObject == null)           
+            if (session == null || session.BaseObject == null)
                 return enSessionValidationResult.eSession_NotExist;
-            
+
             if (!session.BaseObject.IsValid)
                 return enSessionValidationResult.eSession_NotValid;
 
 
             TimeSpan difference = DateTime.Now - session.BaseObject.LasAct_TimeStamp;
 
-            if (difference.Days > Session_Timeout_Age_InDays)           
+            if (difference.Days > Session_Timeout_Age_InDays)
                 return enSessionValidationResult.eSession_Timout;
 
             clsUserSession? UserSession = clsUserSession.GetSession(UserID);
@@ -122,7 +113,7 @@ namespace Core_Layer.Core_Classes.Sessions
 
 
             if (UserSession.BaseObject.SessionID != SessionID)
-                return enSessionValidationResult.eSession_User_NotMatch;        
+                return enSessionValidationResult.eSession_User_NotMatch;
 
             return enSessionValidationResult.eSession_Valid;
 
@@ -136,15 +127,19 @@ namespace Core_Layer.Core_Classes.Sessions
             if (UserID <= 0)
                 return null;
 
-           return new clsUserSession(context.UsersSessions.SingleOrDefault(s => s.UserID == UserID && s.IsValid));
+            return new clsUserSession(context.UsersSessions.SingleOrDefault(s => s.UserID == UserID && s.IsValid));
         }
 
 
         protected override void InitBaseObject()
         {
-            this.BaseObject = new eUsersSessionsDA() { SessionID = string.Empty, 
-                UserID = -1, LasAct_TimeStamp = DateTime.MinValue,
-                IsValid = false };
+            this.BaseObject = new Session()
+            {
+                SessionID = string.Empty,
+                UserID = -1,
+                LasAct_TimeStamp = DateTime.MinValue,
+                IsValid = false
+            };
         }
 
 

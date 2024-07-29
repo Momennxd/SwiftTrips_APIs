@@ -43,7 +43,7 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="person"></param>
         /// <returns></returns>
-        public static SendPersonDTO ToSendPersonDTO(ePeopleDA person)
+        public static SendPersonDTO ToSendPersonDTO(Person person)
         {
             if (person == null)
                 return null;
@@ -62,11 +62,11 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="person"></param>
         /// <returns></returns>
-        public static List<SendPersonDTO> ToSendPersonDTO(List<ePeopleDA> People)
+        public static List<SendPersonDTO> ToSendPersonDTO(List<Person> People)
         {
             List<SendPersonDTO> lstDTOs = new List<SendPersonDTO> ();
 
-            foreach(ePeopleDA person in People)
+            foreach(Person person in People)
             {
                 lstDTOs.Add(ToSendPersonDTO(person));
             }
@@ -76,12 +76,12 @@ namespace API_Layer.DTOs
 
 
 
-        public static ePeopleDA ToPersonEntity(CreatePersonDTO personDTO)
+        public static Person ToPersonEntity(CreatePersonDTO personDTO)
         {
             if (personDTO == null)
                 return null;
 
-            ePeopleDA person = new ePeopleDA()
+            Person person = new Person()
             {
                 FirstName = personDTO.FirstName,
                 LastName = personDTO.LastName,
