@@ -16,7 +16,6 @@ using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
-using Session = DataAccess_Layer.Entities.Logs.Session;
 
 namespace ConsoleApp1
 {

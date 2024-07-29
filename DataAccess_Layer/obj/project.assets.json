@@ -4315,11 +4315,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dell\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj",
+      "projectUniqueName": "C:\\Users\\dell\\Desktop\\ApiProject\\DataAccess_Layer\\DataAccess_Layer.csproj",
       "projectName": "DataAccess_Layer",
-      "projectPath": "C:\\Users\\dell\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\DataAccess_Layer.csproj",
+      "projectPath": "C:\\Users\\dell\\Desktop\\ApiProject\\DataAccess_Layer\\DataAccess_Layer.csproj",
       "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dell\\Desktop\\SwiftTrips_APIs\\DataAccess_Layer\\obj\\",
+      "outputPath": "C:\\Users\\dell\\Desktop\\ApiProject\\DataAccess_Layer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
