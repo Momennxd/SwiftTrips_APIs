@@ -1,4 +1,4 @@
-using ConsoleApp1;
+using Core_Layer.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

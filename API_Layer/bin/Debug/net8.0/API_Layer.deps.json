@@ -618,21 +618,13 @@
       },
       "Core_Layer/1.0.0": {
         "dependencies": {
-          "DataAccess_Layer": "1.0.0"
-        },
-        "runtime": {
-          "Core_Layer.dll": {}
-        }
-      },
-      "DataAccess_Layer/1.0.0": {
-        "dependencies": {
           "EntityFramework.Extensions": "0.0.2",
           "Microsoft.AspNetCore.JsonPatch": "8.0.6",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "8.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "8.0.6"
         },
         "runtime": {
-          "DataAccess_Layer.dll": {}
+          "Core_Layer.dll": {}
         }
       }
     }
@@ -1113,11 +1105,6 @@
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
     },
     "Core_Layer/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "DataAccess_Layer/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

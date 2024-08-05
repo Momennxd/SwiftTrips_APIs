@@ -1,4 +1,4 @@
-using ConsoleApp1;
+using Core_Layer.Repository;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,48 +6,33 @@ namespace DataAccess_Layer.Repository
 {
     public abstract class Repository<T> where T : class
     {
-        #region Repository init
-        protected static AppDbContext context { get; private set; }
-        static Repository()
-        {
-            context = clsService.contextFactory!.CreateDbContext();
-        }
 
+       
         public Repository()
         {
-            InitBaseObject();
+
         }
 
-
-
-
         /// <summary>
-        /// This function init the base object with the default values depending on the child class.
+        /// this abstract method is used to init the child class object.
         /// </summary>
-        protected abstract void InitBaseObject();
-        public T? BaseObject { get; set; }
-        #endregion
+       // protected abstract void InitClass();
 
 
-        #region Get Item
-        public static T? GetItem(dynamic ItemPK)
+        public static T? Find(dynamic ItemPK)
         {
+
             if (ItemPK == null)
                 return null;
 
-            using (AppDbContext context = clsService.contextFactory!.CreateDbContext())
+            try
             {
-
-                try
+                using (DbContext context = clsService.contextFactory!.CreateDbContext())
                 {
                     return context.Set<T>().Find(ItemPK);
-
-                }
-                catch (Exception ex)
-                {
-                    return null;
                 }
             }
+            catch (Exception ex) { return null; }
         }
 
 
@@ -70,7 +55,7 @@ namespace DataAccess_Layer.Repository
                 }
             }
         }
-        #endregion
+
 
         #region Get All Items
         public static List<T>? GetAllItems()
@@ -88,6 +73,8 @@ namespace DataAccess_Layer.Repository
             return AllItems;
 
         }
+
+
         public static async Task<List<T>?> GetAllItemsAsync()
         {
             List<T>? AllItems = null;
@@ -105,6 +92,7 @@ namespace DataAccess_Layer.Repository
         }
 
         #endregion
+
 
         #region Add Item
         public static bool AddItem(T Item)
@@ -129,6 +117,8 @@ namespace DataAccess_Layer.Repository
 
 
         }
+
+
         public static async Task<bool> AddItemAsync(T Item)
         {
             if (Item == null)
@@ -154,6 +144,69 @@ namespace DataAccess_Layer.Repository
         }
         #endregion
 
+
+
+
+        public static T? UpdateItem(dynamic Id, T UpdatedItem)
+        {
+            if (UpdatedItem == null)
+            {
+                return null;
+            }
+
+
+            try
+            {
+                using (DbContext context = clsService.contextFactory!.CreateDbContext())
+                {
+                    T? item = context.Set<T>().Find(Id);
+                    if (item == null)
+                        return null;
+
+                    context.Entry(item).CurrentValues.SetValues(UpdatedItem);
+                    context.SaveChanges();
+                    return item;
+                }
+
+            }
+            catch (Exception ex) { return null; }
+        }
+
+
+
+        public static T? PatchItem(JsonPatchDocument<T> NewItem, dynamic ItemPK)
+        {
+
+            if (NewItem == null || clsService.contextFactory == null)           
+                return null;
+            
+
+            try
+            {
+                using (DbContext context = clsService.contextFactory!.CreateDbContext())
+                {
+                    T Item = context.Set<T>().Find(ItemPK);
+
+                    //id does not exist
+                    if (Item == null)
+                        return null;
+
+                    NewItem.ApplyTo(Item);
+
+                    context.SaveChanges();
+
+                    return Item;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+       
+
         #region Delete Item
         public static bool DeleteItem(dynamic ItemPK)
         {
@@ -170,6 +223,8 @@ namespace DataAccess_Layer.Repository
             }
             catch (Exception ex) { return false; }
         }
+
+
         public static async Task<bool> DeleteItemAsync(dynamic ItemPK)
         {
             try
@@ -187,98 +242,70 @@ namespace DataAccess_Layer.Repository
         }
         #endregion
 
-        #region In Progress
-
-        // Need To Perform
-        public static bool UpdateItem(T NewItem, dynamic ItemPK)
-        {
-            if (NewItem == null)
-            {
-                return false;
-            }
-
-
-            try
-            {
-                using (AppDbContext context = clsService.contextFactory!.CreateDbContext())
-                {
-
-                    T Item = context.Set<T>()
-                        .Find(ItemPK);
-
-                    // تحقق من وجود الكيان
-                    if (Item == null)
-                    {
-                        return false;
-                    }
-
-                    //// تحديث كافة الخصائص
-                    //context.Entry(Item).CurrentValues.SetValues(NewItem);
-
-                    var keyProperties = context.Model.FindEntityType(typeof(T))
-                                            .FindPrimaryKey()
-                                            .Properties;
-
-                    // Get all properties of the entity type
-                    var properties = typeof(T).GetProperties();
-
-                    // Update properties except the key properties
-                    foreach (var property in properties)
-                    {
-                        // Skip key properties
-                        if (keyProperties.Any(kp => kp.Name == property.Name))
-                        {
-                            continue;
-                        }
-
-                        var newValue = property.GetValue(NewItem);
-                        property.SetValue(Item, newValue);
-                    }
-
-
-                    context.SaveChanges();
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                // يمكنك تسجيل الخطأ هنا
-                return false;
-            }
 
 
 
-        }
+        //// Need To Perform
+        //[Obsolete("This method is deprecated")]
+        //public static bool UpdateItem(T NewItem, dynamic ItemPK)
+        //{
+        //    if (NewItem == null)
+        //    {
+        //        return false;
+        //    }
+
+
+        //    try
+        //    {
+        //        using (AppDbContext context = clsService.contextFactory!.CreateDbContext())
+        //        {
+
+        //            T Item = context.Set<T>()
+        //                .Find(ItemPK);
+
+        //            // تحقق من وجود الكيان
+        //            if (Item == null)
+        //            {
+        //                return false;
+        //            }
+
+        //            //// تحديث كافة الخصائص
+        //            //context.Entry(Item).CurrentValues.SetValues(NewItem);
+
+        //            var keyProperties = context.Model.FindEntityType(typeof(T))
+        //                                    .FindPrimaryKey()
+        //                                    .Properties;
+
+        //            // Get all properties of the entity type
+        //            var properties = typeof(T).GetProperties();
+
+        //            // Update properties except the key properties
+        //            foreach (var property in properties)
+        //            {
+        //                // Skip key properties
+        //                if (keyProperties.Any(kp => kp.Name == property.Name))
+        //                {
+        //                    continue;
+        //                }
+
+        //                var newValue = property.GetValue(NewItem);
+        //                property.SetValue(Item, newValue);
+        //            }
+
+
+        //            context.SaveChanges();
+        //            return true;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        // يمكنك تسجيل الخطأ هنا
+        //        return false;
+        //    }
 
 
 
-        public static bool PatchItem(JsonPatchDocument<T> NewItem, dynamic ItemPK)
-        {
-
-            if (NewItem == null || context == null)
-            {
-                return false;
-            }
-
-            try
-            {
-                T Item = context.Set<T>().Find(ItemPK);
-
-                //id does not exist
-                if (Item == null)
-                    return false;
-
-                NewItem.ApplyTo(Item);
-
-                context.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-        }
-        #endregion
+        //}
 
 
 

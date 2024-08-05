@@ -1,0 +1,123 @@
+﻿using DataAccess_Layer;
+using DataAccess_Layer.Entities.Logs;
+using DataAccess_Layer.Repository;
+
+namespace Core_Layer.Core_Classes.Sessions
+{
+    public static class clsUserSessionCore
+    {
+    
+        public static int Session_Timeout_Age_InDays
+        {
+            get
+            {
+                return 90;
+            }
+
+            set
+            {
+                Session_Timeout_Age_InDays = value;
+            }
+        }
+
+
+        public enum enSessionValidationResult
+        {
+            eSession_NotExist,
+            eSession_NotValid,
+            eSession_Timout,
+            eSession_Valid,
+
+            eSession_User_NotMatch,
+            eUser_HasNoSession
+
+        }
+
+
+        /// <summary>
+        /// Generates a session ID as a string (GUID)
+        /// </summary>
+        /// <returns></returns>
+        public static string GenSessionID()
+        {
+            return Guid.NewGuid().ToString(); // Generate a new GUID as the session ID
+        }
+
+
+
+        /// <summary>
+        /// Validates the session by the session ID.
+        /// </summary>
+        /// <param name="SessionID"></param>
+        /// <returns>
+        /// <par>enum of enSessionValidationResult.</par>
+        /// <para>'eSession_NotExist' if the session does not exist in the database.</para>
+        /// <para>'eSession_NotValid' if the session exists in the database but is not valid.</para>
+        /// <para>'eSession_Timout' if the session exists in the database but the it's timespan reached the max.</para>
+        /// <para>'eUser_HasNoSession' if the user has no session in the database.</para>
+        /// <para>'eSession_Valid' if the session exists in the database and valid.</para>
+        /// </returns>
+        public static enSessionValidationResult ValidateSession(string SessionID, int UserID)
+        {
+             eSessionDA? session = eSessionDA.Find(SessionID);
+
+            if (session == null)
+                return enSessionValidationResult.eSession_NotExist;
+
+            if (!session.IsValid)
+                return enSessionValidationResult.eSession_NotValid;
+
+
+            TimeSpan difference = DateTime.Now - session.LasAct_TimeStamp;
+
+            if (difference.Days > Session_Timeout_Age_InDays)
+                return enSessionValidationResult.eSession_Timout;
+
+            eSessionDA? UserSession = clsUserSessionCore.GetSession(UserID);
+
+
+            if (UserSession == null)
+                return enSessionValidationResult.eUser_HasNoSession;
+
+
+            if (string.IsNullOrEmpty(UserSession.SessionID))
+                return enSessionValidationResult.eUser_HasNoSession;
+
+
+            if (UserSession.SessionID != SessionID)
+                return enSessionValidationResult.eSession_User_NotMatch;
+
+            return enSessionValidationResult.eSession_Valid;
+
+
+        }
+
+
+
+        public static eSessionDA? GetSession(int UserID)
+        {
+            if (UserID <= 0)
+                return null;
+
+            return (clsService.Context.UsersSessions.FirstOrDefault(s => s.UserID == UserID && s.IsValid));
+        }
+
+
+
+        public static eSessionDA CreateSession(int UserID)
+        {
+            return new eSessionDA()
+            { 
+                UserID = UserID,
+                SessionID = clsUserSessionCore.GenSessionID(),
+                LasAct_TimeStamp = DateTime.Now,
+                IsValid = true,
+                Invalid_Reason = null
+            };
+
+        }
+
+
+
+    }
+}

@@ -1,5 +1,4 @@
 ﻿using Azure;
-using ConsoleApp1;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 using System;
