@@ -8,38 +8,11 @@ using DataAccess_Layer.Entities.Logs;
 using DataAccess_Layer.Entities.People;
 using DataAccess_Layer.Entities.Reservation;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
-using Microsoft.EntityFrameworkCore.Metadata;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Core_Layer.Repository
+namespace Core_Layer.AppDbContext
 {
-    public class AppDbContext : DbContext
+    public partial class AppDbContext
     {
-        const string _dbConnectionString =
-
-            "Server=.;Database=SwiftTripsDB;User Id=sa;Password=sa123456;TrustServerCertificate=true";
-
-
-        public AppDbContext(DbContextOptions options) : base(options)
-        {
-        }
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(_dbConnectionString);
-
-        }
-
-
-
-        #region Entites
-
         public DbSet<eCountryDA> Countries { get; set; }
 
         public DbSet<ePersonDA> People { get; set; }
@@ -87,10 +60,6 @@ namespace Core_Layer.Repository
         public DbSet<eHotlesReservationsDA> HotelsReservations { get; set; }
 
         public DbSet<eSavedHotlesDA> SavedHotels { get; set; }
-
-
-
-        #endregion
 
     }
 }
