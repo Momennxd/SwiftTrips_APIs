@@ -14,6 +14,7 @@ namespace DataAccess_Layer.Entities.Logs
 {
     public class eSessionDA : Repository<eSessionDA>
     {
+        [Key]
         public string SessionID { get; set; }
 
 

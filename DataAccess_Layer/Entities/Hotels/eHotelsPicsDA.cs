@@ -15,7 +15,7 @@ namespace DataAccess_Layer.Entities.Hotels
     {
 
         [Key]
-        public int PicID { get; }
+        public int PicID { get; set; }
 
         public required string URL { get; set; }
 
