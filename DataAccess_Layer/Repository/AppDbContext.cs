@@ -36,46 +36,6 @@ namespace Core_Layer.Repository
 
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<eCountryDA>().HasKey(e => e.CountryID);
-            modelBuilder.Entity<ePersonDA>().HasKey(e => e.PersonID);
-            modelBuilder.Entity<eHotelManagerDA>().HasKey(e => e.HotelManagerID);
-            modelBuilder.Entity<eHotelsManagersHotelsDA>().HasKey(e => e.ID);
-            modelBuilder.Entity<eHotelDA>().HasKey(e => e.HotelID);
-            modelBuilder.Entity<eHotelsPicsDA>().HasKey(e => e.HotelID);
-            modelBuilder.Entity<eUserDA>().HasKey(e => e.UserID);
-            modelBuilder.Entity<eFacilitiesCategoriesDA>().HasKey(e => e.FacilityCategoryID);
-            modelBuilder.Entity<eFacilitiesDA>().HasKey(e => e.FacilityID);
-            modelBuilder.Entity<eHotelFacilitiesDA>().HasKey(e => e.HotelFactilityID);
-            modelBuilder.Entity<eLanguageDA>().HasKey(e => e.LanguageID);
-            modelBuilder.Entity<ePreferedPeopleLanguagesDA>().HasKey(e => e.LanguagePersonID);
-            modelBuilder.Entity<ePaymentsTypeDA>().HasKey(e => e.PaymentTypeID);
-            modelBuilder.Entity<eSavedHotlesDA>().HasKey(e => e.SavedHotleID);
-            modelBuilder.Entity<eSessionDA>().HasKey(e => e.SessionID);
-
-
-
-
-
-
-            modelBuilder.Entity<eAccommodationDiscountDA>().HasKey(e => e.AccommodationDiacountID);
-            modelBuilder.Entity<eAccommdoationBasesDA>().HasKey(e => e.AccommodationBaseID);
-            modelBuilder.Entity<eAccommodationFacilitiesDA>().HasKey(e => e.AccommodationFacilityID);
-            modelBuilder.Entity<eAccommodationPatmentsMethodDA>().HasKey(e => e.MethodId);
-            modelBuilder.Entity<eAccommodationPricesDA>().HasKey(e => e.AccommodationPricesID);
-            modelBuilder.Entity<eAccommodationReviewDA>().HasKey(e => e.AccommodationRevireID);
-            modelBuilder.Entity<eAccommodatioPicsDA>().HasKey(e => e.AccommodationPicID);
-
-
-            modelBuilder.Entity<eReservationTransactionDA>().HasKey(e => e.TranscationID);
-            modelBuilder.Entity<eReservationTypeDA>().HasKey(e => e.ReservationTypeID);
-            modelBuilder.Entity<eHotlesReservationsDA>().HasKey(e => e.HotlereservationID);
-
-
-
-        }
-
 
 
         #region Entites
