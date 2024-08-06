@@ -1,10 +1,6 @@
 ﻿using API_Layer.DTOs;
-using Core_Layer.Repository;
 using DataAccess_Layer;
 using DataAccess_Layer.Entities.People;
-using DataAccess_Layer.Repository;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 
 
 namespace Core_Layer
@@ -12,7 +8,7 @@ namespace Core_Layer
     public static class clsUserCore
     {
 
-    
+
 
         public static eUserDA? GetUserInfo(string Username)
         {
@@ -23,7 +19,7 @@ namespace Core_Layer
         public static bool DoesUserExist(string Username)
         {
             return clsService.Context.Users.SingleOrDefault(user => user.Username == Username) != null;
-              
+
         }
 
 
@@ -53,6 +49,6 @@ namespace Core_Layer
 
         }
 
-       
+
     }
 }
