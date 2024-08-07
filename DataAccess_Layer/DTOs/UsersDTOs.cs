@@ -6,7 +6,7 @@ using static API_Layer.DTOs.PeopleDTOs;
 
 namespace API_Layer.DTOs
 {
-    public class UsersDTOs
+    public static class UsersDTOs
     {
         public record SendUserDTO(int UserID, SendPersonDTO Person, string Username, string Password, string UserSession);
 

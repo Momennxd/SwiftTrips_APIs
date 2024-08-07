@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core_Layer.DTOs
 {
-    public class EmailsDTOs
+    public static class EmailsDTOs
     {
 
         /// <summary>

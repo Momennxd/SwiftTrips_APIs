@@ -13,9 +13,9 @@ namespace DataAccess_Layer.Repository
 
         }
 
-        /// <summary>
-        /// this abstract method is used to init the child class object.
-        /// </summary>
+        ///// <summary>
+        ///// this abstract method is used to init the child class object.
+        ///// </summary>
        // protected abstract void InitClass();
 
 

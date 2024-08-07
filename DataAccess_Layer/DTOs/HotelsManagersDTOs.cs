@@ -5,7 +5,7 @@ using static API_Layer.DTOs.UsersDTOs;
 
 namespace API_Layer.DTOs
 {
-    public class HotelsManagersDTOs
+    public static class HotelsManagersDTOs
     {
         public record SendHotelsManagerDTO(int HotelsManagerID, SendUserDTO User);
 

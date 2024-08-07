@@ -1,6 +1,8 @@
 ﻿using API_Layer.DTOs;
 using Core_Layer;
 using Core_Layer.Core_Classes.Users;
+using DataAccess_Layer.Entities;
+using DataAccess_Layer.Entities.People;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -28,11 +30,11 @@ namespace API_Layer.Controllers
         public ActionResult AddHotelsManager(DTOs.HotelsManagersDTOs.CreateHotelsManagerDTO HotelsManager)
         {
 
-            if (clsUserCore.DoesUserExist(HotelsManager.Username))
+            if (eUserDA.DoesUserExist(HotelsManager.Username))
                 return BadRequest("Username already exists");
 
 
-            int HotelsManagerID = clsHotelsManagerCore.AddItem(HotelsManager);
+            int HotelsManagerID = eHotelManagerDA.AddItem(HotelsManager);
 
             if (HotelsManagerID != -1)
                 return Ok(HotelsManagerID);
@@ -50,18 +52,18 @@ namespace API_Layer.Controllers
         public ActionResult LoginHotelsManager(string Username, string Password)
         {
 
-            var LoginResult = clsUserValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
+            var LoginResult = clsLoginValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
 
 
-            if (LoginResult.enLoginResult == clsUserValidation.enLoginResult.eWrongUsername)
+            if (LoginResult.enLoginResult == clsLoginValidation.enLoginResult.eWrongUsername)
                 return BadRequest("Wrong Username");
 
-            if (LoginResult.enLoginResult == clsUserValidation.enLoginResult.eWrongPassword)
+            if (LoginResult.enLoginResult == clsLoginValidation.enLoginResult.eWrongPassword)
                 return BadRequest("Wrong Password");
 
 
             return Ok(DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO(
-                 clsHotelsManagerCore.GetHotelManager(LoginResult.userInfo.UserID),
+                 eHotelManagerDA.GetHotelManager(LoginResult.userInfo.UserID),
                  LoginResult.sessionID));
         }
 

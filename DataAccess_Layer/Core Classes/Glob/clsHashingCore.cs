@@ -2,7 +2,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Core_Layer.Core
+namespace Core_Layer.Glob
 {
     /// <summary>
     /// Hashing and compare data

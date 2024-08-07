@@ -1,6 +1,5 @@
 ﻿using API_Layer.DTOs;
 using Core_Layer;
-using Core_Layer.Core_Classes.Sessions;
 using Core_Layer.Core_Classes.Users;
 using DataAccess_Layer.Entities.Logs;
 using DataAccess_Layer.Entities.People;
@@ -33,11 +32,11 @@ namespace API_Layer.Controllers
         public ActionResult AddUser(UsersDTOs.CreateUserDTO userDTO)
         {
 
-            if (clsUserCore.DoesUserExist(userDTO.Username))
+            if (eUserDA.DoesUserExist(userDTO.Username))
                 return BadRequest("Username already exists");
 
 
-            int UserID = clsUserCore.AddItem(userDTO);
+            int UserID = eUserDA.AddItem(userDTO);
 
             if (UserID != -1)
                 return Ok(UserID);
@@ -68,11 +67,11 @@ namespace API_Layer.Controllers
 
 
 
-            clsUserSessionCore.enSessionValidationResult ses_result =
-                clsUserSessionCore.ValidateSession(SessionID, user.UserID);
+            eSessionDA.enSessionValidationResult ses_result =
+                eSessionDA.ValidateSession(SessionID, user.UserID);
 
 
-            if (ses_result != clsUserSessionCore.enSessionValidationResult.eSession_Valid)
+            if (ses_result != eSessionDA.enSessionValidationResult.eSession_Valid)
                 return Unauthorized(ses_result.ToString());
 
 
@@ -95,13 +94,13 @@ namespace API_Layer.Controllers
         {
 
 
-            var LoginResult = clsUserValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
+            var LoginResult = clsLoginValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
 
 
-            if (LoginResult.enLoginResult == clsUserValidation.enLoginResult.eWrongUsername)
+            if (LoginResult.enLoginResult == clsLoginValidation.enLoginResult.eWrongUsername)
                 return BadRequest("Wrong Username");
 
-            if (LoginResult.enLoginResult == clsUserValidation.enLoginResult.eWrongPassword)
+            if (LoginResult.enLoginResult == clsLoginValidation.enLoginResult.eWrongPassword)
                 return BadRequest("Wrong Password");
 
 

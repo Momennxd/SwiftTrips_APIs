@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.Json;
 using Microsoft.IdentityModel.Tokens;
 
 
-namespace Core_Layer.Core
+namespace Core_Layer.Glob
 {
     public class clsCore
     {
@@ -39,7 +39,7 @@ namespace Core_Layer.Core
             string json = File.ReadAllText("JSONs/jsonEmailSettings.json");
 
             // Deserialize JSON data into C# object
-            EmailSettings EmailSettings = JsonSerializer.Deserialize<EmailSettings>(json);
+            EmailSettings? EmailSettings = JsonSerializer.Deserialize<EmailSettings>(json);
 
             if (EmailSettings == null)
                 return false;

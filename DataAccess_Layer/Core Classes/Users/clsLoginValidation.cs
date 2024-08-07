@@ -1,5 +1,4 @@
 ﻿using API_Layer.DTOs;
-using Core_Layer.Core_Classes.Sessions;
 using DataAccess_Layer.Entities.Logs;
 using DataAccess_Layer.Entities.People;
 using Microsoft.AspNetCore.Components.Web;
@@ -11,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Core_Layer.Core_Classes.Users
 {
-    public static class clsUserValidation
+    public static class clsLoginValidation
     {
 
         public enum enLoginResult
@@ -34,9 +33,8 @@ namespace Core_Layer.Core_Classes.Users
             public stLoginResult()
             {
                 userInfo = eUserDA.InitClass();
-
                 enLoginResult = enLoginResult.NULL;
-                sessionID = "";
+                sessionID = string.Empty;
             }
 
 
@@ -54,23 +52,23 @@ namespace Core_Layer.Core_Classes.Users
 
 
 
-
-
         /// <summary>
         /// Validates the user login info by checking the username first, if matches then it validatest he password,
         /// if they match it returns the user object.
         /// </summary>
         /// <param name="dtoLoginUser"></param>
         /// <returns>
+        /// A loginResult object that contains :
         ///<para>1-enLoginResult.eWrongUsername if the username is wrong.</para>
         ///<para>2-enLoginResult.eWrongPassword if the password is wrong.</para>
         ///<para>3-The user object if the info matches.</para>  
+        ///<para>4-The user session ID.</para> 
         /// </returns>
         public static stLoginResult ValidateUserInfo(UsersDTOs.LoginUserDTO dtoLoginUser)
         {
             stLoginResult loginResult = new stLoginResult();
 
-            eUserDA? user = clsUserCore.GetUserInfo(dtoLoginUser.Username);
+            eUserDA? user = eUserDA.GetUserInfo(dtoLoginUser.Username);
 
             if (user == null)
             {
@@ -93,9 +91,9 @@ namespace Core_Layer.Core_Classes.Users
 
 
 
-            #region create session.
+            #region creating the user session.
 
-            eSessionDA session = clsUserSessionCore.CreateSession(loginResult.userInfo.UserID);
+            eSessionDA session = eSessionDA.CreateSession(loginResult.userInfo.UserID);
 
 
             eSessionDA.AddItem(session);

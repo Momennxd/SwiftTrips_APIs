@@ -3,7 +3,7 @@ using DataAccess_Layer.Entities.People;
 
 namespace API_Layer.DTOs
 {
-    public class PeopleDTOs
+    public static class PeopleDTOs
     {
 
         /// <summary>

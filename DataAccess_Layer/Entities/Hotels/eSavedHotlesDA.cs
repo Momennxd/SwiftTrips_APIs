@@ -17,7 +17,7 @@ public class eSavedHotlesDA
     public DateTime SaveDate { get; set; }
 
 
-    // Navigation Property
+    // Navigation Properties
 
     public eUserDA users {  get; set; }
 

@@ -1,6 +1,6 @@
 ﻿using API_Layer.DTOs;
 using Core_Layer;
-using Core_Layer.Core;
+using Core_Layer.Glob;
 using Core_Layer.DTOs;
 using DataAccess_Layer.Entities.Hotels;
 using Microsoft.AspNetCore.JsonPatch;
