@@ -26,7 +26,7 @@ namespace DataAccess_Layer.Entities
 
 
         [NotMapped]
-        public eUserDA User { get; }
+        public eUserDA User { get { return eUserDA.Find(this.UserID); } }
 
 
 

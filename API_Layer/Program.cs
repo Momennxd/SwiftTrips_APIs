@@ -1,4 +1,4 @@
-using Core_Layer.Repository;
+using Core_Layer.AppDbContext;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);

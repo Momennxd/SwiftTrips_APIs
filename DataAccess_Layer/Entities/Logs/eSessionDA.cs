@@ -17,6 +17,8 @@ namespace DataAccess_Layer.Entities.Logs
 
 
         //properties
+
+        [Key]
         public string SessionID { get; set; }
 
 

@@ -10,6 +10,7 @@ namespace DataAccess_Layer.Entities.Reservation
 {
     public class eReservationTransactionDA
     {
+        [Key]
         public int TranscationID { get; set; }
 
         public int HotleReservationID { get; set; }

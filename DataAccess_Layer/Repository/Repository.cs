@@ -1,4 +1,4 @@
-using Core_Layer.Repository;
+using Core_Layer.AppDbContext;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 
@@ -13,11 +13,7 @@ namespace DataAccess_Layer.Repository
 
         }
 
-        ///// <summary>
-        ///// this abstract method is used to init the child class object.
-        ///// </summary>
-       // protected abstract void InitClass();
-
+    
 
         public static T? Find(dynamic ItemPK)
         {

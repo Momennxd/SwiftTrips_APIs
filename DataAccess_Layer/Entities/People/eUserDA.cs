@@ -10,6 +10,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using NotMappedAttribute = System.ComponentModel.DataAnnotations.NotMappedAttribute;
 
 
 namespace DataAccess_Layer.Entities.People
@@ -30,6 +31,11 @@ namespace DataAccess_Layer.Entities.People
         public required string Password { get; set; }
 
         public required bool IsActive { get; set; }
+
+
+        [NotMapped]
+        public ePersonDA Person { get { return ePersonDA.Find(PersonID); } }
+
 
 
         public static eUserDA InitClass()

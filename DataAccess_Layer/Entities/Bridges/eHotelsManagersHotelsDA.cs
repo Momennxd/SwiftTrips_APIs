@@ -14,7 +14,7 @@ namespace DataAccess_Layer.Entities.Bridges
     {
 
         [Key]
-        public int ID { get; }
+        public int ID { get; set; }
 
 
         public int HotelMangerID { get; set; }

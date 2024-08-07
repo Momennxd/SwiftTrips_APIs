@@ -1,5 +1,8 @@
-﻿public class eAccommodationDiscountDA
+﻿using System.ComponentModel.DataAnnotations;
+
+public class eAccommodationDiscountDA
 {
+    [Key]
     public int AccommodationDiacountID { get; set; }
 
     public int AccommodationPeiceID { get; set; }
