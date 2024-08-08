@@ -1,4 +1,5 @@
-﻿using DataAccess_Layer.Repository;
+﻿using Core_Layer.AppDbContext;
+using DataAccess_Layer.Repository;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -131,8 +132,14 @@ namespace DataAccess_Layer.Entities.Logs
         {
             if (UserID <= 0)
                 return null;
-
-            return (await clsService.Context.UsersSessions.FirstOrDefaultAsync(s => s.UserID == UserID && s.IsValid));
+            try
+            {
+                using(AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                {
+                    return await context.UsersSessions.FirstOrDefaultAsync(s => s.UserID == UserID && s.IsValid);
+                }
+            }
+            catch (Exception ex) { return null; }
         }
 
 

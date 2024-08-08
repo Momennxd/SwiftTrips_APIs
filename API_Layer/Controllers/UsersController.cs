@@ -13,22 +13,23 @@ namespace API_Layer.Controllers
     public class UsersController : ControllerBase
     {
 
+
+
+        #region Controller init
+
         public UsersController()
         {
         }
 
+        #endregion
 
 
 
-
-
-
-
-        //EndPoints------------------------------------------------------->
-
-
+        #region Add user
 
         [HttpPost("AddUser")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> AddUser(UsersDTOs.CreateUserDTO userDTO)
         {
 
@@ -45,25 +46,26 @@ namespace API_Layer.Controllers
                 return BadRequest("error");
         }
 
+        #endregion
 
 
 
-
+        #region Get user
 
         [HttpGet("GetUser")]
-        public async Task<ActionResult> GetUser(int UserID, [FromHeader] string SessionID)
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
+        public async Task<ActionResult<DTOs.UsersDTOs.SendUserDTO>> GetUser(int UserID, [FromHeader] string SessionID)
         {
             if (UserID <= 0 || string.IsNullOrEmpty(SessionID))
                 return BadRequest("Enter valid info");
 
 
-            eUserDA? user = eUserDA.Find(UserID);
+            eUserDA? user = await eUserDA.FindAsync(UserID);
 
             if (user == null)
-                return BadRequest("User Not Found");
-
-
-
+                return NotFound();
 
 
 
@@ -78,18 +80,20 @@ namespace API_Layer.Controllers
             UsersDTOs.SendUserDTO sendUserDTO = await UsersDTOs.ToSendUserDTOAsync(user);
 
 
-
             return Ok(sendUserDTO);
 
 
         }
 
+        #endregion
 
 
 
-
+        #region Login
 
         [HttpGet("Login")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> LoginUser(string Username, string Password)
         {
 
@@ -109,6 +113,8 @@ namespace API_Layer.Controllers
 
 
         }
+
+        #endregion
 
 
 
