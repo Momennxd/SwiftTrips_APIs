@@ -26,7 +26,6 @@ namespace DataAccess_Layer.Entities.Language.cs
 
         public ePersonDA ePeople {  get; set; }
 
-
         public eLanguageDA eLanguage { get; set; }
     }
 }

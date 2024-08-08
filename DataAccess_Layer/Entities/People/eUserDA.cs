@@ -33,9 +33,13 @@ namespace DataAccess_Layer.Entities.People
         public required bool IsActive { get; set; }
 
 
-        public ePersonDA? Person { get; set; }
+        public ePersonDA? Person { private get; set; }
+       
 
-
+        public async Task<ePersonDA?> GetPersonAsync()
+        {
+            return await ePersonDA.FindAsync(PersonID);
+        }
 
 
         public static eUserDA InitClass()
@@ -46,7 +50,8 @@ namespace DataAccess_Layer.Entities.People
                 PersonID = -1,
                 Username = string.Empty,
                 Password = string.Empty,
-                IsActive = false
+                IsActive = false,
+                Person = null
 
             };
 
@@ -59,14 +64,20 @@ namespace DataAccess_Layer.Entities.People
         public async static Task<eUserDA?> GetUserInfoAsync(string Username)
         {
             if (string.IsNullOrEmpty(Username)) return null;
+
+            eUserDA userDA = InitClass();
+
             try
             {
                 using (AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
                 {
-                    return await context.Users.SingleOrDefaultAsync(user => user.Username == Username);
+                    userDA = await context.Users.SingleOrDefaultAsync(user => user.Username == Username);
+                    //userDA.Person = await ePersonDA.FindAsync(userDA.PersonID);
                 }
             }
             catch (Exception ex) { return null; }
+
+            return userDA;
         }
 
 

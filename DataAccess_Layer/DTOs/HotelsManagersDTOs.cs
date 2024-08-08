@@ -1,6 +1,7 @@
 ﻿using Core_Layer;
 using DataAccess_Layer.Entities;
 using DataAccess_Layer.Entities.People;
+using Newtonsoft.Json;
 using static API_Layer.DTOs.UsersDTOs;
 
 namespace API_Layer.DTOs
@@ -10,8 +11,47 @@ namespace API_Layer.DTOs
         public record SendHotelsManagerDTO(int HotelsManagerID, SendUserDTO User);
 
 
-        public record CreateHotelsManagerDTO(string Username, string Password, string Email
-            , string Name, int CountryID);
+        public record CreateHotelsManagerDTO
+        {
+            private string? _username;
+            private string? _password;
+            private string? _email;
+            private string? _name;
+
+            public string? Username
+            {
+                get => _username;
+                init => _username = string.IsNullOrWhiteSpace(value) || string.IsNullOrEmpty(value)? null: value;
+            }
+
+            public string? Password
+            {
+                get => _password;
+                init => _password = string.IsNullOrWhiteSpace(value) || string.IsNullOrEmpty(value) ? null : value;
+            }
+
+            public string? Email
+            {
+                get => _email;
+                init => _email = string.IsNullOrWhiteSpace(value)
+                    || string.IsNullOrEmpty(value) 
+                    ? null: value;
+            } 
+
+
+            public string? Name
+            {
+                get => _name;
+                init => _name = string.IsNullOrWhiteSpace(value) || string.IsNullOrEmpty(value)? null: value;
+            }
+
+            public int CountryID { get; init; }
+        }
+
+
+
+
+
 
 
 
@@ -21,7 +61,7 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public async static Task<SendHotelsManagerDTO?> ToSendHotelsManagerDTO(eHotelManagerDA HotelManager,
+        public async static Task<SendHotelsManagerDTO?> ToSendHotelsManagerDTO(eHotelManagerDA? HotelManager,
             string SessionID = "")
         {
             if (HotelManager == null)
@@ -52,7 +92,7 @@ namespace API_Layer.DTOs
             return lstDTOs;
         }
 
-
+        
         public static eHotelManagerDA ToHotelsManagerEntity(CreateHotelsManagerDTO HotelManagerDTO, int UserID)
         {
             if (HotelManagerDTO == null)

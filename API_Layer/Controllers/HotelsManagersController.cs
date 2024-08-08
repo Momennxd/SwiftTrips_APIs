@@ -26,7 +26,7 @@ namespace API_Layer.Controllers
 
 
 
-        [HttpPost("CreateHotelsManager")]
+        [HttpPost("CreateHotelsManagerAccount")]
         public async Task<ActionResult> AddHotelsManager(DTOs.HotelsManagersDTOs.CreateHotelsManagerDTO HotelsManager)
         {
 

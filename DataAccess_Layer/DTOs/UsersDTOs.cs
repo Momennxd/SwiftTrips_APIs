@@ -22,7 +22,7 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public async static Task<SendUserDTO?> ToSendUserDTOAsync(eUserDA user, string SessionID = "")
+        public async static Task<SendUserDTO?> ToSendUserDTOAsync(eUserDA? user, string SessionID = "")
         {
             if (user == null)
                 return null;
