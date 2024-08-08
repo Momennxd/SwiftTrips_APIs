@@ -56,13 +56,13 @@ namespace API_Layer.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult> GetUser(int UserID, [FromHeader] string SessionID)
+        public async Task<ActionResult<DTOs.UsersDTOs.SendUserDTO>> GetUser(int UserID, [FromHeader] string SessionID)
         {
             if (UserID <= 0 || string.IsNullOrEmpty(SessionID))
                 return BadRequest("Enter valid info");
 
 
-            eUserDA? user = eUserDA.Find(UserID);
+            eUserDA? user = await eUserDA.FindAsync(UserID);
 
             if (user == null)
                 return NotFound();

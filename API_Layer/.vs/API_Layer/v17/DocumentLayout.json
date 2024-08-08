@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\API_Layer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\Core_Layer.csproj|c:\\users\\dell\\source\\repos\\swifttrips_apis\\dataaccess_layer\\entities\\people\\euserda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\dell\\source\\repos\\swifttrips_apis\\api_layer\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\Core_Layer.csproj|c:\\users\\dell\\source\\repos\\swifttrips_apis\\dataaccess_layer\\appdbcontext\\appdbcontextconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,7 +17,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,26 +33,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "eUserDA.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\People\\eUserDA.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\People\\eUserDA.cs",
-              "ToolTip": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\People\\eUserDA.cs*",
-              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\People\\eUserDA.cs*",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwCIAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "AppDbContextConfig.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\AppDbContext\\AppDbContextConfig.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\AppDbContext\\AppDbContextConfig.cs",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\AppDbContext\\AppDbContextConfig.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\AppDbContext\\AppDbContextConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T10:44:58.411Z",
+              "WhenOpened": "2024-08-08T10:50:03.017Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "UsersController.cs",
               "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\API_Layer\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\API_Layer\\Controllers\\UsersController.cs*",
-              "RelativeToolTip": "Controllers\\UsersController.cs*",
-              "ViewState": "AQIAADgAAAAAAAAAAAAwwG4AAAAJAAAA",
+              "ToolTip": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\API_Layer\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAcwCEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-08T10:42:29.764Z",
               "EditorCaption": ""

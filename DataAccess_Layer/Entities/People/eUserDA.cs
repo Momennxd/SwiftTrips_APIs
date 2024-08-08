@@ -1,4 +1,5 @@
 ﻿using API_Layer.DTOs;
+using Core_Layer.AppDbContext;
 using DataAccess_Layer.Repository;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
@@ -32,7 +33,7 @@ namespace DataAccess_Layer.Entities.People
         public required bool IsActive { get; set; }
 
 
-        public ePersonDA? Person { get { return ePersonDA.Find(PersonID); } }
+        public ePersonDA? Person { get; set; }
 
 
 
@@ -57,13 +58,29 @@ namespace DataAccess_Layer.Entities.People
 
         public async static Task<eUserDA?> GetUserInfoAsync(string Username)
         {
-            return await clsService.Context.Users.SingleOrDefaultAsync(user => user.Username == Username);
+            if (string.IsNullOrEmpty(Username)) return null;
+            try
+            {
+                using (AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                {
+                    return await context.Users.SingleOrDefaultAsync(user => user.Username == Username);
+                }
+            }
+            catch (Exception ex) { return null; }
         }
 
 
         public async static Task<bool> DoesUserExistAsync(string Username)
         {
-            return await clsService.Context.Users.SingleOrDefaultAsync(user => user.Username == Username) != null;
+            if(string.IsNullOrEmpty(Username)) return false;
+            try
+            {
+                using (AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                {
+                    return await context.Users.SingleOrDefaultAsync(user => user.Username == Username) != null;
+                }
+            }
+            catch (Exception ex) { return false; }
         }
 
 

@@ -13,10 +13,10 @@ namespace DataAccess_Layer.Repository
 
         }
 
-    
 
 
 
+        #region Find item
         public static T? Find(dynamic ItemPK)
         {
 
@@ -51,11 +51,8 @@ namespace DataAccess_Layer.Repository
             { return null; }
         }
 
+        #endregion
 
-
-
-
-        
 
 
         #region Get All Items
@@ -93,11 +90,6 @@ namespace DataAccess_Layer.Repository
         }
 
         #endregion
-
-
-
-
-
 
 
 
@@ -153,10 +145,7 @@ namespace DataAccess_Layer.Repository
 
 
 
-
-
-
-
+        #region Update item
 
         public static T? UpdateItem(dynamic Id, T UpdatedItem)
         {
@@ -208,10 +197,11 @@ namespace DataAccess_Layer.Repository
             catch (Exception ex) { return null; }
         }
 
+        #endregion
 
 
 
-
+        #region Patch item
 
         public static T? PatchItem(JsonPatchDocument<T> NewItem, dynamic ItemPK)
         {
@@ -276,10 +266,7 @@ namespace DataAccess_Layer.Repository
             }
         }
 
-
-
-
-
+        #endregion
 
 
 
@@ -317,71 +304,6 @@ namespace DataAccess_Layer.Repository
             catch (Exception ex) { return false; }
         }
         #endregion
-
-
-     
-
-        //// Need To Perform
-        //[Obsolete("This method is deprecated")]
-        //public static bool UpdateItem(T NewItem, dynamic ItemPK)
-        //{
-        //    if (NewItem == null)
-        //    {
-        //        return false;
-        //    }
-
-
-        //    try
-        //    {
-        //        using (AppDbContext context = clsService.contextFactory!.CreateDbContext())
-        //        {
-
-        //            T Item = context.Set<T>()
-        //                .Find(ItemPK);
-
-        //            // تحقق من وجود الكيان
-        //            if (Item == null)
-        //            {
-        //                return false;
-        //            }
-
-        //            //// تحديث كافة الخصائص
-        //            //context.Entry(Item).CurrentValues.SetValues(NewItem);
-
-        //            var keyProperties = context.Model.FindEntityType(typeof(T))
-        //                                    .FindPrimaryKey()
-        //                                    .Properties;
-
-        //            // Get all properties of the entity type
-        //            var properties = typeof(T).GetProperties();
-
-        //            // Update properties except the key properties
-        //            foreach (var property in properties)
-        //            {
-        //                // Skip key properties
-        //                if (keyProperties.Any(kp => kp.Name == property.Name))
-        //                {
-        //                    continue;
-        //                }
-
-        //                var newValue = property.GetValue(NewItem);
-        //                property.SetValue(Item, newValue);
-        //            }
-
-
-        //            context.SaveChanges();
-        //            return true;
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        // يمكنك تسجيل الخطأ هنا
-        //        return false;
-        //    }
-
-
-
-        //}
 
 
 

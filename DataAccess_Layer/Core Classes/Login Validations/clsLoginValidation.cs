@@ -96,7 +96,7 @@ namespace Core_Layer.Core_Classes.Users
             eSessionDA session = eSessionDA.CreateSession(loginResult.userInfo.UserID);
 
 
-            eSessionDA.AddItem(session);
+            await eSessionDA.AddItemAsync(session);
 
             if (session == null || string.IsNullOrEmpty(session.SessionID))
                 return new stLoginResult(enLoginResult.SessionFailed, null, string.Empty);
