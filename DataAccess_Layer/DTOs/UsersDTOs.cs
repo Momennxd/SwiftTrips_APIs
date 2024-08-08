@@ -22,7 +22,7 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public static SendUserDTO ToSendUserDTO(eUserDA user, string SessionID = "")
+        public static SendUserDTO? ToSendUserDTO(eUserDA user, string SessionID = "")
         {
             if (user == null)
                 return null;
@@ -45,7 +45,7 @@ namespace API_Layer.DTOs
         /// <returns></returns>
         public static List<SendUserDTO> ToSendUserDTO(List<eUserDA> users)
         {
-            List<SendUserDTO> lstDTOs = new List<SendUserDTO> ();
+            List<SendUserDTO> lstDTOs = new List<SendUserDTO>();
 
             foreach(eUserDA user in users)
             {
@@ -57,7 +57,7 @@ namespace API_Layer.DTOs
 
 
 
-        public static eUserDA ToUserEntity(CreateUserDTO userDTO, int PersonID)
+        public static eUserDA? ToUserEntity(CreateUserDTO userDTO, int PersonID)
         {
             if (userDTO == null)
                 return null;

@@ -64,11 +64,11 @@ namespace Core_Layer.Core_Classes.Users
         ///<para>3-The user object if the info matches.</para>  
         ///<para>4-The user session ID.</para> 
         /// </returns>
-        public static stLoginResult ValidateUserInfo(UsersDTOs.LoginUserDTO dtoLoginUser)
+        public async static Task<stLoginResult> ValidateUserInfoAsync(UsersDTOs.LoginUserDTO dtoLoginUser)
         {
             stLoginResult loginResult = new stLoginResult();
 
-            eUserDA? user = eUserDA.GetUserInfo(dtoLoginUser.Username);
+            eUserDA? user = await eUserDA.GetUserInfoAsync(dtoLoginUser.Username);
 
             if (user == null)
             {

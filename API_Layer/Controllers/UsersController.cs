@@ -29,14 +29,14 @@ namespace API_Layer.Controllers
 
 
         [HttpPost("AddUser")]
-        public ActionResult AddUser(UsersDTOs.CreateUserDTO userDTO)
+        public async Task<ActionResult> AddUser(UsersDTOs.CreateUserDTO userDTO)
         {
 
-            if (eUserDA.DoesUserExist(userDTO.Username))
+            if (await eUserDA.DoesUserExistAsync(userDTO.Username))
                 return BadRequest("Username already exists");
 
 
-            int UserID = eUserDA.AddItem(userDTO);
+            int UserID = await eUserDA.AddItemAsync(userDTO);
 
             if (UserID != -1)
                 return Ok(UserID);
@@ -51,7 +51,7 @@ namespace API_Layer.Controllers
 
 
         [HttpGet("GetUser")]
-        public ActionResult GetUser(int UserID, [FromHeader] string SessionID)
+        public async Task<ActionResult> GetUser(int UserID, [FromHeader] string SessionID)
         {
             if (UserID <= 0 || string.IsNullOrEmpty(SessionID))
                 return BadRequest("Enter valid info");
@@ -67,8 +67,8 @@ namespace API_Layer.Controllers
 
 
 
-            eSessionDA.enSessionValidationResult ses_result =
-                eSessionDA.ValidateSession(SessionID, user.UserID);
+            eSessionDA.enSessionValidationResult ses_result = await
+                eSessionDA.ValidateSessionAsync(SessionID, user.UserID);
 
 
             if (ses_result != eSessionDA.enSessionValidationResult.eSession_Valid)
@@ -90,11 +90,12 @@ namespace API_Layer.Controllers
 
 
         [HttpGet("Login")]
-        public ActionResult LoginUser(string Username, string Password)
+        public async Task<ActionResult> LoginUser(string Username, string Password)
         {
 
 
-            var LoginResult = clsLoginValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
+            var LoginResult = 
+                await clsLoginValidation.ValidateUserInfoAsync(new UsersDTOs.LoginUserDTO(Username, Password));
 
 
             if (LoginResult.enLoginResult == clsLoginValidation.enLoginResult.eWrongUsername)

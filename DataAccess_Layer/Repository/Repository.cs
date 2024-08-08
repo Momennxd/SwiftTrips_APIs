@@ -15,6 +15,8 @@ namespace DataAccess_Layer.Repository
 
     
 
+
+
         public static T? Find(dynamic ItemPK)
         {
 
@@ -32,25 +34,28 @@ namespace DataAccess_Layer.Repository
         }
 
 
-        public static async Task<T?> GetItemAsync(dynamic ItemPK)
+        public static async Task<T?> FindAsync(dynamic ItemPK)
         {
+
             if (ItemPK == null)
                 return null;
 
-            using (AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+            try
             {
-
-                try
+                using (DbContext context = await clsService.contextFactory!.CreateDbContextAsync())
                 {
                     return await context.Set<T>().FindAsync(ItemPK);
-
-                }
-                catch (Exception ex)
-                {
-                    return null;
                 }
             }
+            catch (Exception ex)
+            { return null; }
         }
+
+
+
+
+
+        
 
 
         #region Get All Items
@@ -90,6 +95,12 @@ namespace DataAccess_Layer.Repository
         #endregion
 
 
+
+
+
+
+
+
         #region Add Item
         public static bool AddItem(T Item)
         {
@@ -102,7 +113,7 @@ namespace DataAccess_Layer.Repository
                 using (AppDbContext context = clsService.contextFactory!.CreateDbContext())
                 {
                     context.Set<T>().Add(Item);
-                    context.SaveChanges();
+                    context.SaveChangesAsync();
                     return true;
                 }
             }
@@ -143,6 +154,10 @@ namespace DataAccess_Layer.Repository
 
 
 
+
+
+
+
         public static T? UpdateItem(dynamic Id, T UpdatedItem)
         {
             if (UpdatedItem == null)
@@ -167,6 +182,34 @@ namespace DataAccess_Layer.Repository
             }
             catch (Exception ex) { return null; }
         }
+
+        public static async Task<T?> UpdateItemAsync(dynamic Id, T UpdatedItem)
+        {
+            if (UpdatedItem == null)
+            {
+                return null;
+            }
+
+
+            try
+            {
+                using (DbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                {
+                    T? item = await context.Set<T>().FindAsync(Id);
+                    if (item == null)
+                        return null;
+
+                    context.Entry(item).CurrentValues.SetValues(UpdatedItem);
+                     await context.SaveChangesAsync();
+                    return item;
+                }
+
+            }
+            catch (Exception ex) { return null; }
+        }
+
+
+
 
 
 
@@ -201,7 +244,44 @@ namespace DataAccess_Layer.Repository
             }
         }
 
-       
+
+        public static async Task<T?> PatchItemAsync(JsonPatchDocument<T> NewItem, dynamic ItemPK)
+        {
+
+            if (NewItem == null || clsService.contextFactory == null)
+                return null;
+
+
+            try
+            {
+                using (DbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                {
+                    T Item = await context.Set<T>().FindAsync(ItemPK);
+
+                    //id does not exist
+                    if (Item == null)
+                        return null;
+
+                    NewItem.ApplyTo(Item);
+
+                   await context.SaveChangesAsync();
+
+                    return Item;
+
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+
+
+
+
+
+
 
         #region Delete Item
         public static bool DeleteItem(dynamic ItemPK)
@@ -239,7 +319,7 @@ namespace DataAccess_Layer.Repository
         #endregion
 
 
-
+     
 
         //// Need To Perform
         //[Obsolete("This method is deprecated")]

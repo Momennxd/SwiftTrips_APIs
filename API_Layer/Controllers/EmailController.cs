@@ -32,9 +32,12 @@ namespace API_Layer.Controllers
 
 
         [HttpPost("SendEmail")]
-        public ActionResult SendEmail([FromBody] EmailsDTOs.SendEmailDTO emailDTO, string ToMail)
+        public async Task<ActionResult> SendEmail([FromBody] EmailsDTOs.SendEmailDTO emailDTO, string ToMail)
         {
-            return Ok(clsCore.SendEmail(ToMail, emailDTO.Subject, emailDTO.Body));
+            if (await clsCore.SendEmailAsync(ToMail, emailDTO.Subject, emailDTO.Body))
+                return Ok(emailDTO);
+            else
+                return BadRequest("Error");
         }
 
 

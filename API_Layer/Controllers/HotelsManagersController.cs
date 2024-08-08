@@ -27,14 +27,14 @@ namespace API_Layer.Controllers
 
 
         [HttpPost("CreateHotelsManager")]
-        public ActionResult AddHotelsManager(DTOs.HotelsManagersDTOs.CreateHotelsManagerDTO HotelsManager)
+        public async Task<ActionResult> AddHotelsManager(DTOs.HotelsManagersDTOs.CreateHotelsManagerDTO HotelsManager)
         {
 
-            if (eUserDA.DoesUserExist(HotelsManager.Username))
+            if (await eUserDA.DoesUserExistAsync(HotelsManager.Username))
                 return BadRequest("Username already exists");
 
 
-            int HotelsManagerID = eHotelManagerDA.AddItem(HotelsManager);
+            int HotelsManagerID = await eHotelManagerDA.AddItemAsync(HotelsManager);
 
             if (HotelsManagerID != -1)
                 return Ok(HotelsManagerID);
@@ -49,10 +49,10 @@ namespace API_Layer.Controllers
 
 
         [HttpGet("Login")]
-        public ActionResult LoginHotelsManager(string Username, string Password)
+        public async Task<ActionResult> LoginHotelsManager(string Username, string Password)
         {
 
-            var LoginResult = clsLoginValidation.ValidateUserInfo(new UsersDTOs.LoginUserDTO(Username, Password));
+            var LoginResult = await clsLoginValidation.ValidateUserInfoAsync(new UsersDTOs.LoginUserDTO(Username, Password));
 
 
             if (LoginResult.enLoginResult == clsLoginValidation.enLoginResult.eWrongUsername)
@@ -62,8 +62,8 @@ namespace API_Layer.Controllers
                 return BadRequest("Wrong Password");
 
 
-            return Ok(DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO(
-                 eHotelManagerDA.GetHotelManager(LoginResult.userInfo.UserID),
+            return Ok(DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO( await
+                 eHotelManagerDA.GetHotelManagerAsync(LoginResult.userInfo.UserID),
                  LoginResult.sessionID));
         }
 

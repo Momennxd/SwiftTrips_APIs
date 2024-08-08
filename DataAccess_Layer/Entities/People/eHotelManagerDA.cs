@@ -26,7 +26,7 @@ namespace DataAccess_Layer.Entities
 
 
         [NotMapped]
-        public eUserDA User { get { return eUserDA.Find(this.UserID); } }
+        public eUserDA User { get { return eUserDA.Find(UserID); } }
 
 
 
@@ -35,10 +35,10 @@ namespace DataAccess_Layer.Entities
 
 
 
-        public static int AddItem(HotelsManagersDTOs.CreateHotelsManagerDTO managerDTO)
+        public async static Task<int> AddItemAsync(HotelsManagersDTOs.CreateHotelsManagerDTO managerDTO)
         {
 
-            int UserID = eUserDA.AddItem(new UsersDTOs.CreateUserDTO(managerDTO.Username, managerDTO.Password,
+            int UserID = await eUserDA.AddItemAsync(new UsersDTOs.CreateUserDTO(managerDTO.Username, managerDTO.Password,
                 new PeopleDTOs.CreatePersonDTO(managerDTO.Name, null, null, null, null, managerDTO.CountryID,
                 null, null, managerDTO.Email, null)));
 
@@ -47,15 +47,15 @@ namespace DataAccess_Layer.Entities
 
             eHotelManagerDA eHotelsManagers = HotelsManagersDTOs.ToHotelsManagerEntity(managerDTO, UserID);
 
-            eHotelManagerDA.AddItem(eHotelsManagers);
+           await eHotelManagerDA.AddItemAsync(eHotelsManagers);
 
 
             return eHotelsManagers.HotelManagerID;
         }
 
-        public static eHotelManagerDA? GetHotelManager(int UserID)
+        public async static Task<eHotelManagerDA?> GetHotelManagerAsync(int UserID)
         {
-            return clsService.Context.HotelsManagers.SingleOrDefault(m => m.UserID == UserID);
+            return await clsService.Context.HotelsManagers.SingleOrDefaultAsync(m => m.UserID == UserID);
         }
 
     }

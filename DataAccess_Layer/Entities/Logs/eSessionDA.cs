@@ -90,9 +90,9 @@ namespace DataAccess_Layer.Entities.Logs
         /// <para>'eUser_HasNoSession' if the user has no session in the database.</para>
         /// <para>'eSession_Valid' if the session exists in the database and valid.</para>
         /// </returns>
-        public static enSessionValidationResult ValidateSession(string SessionID, int UserID)
+        public async static Task<enSessionValidationResult> ValidateSessionAsync(string SessionID, int UserID)
         {
-            eSessionDA? session = eSessionDA.Find(SessionID);
+            eSessionDA? session = await eSessionDA.FindAsync(SessionID);
 
             if (session == null)
                 return enSessionValidationResult.eSession_NotExist;
@@ -106,7 +106,7 @@ namespace DataAccess_Layer.Entities.Logs
             if (difference.Days > Session_Timeout_Age_InDays)
                 return enSessionValidationResult.eSession_Timout;
 
-            eSessionDA? UserSession = GetSession(UserID);
+            eSessionDA? UserSession = await GetSessionAsync(UserID);
 
 
             if (UserSession == null)
@@ -127,12 +127,12 @@ namespace DataAccess_Layer.Entities.Logs
 
 
 
-        public static eSessionDA? GetSession(int UserID)
+        public async static Task<eSessionDA?> GetSessionAsync(int UserID)
         {
             if (UserID <= 0)
                 return null;
 
-            return (clsService.Context.UsersSessions.FirstOrDefault(s => s.UserID == UserID && s.IsValid));
+            return (await clsService.Context.UsersSessions.FirstOrDefaultAsync(s => s.UserID == UserID && s.IsValid));
         }
 
 

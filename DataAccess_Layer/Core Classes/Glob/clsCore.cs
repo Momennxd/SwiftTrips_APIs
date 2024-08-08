@@ -10,6 +10,7 @@ using System.Text.Json;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Microsoft.EntityFrameworkCore.Storage.Json;
 using Microsoft.IdentityModel.Tokens;
+using static Core_Layer.Glob.clsCore;
 
 
 namespace Core_Layer.Glob
@@ -30,49 +31,48 @@ namespace Core_Layer.Glob
             }
         }
 
-        public static bool SendEmail(string ToMail, string Subject, string Body)
+
+        public static async Task<bool> SendEmailAsync(string ToMail, string Subject, string Body)
         {
             if (string.IsNullOrEmpty(ToMail))
                 return false;
 
-            // Read JSON file contents
-            string json = File.ReadAllText("JSONs/jsonEmailSettings.json");
+            // Read JSON file contents asynchronously
+            using FileStream fs = new FileStream("JSONs/jsonEmailSettings.json",
+                FileMode.Open, FileAccess.Read, FileShare.Read, bufferSize: 4096, useAsync: true);
 
-            // Deserialize JSON data into C# object
-            EmailSettings? EmailSettings = JsonSerializer.Deserialize<EmailSettings>(json);
+            // Deserialize JSON data into C# object asynchronously
+            EmailSettings? emailSettings = await JsonSerializer.DeserializeAsync<EmailSettings>(fs);
 
-            if (EmailSettings == null)
+            if (emailSettings == null)
                 return false;
 
-
-            MailMessage message = new MailMessage();
-            message.From = new MailAddress(EmailSettings.SenderEmail);
-            message.Subject = Subject;
+            MailMessage message = new MailMessage
+            {
+                From = new MailAddress(emailSettings.SenderEmail),
+                Subject = Subject,
+                Body = Body,
+                IsBodyHtml = true
+            };
             message.To.Add(new MailAddress(ToMail));
-            message.Body = Body;
-            message.IsBodyHtml = true;
-
 
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
                 Port = 587,
-                Credentials = new NetworkCredential(EmailSettings.SenderEmail, EmailSettings.MainEmailAppPass),
+                Credentials = new NetworkCredential(emailSettings.SenderEmail, emailSettings.MainEmailAppPass),
                 EnableSsl = true,
             };
 
             try
             {
-                smtpClient.Send(message);
+                await smtpClient.SendMailAsync(message);
                 return true;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
+                // Optionally log the exception or handle it accordingly
                 return false;
             }
-
         }
-
-
-
     }
 }
