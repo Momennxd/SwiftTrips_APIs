@@ -203,8 +203,9 @@ namespace DataAccess_Layer.Repository
 
         #region Patch item
 
-        public static T? PatchItem(JsonPatchDocument<T> NewItem, dynamic ItemPK)
+        public static T PatchItem(JsonPatchDocument<T> NewItem, dynamic ItemPK)
         {
+
 
             if (NewItem == null || clsService.contextFactory == null)           
                 return null;
