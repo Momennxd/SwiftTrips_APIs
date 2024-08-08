@@ -75,7 +75,7 @@ namespace API_Layer.Controllers
                 return Unauthorized(ses_result.ToString());
 
 
-            UsersDTOs.SendUserDTO sendUserDTO = UsersDTOs.ToSendUserDTO(user);
+            UsersDTOs.SendUserDTO sendUserDTO = await UsersDTOs.ToSendUserDTOAsync(user);
 
 
 
@@ -105,7 +105,7 @@ namespace API_Layer.Controllers
                 return BadRequest("Wrong Password");
 
 
-            return Ok(DTOs.UsersDTOs.ToSendUserDTO(LoginResult.userInfo, LoginResult.sessionID));
+            return Ok(await DTOs.UsersDTOs.ToSendUserDTOAsync(LoginResult.userInfo, LoginResult.sessionID));
 
 
         }

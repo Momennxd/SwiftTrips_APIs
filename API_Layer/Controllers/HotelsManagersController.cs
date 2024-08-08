@@ -62,7 +62,7 @@ namespace API_Layer.Controllers
                 return BadRequest("Wrong Password");
 
 
-            return Ok(DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO( await
+            return Ok(await DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO( await
                  eHotelManagerDA.GetHotelManagerAsync(LoginResult.userInfo.UserID),
                  LoginResult.sessionID));
         }

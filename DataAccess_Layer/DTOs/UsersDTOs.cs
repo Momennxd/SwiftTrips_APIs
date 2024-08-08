@@ -22,13 +22,14 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public static SendUserDTO? ToSendUserDTO(eUserDA user, string SessionID = "")
+        public async static Task<SendUserDTO?> ToSendUserDTOAsync(eUserDA user, string SessionID = "")
         {
             if (user == null)
                 return null;
 
             
-            SendUserDTO dto = new SendUserDTO(user.UserID, PeopleDTOs.ToSendPersonDTO(ePersonDA.Find(user.PersonID)),
+            SendUserDTO dto = new SendUserDTO(user.UserID,
+                PeopleDTOs.ToSendPersonDTO(await ePersonDA.FindAsync(user.PersonID)),
                 user.Username, user.Password, SessionID);
 
             return dto;
@@ -43,13 +44,13 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="person"></param>
         /// <returns></returns>
-        public static List<SendUserDTO> ToSendUserDTO(List<eUserDA> users)
+        public async static Task<List<SendUserDTO>> ToSendUserDTO(List<eUserDA> users)
         {
             List<SendUserDTO> lstDTOs = new List<SendUserDTO>();
 
             foreach(eUserDA user in users)
             {
-                lstDTOs.Add(ToSendUserDTO(user));
+                lstDTOs.Add(await ToSendUserDTOAsync(user));
             }
 
             return lstDTOs;

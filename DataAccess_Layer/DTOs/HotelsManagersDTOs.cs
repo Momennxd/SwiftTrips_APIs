@@ -21,15 +21,15 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public static SendHotelsManagerDTO? ToSendHotelsManagerDTO(eHotelManagerDA HotelManager,
+        public async static Task<SendHotelsManagerDTO?> ToSendHotelsManagerDTO(eHotelManagerDA HotelManager,
             string SessionID = "")
         {
             if (HotelManager == null)
                 return null;
 
 
-            SendHotelsManagerDTO dto = new SendHotelsManagerDTO(HotelManager.HotelManagerID,
-                UsersDTOs.ToSendUserDTO(HotelManager.User, SessionID));
+            SendHotelsManagerDTO dto = new SendHotelsManagerDTO(HotelManager.HotelManagerID, await
+                UsersDTOs.ToSendUserDTOAsync(HotelManager.User, SessionID));
 
             return dto;
         }
@@ -40,13 +40,13 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="person"></param>
         /// <returns></returns>
-        public static List<SendHotelsManagerDTO> ToSendHotelsManagerDTO(List<eHotelManagerDA> hotelers)
+        public async static Task<List<SendHotelsManagerDTO>> ToSendHotelsManagerDTO(List<eHotelManagerDA> hotelers)
         {
             List<SendHotelsManagerDTO> lstDTOs = new List<SendHotelsManagerDTO>();
 
             foreach (eHotelManagerDA hoteler in hotelers)
             {
-                lstDTOs.Add(ToSendHotelsManagerDTO(hoteler));
+                lstDTOs.Add(await ToSendHotelsManagerDTO(hoteler));
             }
 
             return lstDTOs;
