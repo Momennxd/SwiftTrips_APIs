@@ -32,7 +32,6 @@ namespace DataAccess_Layer.Entities.People
         public required bool IsActive { get; set; }
 
 
-        [NotMapped]
         public ePersonDA? Person { get { return ePersonDA.Find(PersonID); } }
 
 

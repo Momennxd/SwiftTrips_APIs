@@ -13,22 +13,23 @@ namespace API_Layer.Controllers
     public class UsersController : ControllerBase
     {
 
+
+
+        #region Controller init
+
         public UsersController()
         {
         }
 
+        #endregion
 
 
 
-
-
-
-
-        //EndPoints------------------------------------------------------->
-
-
+        #region Add user
 
         [HttpPost("AddUser")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> AddUser(UsersDTOs.CreateUserDTO userDTO)
         {
 
@@ -45,12 +46,16 @@ namespace API_Layer.Controllers
                 return BadRequest("error");
         }
 
+        #endregion
 
 
 
-
+        #region Get user
 
         [HttpGet("GetUser")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status401Unauthorized)]
         public async Task<ActionResult> GetUser(int UserID, [FromHeader] string SessionID)
         {
             if (UserID <= 0 || string.IsNullOrEmpty(SessionID))
@@ -60,7 +65,7 @@ namespace API_Layer.Controllers
             eUserDA? user = eUserDA.Find(UserID);
 
             if (user == null)
-                return BadRequest("User Not Found");
+                return NotFound();
 
 
 
@@ -75,7 +80,7 @@ namespace API_Layer.Controllers
                 return Unauthorized(ses_result.ToString());
 
 
-            UsersDTOs.SendUserDTO sendUserDTO = UsersDTOs.ToSendUserDTO(user);
+            UsersDTOs.SendUserDTO? sendUserDTO = UsersDTOs.ToSendUserDTO(user);
 
 
 
@@ -84,12 +89,15 @@ namespace API_Layer.Controllers
 
         }
 
+        #endregion
 
 
 
-
+        #region Login
 
         [HttpGet("Login")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult> LoginUser(string Username, string Password)
         {
 
@@ -105,10 +113,12 @@ namespace API_Layer.Controllers
                 return BadRequest("Wrong Password");
 
 
-            return Ok(DTOs.UsersDTOs.ToSendUserDTO(LoginResult.userInfo, LoginResult.sessionID));
+            return Ok(UsersDTOs.ToSendUserDTO(LoginResult.userInfo, LoginResult.sessionID));
 
 
         }
+
+        #endregion
 
 
 
