@@ -1,4 +1,4 @@
-﻿using DataAccess_Layer.Entities.Hotels;
+﻿using Core_Layer.Entities.Hotels;
 using DataAccess_Layer.Entities.People;
 using System.ComponentModel.DataAnnotations;
 

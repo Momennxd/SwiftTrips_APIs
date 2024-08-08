@@ -1,4 +1,5 @@
-﻿using DataAccess_Layer.Entities;
+﻿using Core_Layer.Entities.Hotels;
+using DataAccess_Layer.Entities;
 using DataAccess_Layer.Entities.Accommodation;
 using DataAccess_Layer.Entities.Bridges;
 using DataAccess_Layer.Entities.Facilities;
@@ -23,7 +24,6 @@ namespace Core_Layer.AppDbContext
         public DbSet<eHotelManagerDA> HotelsManagers { get; set; }
 
         public DbSet<eHotelsManagersHotelsDA> HotelsManagersHotels { get; set; }
-
         public DbSet<eHotelDA> Hotels { get; set; }
 
         public DbSet<eHotelsPicsDA> HotelsPics { get; set; }

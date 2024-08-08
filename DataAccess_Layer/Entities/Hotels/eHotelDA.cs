@@ -1,16 +1,11 @@
-﻿using Microsoft.AspNetCore.JsonPatch;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using API_Layer.DTOs;
+using Core_Layer.DTOs;
+using DataAccess_Layer.Repository;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.Hotels
+namespace Core_Layer.Entities.Hotels
 {
-    public class eHotelDA
+    public class eHotelDA : Repository<eHotelDA>
     {
         [Key]
         public int HotelID { get; set; }
@@ -26,9 +21,9 @@ namespace DataAccess_Layer.Entities.Hotels
 
         public required string longitude { get; set; }
 
-        public string? DistanceFromBeach { get; set; }
+        public double? DistanceFromBeach { get; set; }
 
-        public string? DistanceFromCenter { get; set; }
+        public double? DistanceFromCenter { get; set; }
 
         public required string HotelSerialNumber { get; set; }
 
