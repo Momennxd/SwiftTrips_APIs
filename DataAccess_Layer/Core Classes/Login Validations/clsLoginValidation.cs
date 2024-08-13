@@ -1,5 +1,4 @@
 ﻿using API_Layer.DTOs;
-using DataAccess_Layer.Entities.Logs;
 using DataAccess_Layer.Entities.People;
 using Microsoft.AspNetCore.Components.Web;
 using System;
@@ -18,8 +17,7 @@ namespace Core_Layer.Core_Classes.Users
             eWrongUsername,
             eWrongPassword,
             eCorrectInfo,
-            NULL,
-            SessionFailed
+            NULL
         }
 
         public struct stLoginResult
@@ -28,21 +26,18 @@ namespace Core_Layer.Core_Classes.Users
 
             public eUserDA? userInfo { get; set; }
 
-            public string sessionID { get; set; }
 
             public stLoginResult()
             {
                 userInfo = eUserDA.InitClass();
                 enLoginResult = enLoginResult.NULL;
-                sessionID = string.Empty;
             }
 
 
-            public stLoginResult(enLoginResult enLoginResult, eUserDA? userInfo, string sessionID)
+            public stLoginResult(enLoginResult enLoginResult, eUserDA? userInfo)
             {
                 this.userInfo = userInfo;
                 this.enLoginResult = enLoginResult;
-                this.sessionID = sessionID;
             }
         }
 
@@ -91,21 +86,7 @@ namespace Core_Layer.Core_Classes.Users
 
 
 
-            #region creating the user session.
-
-            eSessionDA session = eSessionDA.CreateSession(loginResult.userInfo.UserID);
-
-
-            await eSessionDA.AddItemAsync(session);
-
-            if (session == null || string.IsNullOrEmpty(session.SessionID))
-                return new stLoginResult(enLoginResult.SessionFailed, null, string.Empty);
-
-
-
-            loginResult.sessionID = session.SessionID;
-
-            #endregion
+           
 
 
 

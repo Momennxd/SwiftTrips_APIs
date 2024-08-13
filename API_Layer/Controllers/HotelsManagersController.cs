@@ -63,8 +63,7 @@ namespace API_Layer.Controllers
 
 
             return Ok(await DTOs.HotelsManagersDTOs.ToSendHotelsManagerDTO( await
-                 eHotelManagerDA.GetHotelManagerAsync(LoginResult.userInfo.UserID),
-                 LoginResult.sessionID));
+                 eHotelManagerDA.GetHotelManagerAsync(LoginResult.userInfo.UserID)));
         }
 
 

@@ -8,7 +8,7 @@ namespace API_Layer.DTOs
 {
     public static class UsersDTOs
     {
-        public record SendUserDTO(int UserID, SendPersonDTO Person, string Username, string Password, string UserSession);
+        public record SendUserDTO(int UserID, SendPersonDTO Person, string Username, string Password);
 
         public record CreateUserDTO(string Username, string Password, PeopleDTOs.CreatePersonDTO Person);
 
@@ -22,7 +22,7 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public async static Task<SendUserDTO?> ToSendUserDTOAsync(eUserDA? user, string SessionID = "")
+        public async static Task<SendUserDTO?> ToSendUserDTOAsync(eUserDA? user)
         {
             if (user == null)
                 return null;
@@ -30,7 +30,7 @@ namespace API_Layer.DTOs
             
             SendUserDTO dto = new SendUserDTO(user.UserID,
                 PeopleDTOs.ToSendPersonDTO(await ePersonDA.FindAsync(user.PersonID)),
-                user.Username, user.Password, SessionID);
+                user.Username, user.Password);
 
             return dto;
         }

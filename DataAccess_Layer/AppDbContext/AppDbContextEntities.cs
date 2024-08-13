@@ -5,7 +5,6 @@ using DataAccess_Layer.Entities.Bridges;
 using DataAccess_Layer.Entities.Facilities;
 using DataAccess_Layer.Entities.Hotels;
 using DataAccess_Layer.Entities.Language.cs;
-using DataAccess_Layer.Entities.Logs;
 using DataAccess_Layer.Entities.People;
 using DataAccess_Layer.Entities.Reservation;
 using Microsoft.EntityFrameworkCore;
@@ -18,8 +17,6 @@ namespace Core_Layer.AppDbContext
 
         public DbSet<ePersonDA> People { get; set; }
         public DbSet<eUserDA> Users { get; set; }
-
-        public DbSet<eSessionDA> UsersSessions { get; set; }
 
         public DbSet<eHotelManagerDA> HotelsManagers { get; set; }
 

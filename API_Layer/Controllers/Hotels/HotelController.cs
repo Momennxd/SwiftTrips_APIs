@@ -12,8 +12,7 @@ namespace API_Layer.Controllers.Hotels
     public class HotelController : ControllerBase
     {
 
-
-  
+    
 
 
         #region Add New Hotel

@@ -1,3 +1,4 @@
+using API_Layer;
 using Core_Layer.AppDbContext;
 using Microsoft.EntityFrameworkCore;
 
@@ -6,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers().AddNewtonsoftJson();
-
 
 
 
@@ -19,7 +19,11 @@ builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+
 var app = builder.Build();
+
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -31,6 +35,11 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+//app.UseMiddleware<CustomSessionMiddleware>();
+
+
+
 
 app.MapControllers();
 

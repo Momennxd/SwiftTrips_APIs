@@ -1,7 +1,6 @@
 ﻿using API_Layer.DTOs;
 using Core_Layer;
 using Core_Layer.Core_Classes.Users;
-using DataAccess_Layer.Entities.Logs;
 using DataAccess_Layer.Entities.People;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -30,7 +29,7 @@ namespace API_Layer.Controllers
         [HttpPost("AddUser")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult> AddUser(UsersDTOs.CreateUserDTO userDTO)
+        public async Task<ActionResult> AddUser([FromBody]UsersDTOs.CreateUserDTO userDTO)
         {
 
             if (await eUserDA.DoesUserExistAsync(userDTO.Username))
@@ -56,9 +55,9 @@ namespace API_Layer.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status401Unauthorized)]
-        public async Task<ActionResult<DTOs.UsersDTOs.SendUserDTO>> GetUser(int UserID, [FromHeader] string SessionID)
+        public async Task<ActionResult<DTOs.UsersDTOs.SendUserDTO>> GetUser(int UserID)
         {
-            if (UserID <= 0 || string.IsNullOrEmpty(SessionID))
+            if (UserID <= 0)
                 return BadRequest("Enter valid info");
 
 
@@ -66,15 +65,6 @@ namespace API_Layer.Controllers
 
             if (user == null)
                 return NotFound();
-
-
-
-            eSessionDA.enSessionValidationResult ses_result = await
-                eSessionDA.ValidateSessionAsync(SessionID, user.UserID);
-
-
-            if (ses_result != eSessionDA.enSessionValidationResult.eSession_Valid)
-                return Unauthorized(ses_result.ToString());
 
 
             UsersDTOs.SendUserDTO sendUserDTO = await UsersDTOs.ToSendUserDTOAsync(user);
@@ -109,7 +99,7 @@ namespace API_Layer.Controllers
                 return BadRequest("Wrong Password");
 
 
-            return Ok(await DTOs.UsersDTOs.ToSendUserDTOAsync(LoginResult.userInfo, LoginResult.sessionID));
+            return Ok(await DTOs.UsersDTOs.ToSendUserDTOAsync(LoginResult.userInfo));
 
 
         }

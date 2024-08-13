@@ -20,7 +20,7 @@ namespace DataAccess_Layer
 
         static clsService()
         {
-            string connectionString = //Need more security
+            string connectionString = //Needs more security
            "Server = . ; Database = SwiftTripsDB; User Id=sa; Password=sa123456; TrustServerCertificate=true";
 
             ServiceCollection service = new ServiceCollection();

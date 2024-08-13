@@ -61,15 +61,14 @@ namespace API_Layer.DTOs
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public async static Task<SendHotelsManagerDTO?> ToSendHotelsManagerDTO(eHotelManagerDA? HotelManager,
-            string SessionID = "")
+        public async static Task<SendHotelsManagerDTO?> ToSendHotelsManagerDTO(eHotelManagerDA? HotelManager)
         {
             if (HotelManager == null)
                 return null;
 
 
             SendHotelsManagerDTO dto = new SendHotelsManagerDTO(HotelManager.HotelManagerID, await
-                UsersDTOs.ToSendUserDTOAsync(HotelManager.User, SessionID));
+                UsersDTOs.ToSendUserDTOAsync(HotelManager.User));
 
             return dto;
         }
