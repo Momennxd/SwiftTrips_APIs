@@ -18,8 +18,6 @@ namespace Core_Layer.AppDbContext
         public DbSet<ePersonDA> People { get; set; }
         public DbSet<eUserDA> Users { get; set; }
 
-        public DbSet<eHotelManagerDA> HotelsManagers { get; set; }
-
         public DbSet<eHotelsManagersHotelsDA> HotelsManagersHotels { get; set; }
         public DbSet<eHotelDA> Hotels { get; set; }
 

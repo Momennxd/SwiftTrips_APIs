@@ -16,7 +16,6 @@ public class eHotlesReservationsDA
 
     public int AccommodationBaseID { get; set; }
 
-    public int PersonID { get; set; }
 
     public int NumberOfPeople { get; set; }
 
