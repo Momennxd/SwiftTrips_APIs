@@ -12,8 +12,23 @@ namespace API_Layer.Controllers.Hotels
     public class HotelController : ControllerBase
     {
 
-    
 
+        [HttpGet("GetHotelPics")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        public async Task<ActionResult<Core_Layer.DTOs.HotelsDTOs.SendHotelPicsDTO>> GetHotelPicsByHotelSerialNumber(int HotelSerialNumber)
+        {
+            if (HotelSerialNumber <= 0)
+                return BadRequest("Enter Valid Hotel Serial Number");
+
+            eHotelsPicsDA? HotelPics = await eHotelsPicsDA.FindAsync(HotelSerialNumber);
+
+            if (HotelPics == null)
+                return NotFound("Hotel Not Found");
+
+            return Ok(HotelsDTOs.ToSendHotelPicsDTO(HotelPics));
+        }
 
         #region Add New Hotel
         [HttpPost("Add")]

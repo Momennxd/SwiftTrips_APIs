@@ -22,7 +22,16 @@ namespace Core_Layer.DTOs
         public record SendHotelDTO(int HotelID, string HotelName, string? Discription,
             string latitude, string longitude,
             double? DistanceFromBeach, double? DistanceFromCenter, string HotelSerialNumber);
-        
+
+
+        public record SendHotelPicsDTO(string URL, string PicName);
+
+
+        public static SendHotelPicsDTO? ToSendHotelPicsDTO(eHotelsPicsDA HotelPics)
+        {
+            return new SendHotelPicsDTO(HotelPics.URL, HotelPics.PicName);
+        }
+
         public static eHotelDA ConvertFromSendHotelDTOtoEntity(SendHotelDTO sendHotelDTO)
         {
             return new eHotelDA()

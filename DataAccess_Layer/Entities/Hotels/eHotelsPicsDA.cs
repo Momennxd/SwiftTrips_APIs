@@ -1,4 +1,5 @@
 ﻿using Azure;
+using DataAccess_Layer.Repository;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess_Layer.Entities.Hotels
 {
-    public class eHotelsPicsDA
+    public class eHotelsPicsDA : Repository<eHotelsPicsDA>
     {
 
         [Key]

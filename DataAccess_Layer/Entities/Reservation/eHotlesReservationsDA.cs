@@ -8,7 +8,7 @@ public class eHotlesReservationsDA
 
     public short State { get; set; }
 
-    public string Discripation { get; set; }
+    public string Discription { get; set; }
 
     public DateTime CheckIn {  get; set; }
 
@@ -19,7 +19,6 @@ public class eHotlesReservationsDA
 
     public int NumberOfPeople { get; set; }
 
-    public int Pin {  get; set; }
 
     public int  ReservationType { get; set; }
 
