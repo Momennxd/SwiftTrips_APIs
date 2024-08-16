@@ -16,13 +16,20 @@ namespace DataAccess_Layer.Entities.Hotels
     {
 
         [Key]
-        public int PicID { get; set; }
+        public int HotelPicID { get; set; }
 
         public required string URL { get; set; }
 
         public required int HotelID { get; set; }
 
         public required string PicName { get; set; }
+
+
+        //overloading 
+        public static async Task<List<eHotelsPicsDA>?> GetAllItemsAsync(int HotelID)
+        {
+            return await clsService.Context.HotelsPics.Where(p => p.HotelID == HotelID).ToListAsync();
+        }
 
 
     }

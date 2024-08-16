@@ -29,7 +29,19 @@ namespace Core_Layer.DTOs
 
         public static SendHotelPicsDTO? ToSendHotelPicsDTO(eHotelsPicsDA HotelPics)
         {
+            if (HotelPics == null) return null;
+
             return new SendHotelPicsDTO(HotelPics.URL, HotelPics.PicName);
+        }
+
+        public static List<SendHotelPicsDTO> ToSendHotelPicsDTO(List<eHotelsPicsDA> lstHotelPics)
+        {
+           List<SendHotelPicsDTO> sendHotelPicsDTOs = new List<SendHotelPicsDTO> ();
+
+            lstHotelPics.ForEach(pic => sendHotelPicsDTOs.Add(ToSendHotelPicsDTO(pic)));
+
+            return sendHotelPicsDTOs;
+
         }
 
         public static eHotelDA ConvertFromSendHotelDTOtoEntity(SendHotelDTO sendHotelDTO)

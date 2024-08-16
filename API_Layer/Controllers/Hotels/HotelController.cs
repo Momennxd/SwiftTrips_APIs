@@ -17,12 +17,12 @@ namespace API_Layer.Controllers.Hotels
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Core_Layer.DTOs.HotelsDTOs.SendHotelPicsDTO>> GetHotelPicsByHotelSerialNumber(int HotelSerialNumber)
+        public async Task<ActionResult<Core_Layer.DTOs.HotelsDTOs.SendHotelPicsDTO>> GetHotelPics(int HotelID)
         {
-            if (HotelSerialNumber <= 0)
-                return BadRequest("Enter Valid Hotel Serial Number");
+            if (HotelID <= 0)
+                return BadRequest("Enter Valid Hotel ID");
 
-            eHotelsPicsDA? HotelPics = await eHotelsPicsDA.FindAsync(HotelSerialNumber);
+            List<eHotelsPicsDA> HotelPics = await eHotelsPicsDA.GetAllItemsAsync(HotelID);
 
             if (HotelPics == null)
                 return NotFound("Hotel Not Found");
