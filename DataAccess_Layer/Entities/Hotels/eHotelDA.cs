@@ -1,6 +1,6 @@
-﻿using API_Layer.DTOs;
+﻿using Core_Layer.DTOs;
 using Core_Layer.DTOs;
-using DataAccess_Layer.Repository;
+using Core_Layer.Repository;
 using System.ComponentModel.DataAnnotations;
 
 namespace Core_Layer.Entities.Hotels

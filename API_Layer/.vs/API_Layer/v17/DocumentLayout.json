@@ -1,26 +1,24 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\API_Layer\\",
+  "WorkspaceRootPath": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\dell\\source\\repos\\swifttrips_apis\\api_layer\\controllers\\hotels\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\hotels\\hotelcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\dell\\desktop\\temp\\api_layer\\controllers\\hotels\\accommodationbasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\hotels\\accommodationbasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\Core_Layer.csproj|c:\\users\\dell\\source\\repos\\swifttrips_apis\\dataaccess_layer\\entities\\hotels\\ehotelda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\Core_Layer.csproj|c:\\users\\dell\\desktop\\temp\\dataaccess_layer\\entities\\accommodation\\eaccommdoationbasesda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\Core_Layer.csproj|c:\\users\\dell\\source\\repos\\swifttrips_apis\\dataaccess_layer\\dtos\\hotelsdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\Core_Layer.csproj|c:\\users\\dell\\desktop\\temp\\dataaccess_layer\\dtos\\accommodationbasesdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\Core_Layer.csproj|c:\\users\\dell\\source\\repos\\swifttrips_apis\\dataaccess_layer\\dtos\\usersdtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\dell\\source\\repos\\swifttrips_apis\\api_layer\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\dell\\desktop\\temp\\api_layer\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EF9FEC2-93F9-423B-9901-5CC25D2557BD}|..\\DataAccess_Layer\\Core_Layer.csproj|c:\\users\\dell\\source\\repos\\swifttrips_apis\\dataaccess_layer\\entities\\people\\euserda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\dell\\desktop\\temp\\api_layer\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +28,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,81 +44,64 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "eHotelDA.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Hotels\\eHotelDA.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Hotels\\eHotelDA.cs",
-              "ToolTip": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\Hotels\\eHotelDA.cs",
-              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Hotels\\eHotelDA.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAIwB4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T18:40:50.14Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HotelsDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Source\\Repos\\SwiftTrips_APIs\\DataAccess_Layer\\DTOs\\HotelsDTOs.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\DTOs\\HotelsDTOs.cs",
-              "ToolTip": "C:\\Users\\dell\\Source\\Repos\\SwiftTrips_APIs\\DataAccess_Layer\\DTOs\\HotelsDTOs.cs",
-              "RelativeToolTip": "..\\DataAccess_Layer\\DTOs\\HotelsDTOs.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowE8AAAASAAAA",
+              "Title": "AccommodationBasesDTOs.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\temp\\DataAccess_Layer\\DTOs\\AccommodationBasesDTOs.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\DTOs\\AccommodationBasesDTOs.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\temp\\DataAccess_Layer\\DTOs\\AccommodationBasesDTOs.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\DTOs\\AccommodationBasesDTOs.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAowDkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T18:18:12.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "eUserDA.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\People\\eUserDA.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\People\\eUserDA.cs",
-              "ToolTip": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\Entities\\People\\eUserDA.cs",
-              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\People\\eUserDA.cs",
-              "ViewState": "AQIAAEsAAAAAAAAAAAAwwF4AAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T18:39:43.767Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UsersDTOs.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\DTOs\\UsersDTOs.cs",
-              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\DTOs\\UsersDTOs.cs",
-              "ToolTip": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\DataAccess_Layer\\DTOs\\UsersDTOs.cs",
-              "RelativeToolTip": "..\\DataAccess_Layer\\DTOs\\UsersDTOs.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAIwAwAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T18:18:18.834Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-18T12:38:15.959Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "HotelController.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\API_Layer\\Controllers\\Hotels\\HotelController.cs",
-              "RelativeDocumentMoniker": "Controllers\\Hotels\\HotelController.cs",
-              "ToolTip": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\API_Layer\\Controllers\\Hotels\\HotelController.cs",
-              "RelativeToolTip": "Controllers\\Hotels\\HotelController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAUwFIAAAAAAAAA",
+              "Title": "AccommodationBasesController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\Hotels\\AccommodationBasesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Hotels\\AccommodationBasesController.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\Hotels\\AccommodationBasesController.cs",
+              "RelativeToolTip": "Controllers\\Hotels\\AccommodationBasesController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwFEAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T18:15:34.576Z",
+              "WhenOpened": "2024-08-18T12:08:22.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "UsersController.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\API_Layer\\Controllers\\UsersController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
-              "ToolTip": "C:\\Users\\dell\\source\\repos\\SwiftTrips_APIs\\API_Layer\\Controllers\\UsersController.cs",
-              "RelativeToolTip": "Controllers\\UsersController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAMwBoAAAAAAAAA",
+              "Title": "EmailController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\EmailController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmailController.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\EmailController.cs",
+              "RelativeToolTip": "Controllers\\EmailController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-08T10:42:29.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-18T12:08:09.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T12:07:33.426Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "eAccommdoationBasesDA.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\temp\\DataAccess_Layer\\Entities\\Accommodation\\eAccommdoationBasesDA.cs",
+              "RelativeDocumentMoniker": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommdoationBasesDA.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\temp\\DataAccess_Layer\\Entities\\Accommodation\\eAccommdoationBasesDA.cs",
+              "RelativeToolTip": "..\\DataAccess_Layer\\Entities\\Accommodation\\eAccommdoationBasesDA.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAADcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-17T20:02:45.626Z"
             }
           ]
         }

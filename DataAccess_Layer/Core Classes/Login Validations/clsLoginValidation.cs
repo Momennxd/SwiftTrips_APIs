@@ -1,5 +1,5 @@
-﻿using API_Layer.DTOs;
-using DataAccess_Layer.Entities.People;
+﻿using Core_Layer.DTOs;
+using Core_Layer.Entities.People;
 using Microsoft.AspNetCore.Components.Web;
 using System;
 using System.Collections.Generic;

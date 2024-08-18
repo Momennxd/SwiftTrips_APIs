@@ -1,4 +1,4 @@
-﻿using DataAccess_Layer.Entities.Accommodation;
+﻿using Core_Layer.Entities.Accommodation;
 using System.ComponentModel.DataAnnotations;
 
 public class eHotlesReservationsDA

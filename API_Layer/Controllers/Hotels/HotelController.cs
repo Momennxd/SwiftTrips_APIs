@@ -1,11 +1,11 @@
-﻿using DataAccess_Layer.Entities.Hotels;
+﻿using Core_Layer.Entities.Hotels;
 using Microsoft.AspNetCore.Mvc;
 using Core_Layer.DTOs;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Core_Layer.Entities.Hotels;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
-namespace API_Layer.Controllers.Hotels
+namespace Core_Layer.Controllers.Hotels
 {
     [Route("api/Hotels")]
     [ApiController]

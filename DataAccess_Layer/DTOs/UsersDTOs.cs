@@ -1,10 +1,10 @@
 ﻿using Core_Layer;
-using DataAccess_Layer.Entities.People;
+using Core_Layer.Entities.People;
 using Microsoft.AspNetCore.Identity;
 using System.Runtime.CompilerServices;
-using static API_Layer.DTOs.PeopleDTOs;
+using static Core_Layer.DTOs.PeopleDTOs;
 
-namespace API_Layer.DTOs
+namespace Core_Layer.DTOs
 {
     public static class UsersDTOs
     {

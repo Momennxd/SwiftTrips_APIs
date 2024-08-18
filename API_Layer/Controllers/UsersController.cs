@@ -1,11 +1,9 @@
-﻿using API_Layer.DTOs;
-using Core_Layer;
-using Core_Layer.Core_Classes.Users;
-using DataAccess_Layer.Entities.People;
-using Microsoft.AspNetCore.JsonPatch;
+﻿using Core_Layer.Core_Classes.Users;
+using Core_Layer.DTOs;
+using Core_Layer.Entities.People;
 using Microsoft.AspNetCore.Mvc;
 
-namespace API_Layer.Controllers
+namespace Core_Layer.Controllers
 {
     [Route("API/Users")]
     [ApiController]
@@ -29,7 +27,7 @@ namespace API_Layer.Controllers
         [HttpPost("AddUser")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult> AddUser([FromBody]UsersDTOs.CreateUserDTO userDTO)
+        public async Task<ActionResult> AddUser([FromBody] UsersDTOs.CreateUserDTO userDTO)
         {
 
             if (await eUserDA.DoesUserExistAsync(userDTO.Username))
@@ -88,7 +86,7 @@ namespace API_Layer.Controllers
         {
 
 
-            var LoginResult = 
+            var LoginResult =
                 await clsLoginValidation.ValidateUserInfoAsync(new UsersDTOs.LoginUserDTO(Username, Password));
 
 

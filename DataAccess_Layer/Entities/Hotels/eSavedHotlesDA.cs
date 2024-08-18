@@ -1,5 +1,5 @@
 ﻿using Core_Layer.Entities.Hotels;
-using DataAccess_Layer.Entities.People;
+using Core_Layer.Entities.People;
 using System.ComponentModel.DataAnnotations;
 
 public class eSavedHotlesDA

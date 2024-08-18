@@ -1,5 +1,5 @@
 ﻿using Core_Layer;
-using DataAccess_Layer.Repository;
+using Core_Layer.Repository;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.People
+namespace Core_Layer.Entities.People
 {
     public class ePersonDA : Repository<ePersonDA>
     {

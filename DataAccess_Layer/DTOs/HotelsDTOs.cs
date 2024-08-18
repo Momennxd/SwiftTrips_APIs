@@ -1,5 +1,5 @@
 ﻿using Core_Layer.Entities.Hotels;
-using DataAccess_Layer.Entities.Hotels;
+using Core_Layer.Entities.Hotels;
 
 namespace Core_Layer.DTOs
 {

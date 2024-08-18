@@ -1,4 +1,4 @@
-﻿using DataAccess_Layer.Entities.People;
+﻿using Core_Layer.Entities.People;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.Language.cs
+namespace Core_Layer.Entities.Language.cs
 {
 
     public class ePreferedPeopleLanguagesDA

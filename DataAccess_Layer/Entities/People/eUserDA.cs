@@ -1,19 +1,9 @@
-﻿using API_Layer.DTOs;
-using Core_Layer.AppDbContext;
-using DataAccess_Layer.Repository;
-using Microsoft.AspNetCore.JsonPatch;
+﻿using Core_Layer.DTOs;
+using Core_Layer.Repository;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using NotMappedAttribute = System.ComponentModel.DataAnnotations.NotMappedAttribute;
 
-
-namespace DataAccess_Layer.Entities.People
+namespace Core_Layer.Entities.People
 {
     public class eUserDA : Repository<eUserDA>
     {
@@ -34,7 +24,7 @@ namespace DataAccess_Layer.Entities.People
 
 
         public ePersonDA? Person { private get; set; }
-       
+
 
         public async Task<ePersonDA?> GetPersonAsync()
         {
@@ -69,7 +59,7 @@ namespace DataAccess_Layer.Entities.People
 
             try
             {
-                using (AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                using (AppDbContext.AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
                 {
                     userDA = await context.Users.SingleOrDefaultAsync(user => user.Username == Username);
                     //userDA.Person = await ePersonDA.FindAsync(userDA.PersonID);
@@ -83,10 +73,10 @@ namespace DataAccess_Layer.Entities.People
 
         public async static Task<bool> DoesUserExistAsync(string Username)
         {
-            if(string.IsNullOrEmpty(Username)) return false;
+            if (string.IsNullOrEmpty(Username)) return false;
             try
             {
-                using (AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                using (AppDbContext.AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
                 {
                     return await context.Users.SingleOrDefaultAsync(user => user.Username == Username) != null;
                 }
@@ -121,6 +111,6 @@ namespace DataAccess_Layer.Entities.People
         }
 
 
-      
+
     }
 }

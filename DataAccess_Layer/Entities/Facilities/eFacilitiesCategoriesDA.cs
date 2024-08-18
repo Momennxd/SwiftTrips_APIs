@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.Facilities
+namespace Core_Layer.Entities.Facilities
 {
     public class eFacilitiesCategoriesDA
     {

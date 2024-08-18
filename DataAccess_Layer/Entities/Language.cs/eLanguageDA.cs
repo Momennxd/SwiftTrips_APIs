@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.Language.cs
+namespace Core_Layer.Entities.Language.cs
 {
     public class eLanguageDA
     {

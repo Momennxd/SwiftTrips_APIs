@@ -1,12 +1,12 @@
 ﻿using Core_Layer.Entities.Hotels;
-using DataAccess_Layer.Entities;
-using DataAccess_Layer.Entities.Accommodation;
-using DataAccess_Layer.Entities.Bridges;
-using DataAccess_Layer.Entities.Facilities;
-using DataAccess_Layer.Entities.Hotels;
-using DataAccess_Layer.Entities.Language.cs;
-using DataAccess_Layer.Entities.People;
-using DataAccess_Layer.Entities.Reservation;
+using Core_Layer.Entities;
+using Core_Layer.Entities.Accommodation;
+using Core_Layer.Entities.Bridges;
+using Core_Layer.Entities.Facilities;
+using Core_Layer.Entities.Hotels;
+using Core_Layer.Entities.Language.cs;
+using Core_Layer.Entities.People;
+using Core_Layer.Entities.Reservation;
 using Microsoft.EntityFrameworkCore;
 
 namespace Core_Layer.AppDbContext

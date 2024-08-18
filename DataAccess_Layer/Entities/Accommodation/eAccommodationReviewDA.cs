@@ -1,5 +1,5 @@
-﻿using DataAccess_Layer.Entities.Accommodation;
-using DataAccess_Layer.Entities.People;
+﻿using Core_Layer.Entities.Accommodation;
+using Core_Layer.Entities.People;
 using System.ComponentModel.DataAnnotations;
 
 public class eAccommodationReviewDA

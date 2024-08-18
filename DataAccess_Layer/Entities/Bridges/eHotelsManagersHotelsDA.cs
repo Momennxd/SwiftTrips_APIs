@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.Bridges
+namespace Core_Layer.Entities.Bridges
 {
     public class eHotelsManagersHotelsDA
     {

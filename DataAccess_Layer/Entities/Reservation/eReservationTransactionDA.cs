@@ -1,4 +1,4 @@
-﻿using DataAccess_Layer.Entities.Reservation;
+﻿using Core_Layer.Entities.Reservation;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.Reservation
+namespace Core_Layer.Entities.Reservation
 {
     public class eReservationTransactionDA
     {

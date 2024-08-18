@@ -1,4 +1,5 @@
-﻿using DataAccess_Layer.Entities.Hotels;
+﻿using Core_Layer.DTOs;
+using Core_Layer.Entities.Hotels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -7,39 +8,51 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.Accommodation
+namespace Core_Layer.Entities.Accommodation
 {
-    public class eAccommdoationBasesDA
+    public class eAccommdoationBasesDA : Repository.Repository<eAccommdoationBasesDA>
     {
+        #region Columns
         [Key]
+        public int AccommodationBaseID { get; set; } // Primary Key
 
-        public int AccommodationBaseID { get; set; }
+        public int HotelID { get; set; }
 
-        public int HotleID { get; set; } 
+        public string? Discription { get; set; } // Nullable nvarchar(500)
 
-        public string Discriptaion { get; set; }
+        public short MaxCapacity { get; set; }
 
-        public short MaxCompactiy { get; set; }
+        public byte NumberOfSingleBeds { get; set; }
 
-        public short NumberOfSingleBeds { get; set; }
+        public byte NumberOfDoubleBeds { get; set; }
 
-        public short NumberOfDoubleBeds { get; set; }
+        public short Size { get; set; }
 
-        public int Size {  get; set; }
+        public string AccommadationName { get; set; } = string.Empty; // nvarchar(50)
 
-        public string AccommodationName { get; set; }
-
-        public string AccommodationSeriaNumber {  get; set; }
+        public string AccommodationSerialNumber { get; set; } = string.Empty; // nvarchar(50)
 
         public short NumberOfClones { get; set; }
 
-        public bool Smoking { get; set; }
+        public bool Smoking { get; set; } // bit
 
-        public string BedsDiscripation { get; set; }
+        public string? BedsDiscription { get; set; } // Nullable nvarchar(500)
+        #endregion
 
 
-      
+        #region Add New
 
+        public static async Task<int> AddItemAsync(DTOs.AccommodationBasesDTOs.AddNewDTO addNewDTO)
+        {
+            eAccommdoationBasesDA AccommodationBase = AccommodationBasesDTOs.ToAccommdoationBasesEntity(addNewDTO);
+
+            if (!await eAccommdoationBasesDA.AddItemAsync(AccommodationBase))
+                return -1;
+
+            return AccommodationBase.AccommodationBaseID;
+        }
+
+        #endregion
 
 
     }

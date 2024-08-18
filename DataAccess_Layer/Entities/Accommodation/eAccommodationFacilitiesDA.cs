@@ -1,7 +1,7 @@
-﻿using DataAccess_Layer.Entities.Facilities;
+﻿using Core_Layer.Entities.Facilities;
 using System.ComponentModel.DataAnnotations;
 
-namespace DataAccess_Layer.Entities.Accommodation
+namespace Core_Layer.Entities.Accommodation
 {
     public class eAccommodationFacilitiesDA
     {

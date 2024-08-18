@@ -1,5 +1,5 @@
 ﻿using Azure;
-using DataAccess_Layer.Repository;
+using Core_Layer.Repository;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -10,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAccess_Layer.Entities.Hotels
+namespace Core_Layer.Entities.Hotels
 {
     public class eHotelsPicsDA : Repository<eHotelsPicsDA>
     {

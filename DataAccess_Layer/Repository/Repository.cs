@@ -2,7 +2,7 @@ using Core_Layer.AppDbContext;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.EntityFrameworkCore;
 
-namespace DataAccess_Layer.Repository
+namespace Core_Layer.Repository
 {
     public abstract class Repository<T> where T : class
     {
@@ -61,7 +61,7 @@ namespace DataAccess_Layer.Repository
             List<T>? AllItems = null;
             try
             {
-                using (AppDbContext context = clsService.contextFactory!.CreateDbContext())
+                using (AppDbContext.AppDbContext context = clsService.contextFactory!.CreateDbContext())
                 {
                     AllItems = context.Set<T>().ToList();
                 }
@@ -78,7 +78,7 @@ namespace DataAccess_Layer.Repository
             List<T>? AllItems = null;
             try
             {
-                using (AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                using (AppDbContext.AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
                 {
                     AllItems = await context.Set<T>().ToListAsync();
                 }
@@ -102,7 +102,7 @@ namespace DataAccess_Layer.Repository
 
             try
             {
-                using (AppDbContext context = clsService.contextFactory!.CreateDbContext())
+                using (AppDbContext.AppDbContext context = clsService.contextFactory!.CreateDbContext())
                 {
                     context.Set<T>().Add(Item);
                     context.SaveChangesAsync();
@@ -126,7 +126,7 @@ namespace DataAccess_Layer.Repository
 
             try
             {
-                using (AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                using (AppDbContext.AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
                 {
 
                     await context.Set<T>().AddAsync(Item);
@@ -276,7 +276,7 @@ namespace DataAccess_Layer.Repository
         {
             try
             {
-                using (AppDbContext context = clsService.contextFactory!.CreateDbContext())
+                using (AppDbContext.AppDbContext context = clsService.contextFactory!.CreateDbContext())
                 {
                     // Need To Perform
                     var Item = context.Set<T>().Find(ItemPK);
@@ -293,7 +293,7 @@ namespace DataAccess_Layer.Repository
         {
             try
             {
-                using (AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
+                using (AppDbContext.AppDbContext context = await clsService.contextFactory!.CreateDbContextAsync())
                 {
                     // Need To Perform
                     var Item = await context.Set<T>().FindAsync(ItemPK);

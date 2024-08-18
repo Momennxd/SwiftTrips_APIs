@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace DataAccess_Layer.Entities.Facilities
+namespace Core_Layer.Entities.Facilities
 {
     public class eHotelFacilitiesDA
     {

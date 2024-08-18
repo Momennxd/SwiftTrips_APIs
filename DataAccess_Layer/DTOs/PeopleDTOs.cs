@@ -1,7 +1,7 @@
 ﻿using Core_Layer;
-using DataAccess_Layer.Entities.People;
+using Core_Layer.Entities.People;
 
-namespace API_Layer.DTOs
+namespace Core_Layer.DTOs
 {
     public static class PeopleDTOs
     {
