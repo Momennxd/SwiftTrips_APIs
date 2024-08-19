@@ -15,6 +15,7 @@ namespace Core_Layer.Controllers.Hotels
 
 
         #region Get By ID
+        [Authorize]
         [HttpGet("AccommodationBaseByID")]
         public async Task<ActionResult<Core_Layer.DTOs.AccommodationBasesDTOs>> GetHotel(int ID)
         {

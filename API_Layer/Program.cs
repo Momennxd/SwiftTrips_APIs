@@ -1,3 +1,4 @@
+using API_Layer.Authorization;
 using API_Layer.Security;
 using Core_Layer.AppDbContext;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -6,13 +7,19 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 #region Init Builder
+
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddControllers().AddNewtonsoftJson();
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add<PermissionBasedAuthorizationFilters>();
+}).AddNewtonsoftJson();
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
                builder.Configuration.GetConnectionString("MyConnection")
                ));
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+
 #endregion
 
 
