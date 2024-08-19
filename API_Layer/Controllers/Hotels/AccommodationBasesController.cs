@@ -1,5 +1,6 @@
 ﻿using Core_Layer.DTOs;
 using Core_Layer.Entities.Accommodation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;

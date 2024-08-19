@@ -646,8 +646,6 @@ C:\Users\dell\Desktop\temp\API_Layer\obj\Debug\net8.0\API_Layer.sourcelink.json
 C:\Users\dell\Desktop\temp\API_Layer\obj\Debug\net8.0\API_Layer.dll
 C:\Users\dell\Desktop\temp\API_Layer\obj\Debug\net8.0\refint\API_Layer.dll
 C:\Users\dell\Desktop\temp\API_Layer\obj\Debug\net8.0\API_Layer.pdb
-C:\Users\dell\Desktop\temp\API_Layer\bin\Debug\net8.0\JSONs\appsettings.Development.json
-C:\Users\dell\Desktop\temp\API_Layer\bin\Debug\net8.0\JSONs\appsettings.json
 C:\Users\dell\Desktop\temp\API_Layer\bin\Debug\net8.0\API_Layer.exe
 C:\Users\dell\Desktop\temp\API_Layer\bin\Debug\net8.0\API_Layer.deps.json
 C:\Users\dell\Desktop\temp\API_Layer\bin\Debug\net8.0\API_Layer.runtimeconfig.json
@@ -714,3 +712,6 @@ C:\Users\dell\Desktop\temp\API_Layer\obj\Debug\net8.0\scopedcss\bundle\API_Layer
 C:\Users\dell\Desktop\temp\API_Layer\obj\Debug\net8.0\API_Layer.csproj.Up2Date
 C:\Users\dell\Desktop\temp\API_Layer\obj\Debug\net8.0\API_Layer.genruntimeconfig.cache
 C:\Users\dell\Desktop\temp\API_Layer\obj\Debug\net8.0\ref\API_Layer.dll
+C:\Users\dell\Desktop\temp\API_Layer\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\dell\Desktop\temp\API_Layer\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\dell\Desktop\temp\API_Layer\bin\Debug\net8.0\appsettings.json
