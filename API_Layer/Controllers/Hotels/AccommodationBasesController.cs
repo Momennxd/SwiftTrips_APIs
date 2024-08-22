@@ -1,10 +1,10 @@
-﻿using Core_Layer.DTOs;
+﻿using Core_Layer.DTOs.Accommodations;
 using Core_Layer.Entities.Accommodation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
-using static Core_Layer.DTOs.AccommodationBasesDTOs;
+using static Core_Layer.DTOs.Accommodations.AccommodationBasesDTOs;
 
 namespace Core_Layer.Controllers.Hotels
 {
@@ -17,7 +17,7 @@ namespace Core_Layer.Controllers.Hotels
         #region Get By ID
         [Authorize]
         [HttpGet("AccommodationBaseByID")]
-        public async Task<ActionResult<Core_Layer.DTOs.AccommodationBasesDTOs>> GetHotel(int ID)
+        public async Task<ActionResult<AccommodationBasesDTOs>> GetHotel(int ID)
         {
             if (ID < 0)
                 return BadRequest("Invalid input");
@@ -35,7 +35,7 @@ namespace Core_Layer.Controllers.Hotels
 
         #region Add New 
         [HttpPost("AddNewAccommodationBase")]
-        public async Task<ActionResult> AddNewAccommodationBase(Core_Layer.DTOs.AccommodationBasesDTOs.AddNewDTO addNewDTO)
+        public async Task<ActionResult> AddNewAccommodationBase(AccommodationBasesDTOs.AddNewDTO addNewDTO)
         {
             if (addNewDTO == null)
                 return BadRequest();

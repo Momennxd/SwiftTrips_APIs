@@ -94,7 +94,7 @@ namespace Core_Layer.Repository
 
 
         #region Add Item
-        public static bool AddItem(T Item)
+        public static bool AddItem(T? Item)
         {
             if (Item == null)
                 return false;
@@ -118,7 +118,7 @@ namespace Core_Layer.Repository
         }
 
 
-        public static async Task<bool> AddItemAsync(T Item)
+        public static async Task<bool> AddItemAsync(T? Item)
         {
             if (Item == null)
                 return false;

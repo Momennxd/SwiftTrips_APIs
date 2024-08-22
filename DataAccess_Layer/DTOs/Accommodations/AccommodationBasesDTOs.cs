@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core_Layer.DTOs
+namespace Core_Layer.DTOs.Accommodations
 {
     public class AccommodationBasesDTOs
     {
@@ -24,6 +24,35 @@ namespace Core_Layer.DTOs
             bool Smoking,
             string? BedsDiscripation
             );
+
+
+        public static async Task<MainDTO?> SendMainDTO(int Id)
+        {
+            if (Id < 0)
+                return null;
+
+            var accommodationBase = await eAccommdoationBasesDA.FindAsync(Id);
+
+            if (accommodationBase == null)
+                return null;
+
+            return new MainDTO
+            (
+                AccommodationBaseID: accommodationBase.AccommodationBaseID,
+                HotleID: accommodationBase.HotelID,
+                Discriptaion: accommodationBase.Discription,
+                MaxCompactiy: accommodationBase.MaxCapacity,
+                NumberOfSingleBeds: accommodationBase.NumberOfSingleBeds,
+                NumberOfDoubleBeds: accommodationBase.NumberOfDoubleBeds,
+                Size: accommodationBase.Size,
+                AccommodationName: accommodationBase.AccommadationName,
+                AccommodationSeriaNumber: accommodationBase.AccommodationSerialNumber,
+                NumberOfClones: accommodationBase.NumberOfClones,
+                Smoking: accommodationBase.Smoking,
+                BedsDiscripation: accommodationBase.BedsDiscription
+            );
+        }
+
 
         public record AddNewDTO(
             int HotleID,
@@ -56,7 +85,7 @@ namespace Core_Layer.DTOs
                 BedsDiscription = addNewDTO.BedsDiscripation  // Updated property name
             };
         }
-        
+
         public static eAccommdoationBasesDA ToAccommdoationBasesEntity(MainDTO dto)
         {
             return new eAccommdoationBasesDA
@@ -93,6 +122,7 @@ namespace Core_Layer.DTOs
                 BedsDiscripation: AccommdoationBasesDA.BedsDiscription  // Updated property name
             );
         }
+
 
         #endregion
 

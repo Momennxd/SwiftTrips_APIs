@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core_Layer.Repository;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,16 +9,12 @@ using System.Threading.Tasks;
 
 namespace Core_Layer.Entities.Facilities
 {
-    public class eFacilitiesCategoriesDA
+    public class eFacilitiesCategoriesDA : Repository<eFacilitiesCategoriesDA>
     {
         [Key]
         public int FacilityCategoryID { get; set; }
-
-
         public string CategoryName { get; set; }
-
-
-        public string? Description { get; set; }
+        public string? Discription { get; set; }
     }
 }
 

@@ -1,23 +1,17 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Core_Layer.Repository;
+using System.ComponentModel.DataAnnotations;
 
 
 
 namespace Core_Layer.Entities.Facilities
 {
-    public class eFacilitiesDA
+    public class eFacilitiesDA : Repository<eFacilitiesDA>
     {
         [Key]
         public int FacilityID { get; set; }
-
-
         public string FacilityName { get; set; }
-
-
-        public string Description { get; set; }
-
-
-        public int CategoryID { get; set; }
-
+        public string Discription { get; set; }
+        public int FacilityCategoryID { get; set; }
 
     }
 }

@@ -1,4 +1,4 @@
-﻿using Core_Layer.DTOs;
+﻿using Core_Layer.DTOs.Accommodations;
 using Core_Layer.Entities.Hotels;
 using System;
 using System.Collections.Generic;
@@ -42,7 +42,7 @@ namespace Core_Layer.Entities.Accommodation
 
         #region Add New
 
-        public static async Task<int> AddItemAsync(DTOs.AccommodationBasesDTOs.AddNewDTO addNewDTO)
+        public static async Task<int> AddItemAsync(AccommodationBasesDTOs.AddNewDTO addNewDTO)
         {
             eAccommdoationBasesDA AccommodationBase = AccommodationBasesDTOs.ToAccommdoationBasesEntity(addNewDTO);
 

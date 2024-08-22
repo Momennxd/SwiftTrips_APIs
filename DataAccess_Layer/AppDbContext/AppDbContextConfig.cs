@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Core_Layer.Entities.Accommodation;
+using Core_Layer.Entities.Facilities;
+using Microsoft.EntityFrameworkCore;
 
 namespace Core_Layer.AppDbContext
 {
@@ -8,7 +10,6 @@ namespace Core_Layer.AppDbContext
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
-
 
 
     }

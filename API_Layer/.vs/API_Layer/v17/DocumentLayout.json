@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\dell\\desktop\\temp\\api_layer\\authorization\\permissionbasedauthorizationfilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:authorization\\permissionbasedauthorizationfilters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\dell\\desktop\\temp\\api_layer\\controllers\\accommodations\\accommodationsfacilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|solutionrelative:controllers\\accommodations\\accommodationsfacilitiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DA9CFE4-99FD-4A7A-8861-22E36F884CAE}|API_Layer.csproj|c:\\users\\dell\\desktop\\temp\\api_layer\\controllers\\hotels\\accommodationbasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,28 +34,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PermissionBasedAuthorizationFilters.cs",
-              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Authorization\\PermissionBasedAuthorizationFilters.cs",
-              "RelativeDocumentMoniker": "Authorization\\PermissionBasedAuthorizationFilters.cs",
-              "ToolTip": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Authorization\\PermissionBasedAuthorizationFilters.cs",
-              "RelativeToolTip": "Authorization\\PermissionBasedAuthorizationFilters.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T12:01:43.298Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AccommodationBasesController.cs",
               "DocumentMoniker": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\Hotels\\AccommodationBasesController.cs",
               "RelativeDocumentMoniker": "Controllers\\Hotels\\AccommodationBasesController.cs",
               "ToolTip": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\Hotels\\AccommodationBasesController.cs",
               "RelativeToolTip": "Controllers\\Hotels\\AccommodationBasesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAATAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAADsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-19T11:44:45.719Z",
+              "WhenOpened": "2024-08-22T18:15:52.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccommodationsFacilitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\Accommodations\\AccommodationsFacilitiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Accommodations\\AccommodationsFacilitiesController.cs",
+              "ToolTip": "C:\\Users\\dell\\Desktop\\temp\\API_Layer\\Controllers\\Accommodations\\AccommodationsFacilitiesController.cs",
+              "RelativeToolTip": "Controllers\\Accommodations\\AccommodationsFacilitiesController.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAwFEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T10:02:46.775Z",
               "EditorCaption": ""
             }
           ]
