@@ -34,4 +34,4 @@ The Swift Trips environment is organized into the following projects:
 For detailed information on each component, refer to the following documentation:
 
 -  ***Channel Manager***: [Channel Manager Documentation](https://github.com/Momennxd/Channel-Manager)
--  ***Hotel Management System (HMS)***: Hotel Management System Documentation
+-  ***Hotel Management System (HMS)***: [Hotel Management System Documentation](https://github.com/AhmedMohammed204/HotelManagmentSystem/tree/master)
